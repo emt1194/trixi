@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trixi Starverse</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(195deg, #ff00c3, #d123ba, #a42dab, #7b2f97, #552b80, #342465, #181a48, #050b2b);
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+            animation: backgroundAnimation 5s infinite linear;
+            background-size: 400% 400%;
+        }
+
+        .container {
+            position: relative;
+            width: 90%;
+            height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: inherit;
+            border: 10px solid transparent;
+            box-sizing: border-box;
+            background-clip: padding-box;
+            flex-wrap: wrap;
+			padding:50px;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            box-shadow:
+                inset 0 0 50px #fff, 
+                inset 20px 0 80px #f0f, 
+                inset -20px 0 80px #0ff, 
+                inset 20px 0 300px #f0f, 
+                inset -20px 0 300px #0ff, 
+                0 0 50px #fff,       
+                -10px 0 80px #f0f,      
+                10px 0 80px #0ff;     
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+            flex: 1 1 50%;
+            order: 1;
+        }
+
+        .content h1 {
+            margin: 0;
+            font-size: 4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: linear-gradient(to right, #ff00c3, #d123ba, #7b2f97);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 5px rgba(255, 0, 195, 0.7), 0 0 10px rgba(209, 35, 186, 0.5);
+        }
+
+        .content p {
+            margin: 10px 0;
+            font-size: 1.5rem;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .buttons a {
+            display: inline-block;
+        }
+
+        .fixed-image {
+            flex: 1 1 50%;
+            order: 2;
+            position: relative;
+            max-height: 50vh;
+            width: auto;
+            object-fit: contain;
+            z-index: 3;
+        }
+
+        .small-text {
+            font-size: 1rem;
+			margin-top:20px;
+        }
+
+        @media (max-width: 960px) {
+            .buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+			.container
+			{
+			padding-left:20px;
+			padding-right:20px;
+			}
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                order: 1;
+                flex: 1 1 100%;
+            }
+
+            .fixed-image {
+                order: 2;
+                flex: 1 1 100%;
+                width: 100%;
+                max-height: auto;
+            }
+        }
+
+        .glow-on-hover {
+            width: 220px;
+            height: 50px;
+            border: 2px solid #ff00c3;
+            outline: none;
+            color: #fff;
+            background: rgba(255, 182, 193, 0.25)!important;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 50px;
+        }
+
+        .glow-on-hover:before {
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 50px;
+        }
+
+        .glow-on-hover:active {
+            color: #000
+        }
+
+        .glow-on-hover:active:after {
+            background: transparent;
+        }
+
+        .glow-on-hover:hover:before {
+            opacity: 1;
+        }
+
+        .glow-on-hover:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #111;
+            left: 0;
+            top: 0;
+            border-radius: 50px;
+        }
+
+        @keyframes glowing {
+            0% { background-position: 0 0; }
+            50% { background-position: 400% 0; }
+            100% { background-position: 0 0; }
+        }
+
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+		
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="trixi-polygons.jpg" alt="Background" class="background-image">
+        <div class="content">
+            <h1>TrixiVerse</h1>
+            <p>Reimagining Financial Intelligence for Gen Z</p>
+            <div class="buttons">
+                <a href="#"><button class="glow-on-hover">Medium</button></a>
+                <a href="#"><button class="glow-on-hover">Telegram</button></a>
+                <a href="#"><button class="glow-on-hover">DexScreener</button></a>
+            </div>
+<div class="small-text"><span>In a world where staying ahead in the market requires not just knowledge but also the right tools, Trixi is revolutionizing how insights are delivered and consumed.</span></div>
+        </div>
+        <img src="trixi-transparent.webp" alt="Fixed Image" class="fixed-image">
+    </div>
+</body>
+</html>
