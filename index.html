@@ -74,7 +74,19 @@
             font-size: 4rem;
             font-weight: bold;
             text-transform: uppercase;
-            background: linear-gradient(to right, #ff00c3, #d123ba, #7b2f97);
+            background: #ff00c3;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 5px rgba(255, 0, 195, 0.8), 0 0 10px rgba(209, 35, 186, 0.5);
+        }
+		
+		.pre-h1
+		{
+            margin: 0;
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: #ff00c3;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 0 0 5px rgba(255, 0, 195, 0.8), 0 0 10px rgba(209, 35, 186, 0.5);
@@ -100,13 +112,16 @@
 		
 		
 		.ca
-		{font-family:consolas;}
+		{font-family:consolas;
+		color:#ff00c3;
+		  transition: all .1s ease-in-out;}
 		
- .glow-on-hover
- {font-size:1.3em;
-   font-family: 'Poppins', bsans-serif;
-   font-weight:bold;}
-
+		.ca:hover
+		{
+		 text-shadow: 0 0 5px rgba(255, 0, 195, 0.8), 0 0 10px rgba(209, 35, 186, 0.5)
+		}
+		
+ 
         .buttons a {
             display: inline-block;
         }
@@ -192,88 +207,224 @@ filter: invert(25%) sepia(92%) saturate(3367%) hue-rotate(287deg) brightness(91%
         }
 		
         }
+		
+body {}
+button {
+  width:200px;
+  position: relative;
+  padding: 12px 35px;
+  background: #ff00c3;
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+  border: 3px solid transparent;);
+  border-radius: 8px;
+  box-shadow: 0 0 0 #fec1958c;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  box-shadow:0 0 5px rgba(255, 0, 195, 0.8), 0 0 10px rgba(209, 35, 186, 0.5);   
+}
 
-        .glow-on-hover {
-            width: 220px;
-            height: 50px;
-            border: 2px solid #ff00c3;
-            outline: none;
-            color: #fff;
-            background: rgba(255, 182, 193, 0.25)!important;
+.star-1 {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.star-2 {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-3 {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-4 {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all .8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-5 {
+  position: absolute;
+  top: 25%;
+  left: 45%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all .6s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-6 {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -5;
+  transition: all .8s ease;
+}
+
+button:hover {
+  background: transparent;
+  border:3px solid white;
+  box-shadow: 0 0 25px #fec1958c;
+}
+
+button:hover .star-1 {
+  position: absolute;
+  top: -80%;
+  left: -30%;
+  width: 25px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-2 {
+  position: absolute;
+  top: -25%;
+  left: 10%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-3 {
+  position: absolute;
+  top: 55%;
+  left: 25%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-4 {
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  width: 8px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-5 {
+  position: absolute;
+  top: 25%;
+  left: 115%;
+  width: 15px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+button:hover .star-6 {
+  position: absolute;
+  top: 5%;
+  left: 60%;
+  width: 5px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.fil0 {
+  fill: #FFFDEF
+}
+
+        .clickable-text {
             cursor: pointer;
-            position: relative;
-            z-index: 0;
-            border-radius: 50px;
+            text-decoration: underline;
         }
+		
 
-        .glow-on-hover:before {
-            content: '';
-            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            background-size: 400%;
-            z-index: -1;
-            filter: blur(5px);
-            width: calc(100% + 4px);
-            height: calc(100% + 4px);
-            animation: glowing 20s linear infinite;
-            opacity: 0;
-            transition: opacity .3s ease-in-out;
-            border-radius: 50px;
-        }
-
-        .glow-on-hover:active {
-            color: #000
-        }
-
-        .glow-on-hover:active:after {
-            background: transparent;
-        }
-
-        .glow-on-hover:hover:before {
-            opacity: 1;
-        }
-
-        .glow-on-hover:after {
-            z-index: -1;
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: #111;
-            left: 0;
-            top: 0;
-            border-radius: 50px;
-        }
-
-        @keyframes glowing {
-            0% { background-position: 0 0; }
-            50% { background-position: 400% 0; }
-            100% { background-position: 0 0; }
-        }
-
-        @keyframes backgroundAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+  
     </style>
 </head>
 <body>
     <div class="container">
         <img src="trixi-polygons.jpg" alt="Background" class="background-image">
         <div class="content">
+		<div class="pre-h1">Welcome to the</div>
             <h1>TrixiVerse</h1>
             <h2>Reimagining Financial Intelligence for Gen-Z</h2>
             <div class="buttons">
-                <a href="https://raydium.io/swap/?inputMint=sol&outputMint=BE7o6vC8c7yXbXYodksospGs6g58SFa68ziUHoMg733v" target="_blank"><button class="glow-on-hover">Buy on Radium  </button></a>
-                <!--<a href="#"><button class="glow-on-hover">Telegram</button></a>
-                <a href="#"><button class="glow-on-hover">DexScreener</button></a>-->
+             
+<a href="https://raydium.io/swap/?inputMint=sol&outputMint=BE7o6vC8c7yXbXYodksospGs6g58SFa68ziUHoMg733v" target="_blank"><button>Buy on Raydium
+  <div class="star-1">
+    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+  </div>
+  <div class="star-2">
+    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+  </div>
+  <div class="star-3">
+    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+  </div>
+  <div class="star-4">
+    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+  </div>
+  <div class="star-5">
+    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+  </div>
+  <div class="star-6">
+    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+  </div>
+</button></a>
+
+<a href="https://jup.ag/swap/SOL-BE7o6vC8c7yXbXYodksospGs6g58SFa68ziUHoMg733v" target="_blank"><button>Buy on Jupiter
+  <div class="star-1">
+    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+  </div>
+  <div class="star-2">
+    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+  </div>
+  <div class="star-3">
+    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+  </div>
+  <div class="star-4">
+    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+  </div>
+  <div class="star-5">
+    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+  </div>
+  <div class="star-6">
+    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
+  </div>
+</button></a>
+
             </div>
             <div class="small-text">
                 <div class="max-550px">In a world where staying ahead in the market requires not just knowledge but also the right tools, Trixi is revolutionizing how insights are delivered and consumed.</div>
-				<br><br><span>CA:</span> <span class="ca">BE7o6vC8c7yXbXYodksospGs6g58SFa68ziUHoMg733v</span>
+				<br><br><span>CA:</span> <span class="ca clickable-text" onclick="copyToClipboard()">BE7o6vC8c7yXbXYodksospGs6g58SFa68ziUHoMg733v</span>
             </div>
             <div class="icons">
                 <a href="https://medium.com/@trixi.verse"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256"><g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(4,4)"><path d="M18.99805,15c-9.37431,0.02204 -16.96202,7.62762 -16.96202,17.00195c0,9.37434 7.58771,16.97991 16.96202,17.00195c9.37431,-0.02204 16.96202,-7.62762 16.96202,-17.00195c0,-9.37434 -7.58771,-16.97991 -16.96202,-17.00195zM45.49805,16c-4.68747,0.02138 -8.48139,7.17943 -8.48139,16.00195c0,8.82252 3.79393,15.98057 8.48139,16.00195c4.68747,-0.02138 8.48139,-7.17943 8.48139,-16.00195c0,-8.82252 -3.79393,-15.98057 -8.48139,-16.00195zM58.5,17c-1.25251,-0.01344 -2.41123,2.84297 -3.03839,7.49012c-0.62716,4.64714 -0.62716,10.37654 0,15.02368c0.62716,4.64714 1.78588,7.50355 3.03839,7.49012c1.25251,0.01344 2.41123,-2.84297 3.03839,-7.49012c0.62716,-4.64714 0.62716,-10.37654 0,-15.02368c-0.62716,-4.64714 -1.78588,-7.50355 -3.03839,-7.49012z"></path></g></g></svg></a>
@@ -290,3 +441,12 @@ filter: invert(25%) sepia(92%) saturate(3367%) hue-rotate(287deg) brightness(91%
     </div>
 </body>
 </html>
+
+<script>
+function copyToClipboard() {
+            const textToCopy = "BE7o6vC8c7yXbXYodksospGs6g58SFa68ziUHoMg733v";
+            navigator.clipboard.writeText(textToCopy).catch(err => {
+                console.error("Failed to copy text: ", err);
+            });
+        }
+    </script>
