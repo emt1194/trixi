@@ -1,457 +1,605 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trixi Starverse - Reimagining Financial Intelligence for Gen-Z</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-		 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(195deg, #ff00c3, #d123ba, #a42dab, #7b2f97, #552b80, #342465, #181a48, #050b2b);
-            overflow: hidden;
-            font-family: 'Inter', sans-serif;
-            animation: backgroundAnimation 5s infinite linear;
-            background-size: 400% 400%;
+<!-- This site was created in Webflow. https://webflow.com -->
+<!-- Last Published: Tue Mar 18 2025 22:36:05 GMT+0000 (Coordinated Universal Time) -->
+<html data-wf-domain="trixi-2.webflow.io" data-wf-locale="en" data-wf-page="67d9b4bf16031fa6ad755211" data-wf-site="67d9b4bf16031fa6ad755164" data-wf-status="1" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Trixi AI</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/css/trixi-2.webflow.26b5fc04a.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect" />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      WebFont.load({
+        google: {
+          families: ["Outfit:300,regular,500,600,700,800,900", "Inter:regular,500,700,900"]
         }
-
-        .container {
-            position: relative;
-            width: 90%;
-            height: 90%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: inherit;
-            border: 10px solid transparent;
-            box-sizing: border-box;
-            background-clip: padding-box;
-            flex-wrap: wrap;
-            padding: 50px;
-        }
-
-        .background-image {
-            position: absolute;
-			border-radius:50px;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 1;
-            box-shadow:
-                inset 0 0 50px #fff, 
-                inset 20px 0 80px #f0f, 
-                inset -20px 0 80px #0ff, 
-                inset 20px 0 300px #f0f, 
-                inset -20px 0 300px #0ff, 
-                0 0 50px #fff,       
-                -10px 0 80px #f0f,      
-                10px 0 80px #0ff;     
-        }
-		
-.max-550px
-		{max-width:550px;
-				display:inline-block;}
-
-        .content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            color: white;
-            flex: 1 1 50%;
-            order: 1;
-        }
-
-        .content h1 {
-            margin: 0;
-            font-size: 4rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            background: #ff00c3;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 5px rgba(255, 0, 195, 0.8), 0 0 10px rgba(209, 35, 186, 0.5);
-        }
-		
-		.pre-h1
-		{
-            margin: 0;
-            font-size: 2rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            background: #ff00c3;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 5px rgba(255, 0, 195, 0.8), 0 0 10px rgba(209, 35, 186, 0.5);
-        }
-		
-		.content h2
-		{			 text-shadow: 0 0 5px rgba(255, 0, 195, 0.8), 0 0 10px rgba(209, 35, 186, 0.5);
-}
-
-        .content p {
-            margin: 10px 0;
-            font-size: 1.5rem;
-        }
-
-        .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-
-        }
-		
-		
-		
-		.ca
-		{font-family:consolas;
-		color:#ff00c3;
-		  transition: all .1s ease-in-out;}
-		
-		.ca:hover
-		{
-		 text-shadow: 0 0 5px rgba(255, 0, 195, 0.8), 0 0 10px rgba(209, 35, 186, 0.5)
-		}
-		
- 
-        .buttons a {
-            display: inline-block;
-        }
-		
-		svg:hover,svg:focus {
-filter: invert(25%) sepia(92%) saturate(3367%) hue-rotate(287deg) brightness(91%) contrast(131%);
-		}
-
-        .fixed-image {
-            flex: 1 1 50%;
-            order: 2;
-            position: relative;
-            max-height: 50vh;
-            width: auto;
-            object-fit: contain;
-            z-index: 3;
-
-        }
-
-        .small-text {
-            font-size: 1.1rem;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-
-        .icons {
-            margin-top: 20px;
-           
-                     align-items: center;
-            gap: 80px;
-        }
-
-        .icons svg {
-            width: 50px;
-            height: 50px;
-			margin-left:20px;
-			margin-right:20px;
-        }
-
-        @media (max-width: 960px) {
-            .buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            .container {
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .content {
-                order: 1;
-                flex: 1 1 100%;
-            }
-
-            .fixed-image {
-                order: 2;
-                flex: 1 1 100%;
-                width: 100%;
-                max-height: auto;
-            }
-			
-			.icons svg {
-            width: 40px;
-            height: 40px;
-			margin-left:10px;
-			margin-right:10px;
-        }
-		
-		.small-text {
-            padding-left:20px;
-			padding-right:20px;
-			font-size: .9rem;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-		
-		.container {
-            width: 100%;
-            height: 100%;
-           border: none;
-        }
-		
-.background-image {
-
-			border-radius:0px;
-		}
-        }
-		
-body {}
-button {
-  width:200px;
-  position: relative;
-  padding: 12px 35px;
-  background: #ff00c3;
-  font-size: 17px;
-  font-weight: 500;
-  color: white;
-  border: 3px solid transparent;);
-  border-radius: 8px;
-  box-shadow: 0 0 0 #fec1958c;
-  transition: all .3s ease-in-out;
-  cursor: pointer;
-  box-shadow:0 0 5px rgba(255, 0, 195, 0.8), 0 0 10px rgba(209, 35, 186, 0.5);   
-}
-
-.star-1 {
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  width: 25px;
-  height: auto;
-  filter: drop-shadow(0 0 0 #fffdef);
-  z-index: -5;
-  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
-}
-
-.star-2 {
-  position: absolute;
-  top: 45%;
-  left: 45%;
-  width: 15px;
-  height: auto;
-  filter: drop-shadow(0 0 0 #fffdef);
-  z-index: -5;
-  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
-}
-
-.star-3 {
-  position: absolute;
-  top: 40%;
-  left: 40%;
-  width: 5px;
-  height: auto;
-  filter: drop-shadow(0 0 0 #fffdef);
-  z-index: -5;
-  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
-}
-
-.star-4 {
-  position: absolute;
-  top: 20%;
-  left: 40%;
-  width: 8px;
-  height: auto;
-  filter: drop-shadow(0 0 0 #fffdef);
-  z-index: -5;
-  transition: all .8s cubic-bezier(0, 0.4, 0, 1.01);
-}
-
-.star-5 {
-  position: absolute;
-  top: 25%;
-  left: 45%;
-  width: 15px;
-  height: auto;
-  filter: drop-shadow(0 0 0 #fffdef);
-  z-index: -5;
-  transition: all .6s cubic-bezier(0, 0.4, 0, 1.01);
-}
-
-.star-6 {
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  width: 5px;
-  height: auto;
-  filter: drop-shadow(0 0 0 #fffdef);
-  z-index: -5;
-  transition: all .8s ease;
-}
-
-button:hover {
-  background: transparent;
-  border:3px solid white;
-  box-shadow: 0 0 25px #fec1958c;
-}
-
-button:hover .star-1 {
-  position: absolute;
-  top: -80%;
-  left: -30%;
-  width: 25px;
-  height: auto;
-  filter: drop-shadow(0 0 10px #fffdef);
-  z-index: 2;
-}
-
-button:hover .star-2 {
-  position: absolute;
-  top: -25%;
-  left: 10%;
-  width: 15px;
-  height: auto;
-  filter: drop-shadow(0 0 10px #fffdef);
-  z-index: 2;
-}
-
-button:hover .star-3 {
-  position: absolute;
-  top: 55%;
-  left: 25%;
-  width: 5px;
-  height: auto;
-  filter: drop-shadow(0 0 10px #fffdef);
-  z-index: 2;
-}
-
-button:hover .star-4 {
-  position: absolute;
-  top: 30%;
-  left: 80%;
-  width: 8px;
-  height: auto;
-  filter: drop-shadow(0 0 10px #fffdef);
-  z-index: 2;
-}
-
-button:hover .star-5 {
-  position: absolute;
-  top: 25%;
-  left: 115%;
-  width: 15px;
-  height: auto;
-  filter: drop-shadow(0 0 10px #fffdef);
-  z-index: 2;
-}
-
-button:hover .star-6 {
-  position: absolute;
-  top: 5%;
-  left: 60%;
-  width: 5px;
-  height: auto;
-  filter: drop-shadow(0 0 10px #fffdef);
-  z-index: 2;
-}
-
-.fil0 {
-  fill: #FFFDEF
-}
-
-        .clickable-text {
-            cursor: pointer;
-            text-decoration: underline;
-        }
-		
-
-  
-    </style>
-</head>
-<body>
-    <div class="container">
-        <img src="trixi-polygons.jpg" alt="Background" class="background-image">
-        <div class="content">
-		<div class="pre-h1">Welcome to the</div>
-            <h1>TrixiVerse</h1>
-            <h2>Reimagining Financial Intelligence for Gen-Z</h2>
-            <div class="buttons">
-             
-<a href="https://raydium.io/swap/?inputMint=sol&outputMint=BE7o6vC8c7yXbXYodksospGs6g58SFa68ziUHoMg733v" target="_blank"><button>Buy on Raydium
-  <div class="star-1">
-    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
-  </div>
-  <div class="star-2">
-    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
-  </div>
-  <div class="star-3">
-    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
-  </div>
-  <div class="star-4">
-    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
-  </div>
-  <div class="star-5">
-    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
-  </div>
-  <div class="star-6">
-    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
-  </div>
-</button></a>
-
-<a href="https://jup.ag/swap/SOL-BE7o6vC8c7yXbXYodksospGs6g58SFa68ziUHoMg733v" target="_blank"><button>Buy on Jupiter
-  <div class="star-1">
-    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
-  </div>
-  <div class="star-2">
-    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
-  </div>
-  <div class="star-3">
-    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
-  </div>
-  <div class="star-4">
-    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
-  </div>
-  <div class="star-5">
-    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
-  </div>
-  <div class="star-6">
-    <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><defs></defs><g id="Layer_x0020_1"><metadata id="CorelCorpID_0Corel-Layer"></metadata><path d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z" class="fil0"></path></g></svg>
-  </div>
-</button></a>
-
-            </div>
-            <div class="small-text">
-                <div class="max-550px">In a world where staying ahead in the market requires not just knowledge but also the right tools, Trixi is revolutionizing how insights are delivered and consumed.</div>
-				<br><br><span>CA:</span> <span class="ca clickable-text" onclick="copyToClipboard()">BE7o6vC8c7yXbXYodksospGs6g58SFa68ziUHoMg733v</span>
-            </div>
-            <div class="icons">
-                <a href="https://medium.com/@trixi.verse" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256"><g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(4,4)"><path d="M18.99805,15c-9.37431,0.02204 -16.96202,7.62762 -16.96202,17.00195c0,9.37434 7.58771,16.97991 16.96202,17.00195c9.37431,-0.02204 16.96202,-7.62762 16.96202,-17.00195c0,-9.37434 -7.58771,-16.97991 -16.96202,-17.00195zM45.49805,16c-4.68747,0.02138 -8.48139,7.17943 -8.48139,16.00195c0,8.82252 3.79393,15.98057 8.48139,16.00195c4.68747,-0.02138 8.48139,-7.17943 8.48139,-16.00195c0,-8.82252 -3.79393,-15.98057 -8.48139,-16.00195zM58.5,17c-1.25251,-0.01344 -2.41123,2.84297 -3.03839,7.49012c-0.62716,4.64714 -0.62716,10.37654 0,15.02368c0.62716,4.64714 1.78588,7.50355 3.03839,7.49012c1.25251,0.01344 2.41123,-2.84297 3.03839,-7.49012c0.62716,-4.64714 0.62716,-10.37654 0,-15.02368c-0.62716,-4.64714 -1.78588,-7.50355 -3.03839,-7.49012z"></path></g></g></svg></a>
-                <a href="https://t.me/TrixiVerse" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
-<g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M46.137,6.552c-0.75,-0.636 -1.928,-0.727 -3.146,-0.238h-0.002c-1.281,0.514 -36.261,15.518 -37.685,16.131c-0.259,0.09 -2.521,0.934 -2.288,2.814c0.208,1.695 2.026,2.397 2.248,2.478l8.893,3.045c0.59,1.964 2.765,9.21 3.246,10.758c0.3,0.965 0.789,2.233 1.646,2.494c0.752,0.29 1.5,0.025 1.984,-0.355l5.437,-5.043l8.777,6.845l0.209,0.125c0.596,0.264 1.167,0.396 1.712,0.396c0.421,0 0.825,-0.079 1.211,-0.237c1.315,-0.54 1.841,-1.793 1.896,-1.935l6.556,-34.077c0.4,-1.82 -0.156,-2.746 -0.694,-3.201zM22,32l-3,8l-3,-10l23,-17z"></path></g></g>
-</svg></a>
-                <a href="https://www.dextools.io/app/en/solana/pair-explorer/JA2UJrZLxwY5puk6yNAS63FEA83o7xgriEFp8yqMWeLq?t=1737567777014" target="_blank"><svg fill="none" height="2500" viewBox="0 -.058 754.779 867.058" width="2174" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="m280.395 49.025c-51.649 26.905-93.905 49.672-93.896 50.598.023 2.39 123.959 65.156 128.358 65.003 2.001-.067 16.517-6.749 32.256-14.847l28.621-14.721 31.258 16.067 31.256 16.07 51.188-23.001c77.13-34.659 85.141-38.457 83.885-39.733-1.666-1.693-29.331-16.555-104.388-56.07-36.274-19.098-71.481-37.823-78.24-41.612-6.758-3.789-13.21-6.837-14.337-6.778s-44.311 22.12-95.961 49.024zm-226.532 117.306-53.766 27.772v121.886c0 67.038.706 121.885 1.572 121.885.863 0 27.316-11.467 58.783-25.482l57.213-25.482v-128.476l27.958 15.232a33224.294 33224.294 0 0 0 64.671 35.109l36.712 19.877 16.336-7.387a3822.03 3822.03 0 0 0 30.674-14.056c7.885-3.672 27.241-12.39 43.012-19.377 15.771-6.99 30.37-14.019 32.44-15.621 2.75-2.128-30.782-20.658-124.025-68.54-70.285-36.093-130.046-65.509-132.802-65.368s-29.206 12.752-58.778 28.028zm529.148 7.799c-36.618 16.531-66.604 30.717-66.638 31.526-.032.808 19.926 12.675 44.354 26.367 24.426 13.695 44.412 25.632 44.412 26.531 0 .897-21.615 11.37-48.03 23.278-26.419 11.905-93.194 42.061-148.393 67.014l-184.954 83.602c-46.525 21.032-88.462 39.989-93.193 42.132-95.03 43.019-121.15 54.956-124.737 57.005-3.607 2.063-4.424 14.048-5.066 74.201l-.766 71.744 48.08 24.498 48.079 24.497 66.669-30.088c36.669-16.547 66.669-30.953 66.669-32.014 0-1.058-6.776-5.473-15.054-9.815-8.282-4.342-25.378-13.954-37.995-21.364-12.616-7.411-25.196-14.21-27.958-15.112-2.761-.899-4.98-2.472-4.935-3.498.046-1.023 29.404-14.968 65.236-30.991 69.597-31.117 122.858-55.1 237.202-106.809a305577.39 305577.39 0 0 1 153.411-69.31c44.948-20.288 97.208-43.983 116.134-52.655l34.41-15.767.765-72.561.769-72.558-48.765-25.03c-26.822-13.765-49.748-24.994-50.95-24.953-1.201.038-32.141 13.595-68.756 30.13zm153.872 261.772c-7.186 3.51-21.38 10.082-31.542 14.603s-29.446 13.222-42.852 19.339l-24.374 11.117-.556 63.702c-.307 35.035-1.597 63.545-2.867 63.36-2.885-.429-48.567-23.857-94.487-48.463-33.143-17.757-35.225-18.463-43.013-14.606-4.502 2.231-31.413 14.3-59.801 26.825-28.389 12.523-52.541 23.587-53.677 24.589-1.133 1 56.002 31.967 126.97 68.819l129.029 67.003 55.119-28.513c30.312-15.68 56.088-29.983 57.275-31.782 2.672-4.045 2.443-242.93-.232-242.607-1.058.127-7.806 3.104-14.992 6.614zm-305.227 280.391a25013.26 25013.26 0 0 0 -28.675 12.349c-28.856 12.484-23.201 12.898-57.531-4.192-22.865-11.382-32.721-14.894-36.999-13.189-3.209 1.278-30.826 13.703-61.376 27.61-30.548 13.907-56.602 25.285-57.898 25.285-12.817 0 8.491 12.731 90.714 54.207l96.428 48.637 40.572-20.03c22.315-11.017 67.323-33.078 100.021-49.024 32.695-15.95 59.042-29.413 58.549-29.921-.497-.506-27.893-14.574-60.883-31.262l-59.982-30.338z" fill="#ffffff" fill-rule="evenodd"/></svg></a>
-                <a href="https://dexscreener.com/solana/ja2ujrzlxwy5puk6ynas63fea83o7xgriefp8yqmwelq" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" fill="#fff" fill-rule="evenodd" class="chakra-icon custom-euf446" viewBox="0 0 252 300"><path d="M151.818 106.866c9.177-4.576 20.854-11.312 32.545-20.541 2.465 5.119 2.735 9.586 1.465 13.193-.9 2.542-2.596 4.753-4.826 6.512-2.415 1.901-5.431 3.285-8.765 4.033-6.326 1.425-13.712.593-20.419-3.197m1.591 46.886 12.148 7.017c-24.804 13.902-31.547 39.716-39.557 64.859-8.009-25.143-14.753-50.957-39.556-64.859l12.148-7.017a5.95 5.95 0 0 0 3.84-5.845c-1.113-23.547 5.245-33.96 13.821-40.498 3.076-2.342 6.434-3.518 9.747-3.518s6.671 1.176 9.748 3.518c8.576 6.538 14.934 16.951 13.821 40.498a5.95 5.95 0 0 0 3.84 5.845zM126 0c14.042.377 28.119 3.103 40.336 8.406 8.46 3.677 16.354 8.534 23.502 14.342 3.228 2.622 5.886 5.155 8.814 8.071 7.897.273 19.438-8.5 24.796-16.709-9.221 30.23-51.299 65.929-80.43 79.589-.012-.005-.02-.012-.029-.018-5.228-3.992-11.108-5.988-16.989-5.988s-11.76 1.996-16.988 5.988c-.009.005-.017.014-.029.018-29.132-13.66-71.209-49.359-80.43-79.589 5.357 8.209 16.898 16.982 24.795 16.709 2.929-2.915 5.587-5.449 8.814-8.071C69.31 16.94 77.204 12.083 85.664 8.406 97.882 3.103 111.959.377 126 0m-25.818 106.866c-9.176-4.576-20.854-11.312-32.544-20.541-2.465 5.119-2.735 9.586-1.466 13.193.901 2.542 2.597 4.753 4.826 6.512 2.416 1.901 5.432 3.285 8.766 4.033 6.326 1.425 13.711.593 20.418-3.197"/><path d="M197.167 75.016c6.436-6.495 12.107-13.684 16.667-20.099l2.316 4.359c7.456 14.917 11.33 29.774 11.33 46.494l-.016 26.532.14 13.754c.54 33.766 7.846 67.929 24.396 99.193l-34.627-27.922-24.501 39.759-25.74-24.231L126 299.604l-41.132-66.748-25.739 24.231-24.501-39.759L0 245.25c16.55-31.264 23.856-65.427 24.397-99.193l.14-13.754-.016-26.532c0-16.721 3.873-31.578 11.331-46.494l2.315-4.359c4.56 6.415 10.23 13.603 16.667 20.099l-2.01 4.175c-3.905 8.109-5.198 17.176-2.156 25.799 1.961 5.554 5.54 10.317 10.154 13.953 4.48 3.531 9.782 5.911 15.333 7.161 3.616.814 7.3 1.149 10.96 1.035-.854 4.841-1.227 9.862-1.251 14.978L53.2 160.984l25.206 14.129a41.926 41.926 0 0 1 5.734 3.869c20.781 18.658 33.275 73.855 41.861 100.816 8.587-26.961 21.08-82.158 41.862-100.816a41.865 41.865 0 0 1 5.734-3.869l25.206-14.129-32.665-18.866c-.024-5.116-.397-10.137-1.251-14.978 3.66.114 7.344-.221 10.96-1.035 5.551-1.25 10.854-3.63 15.333-7.161 4.613-3.636 8.193-8.399 10.153-13.953 3.043-8.623 1.749-17.689-2.155-25.799l-2.01-4.175z"/></svg></a>
-                <a href="https://x.com/trixi_verse" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 256 256"><path fill="#fff" stroke-miterlimit="10" d="m26.37 26-8.795-12.822.015.012L25.52 4h-2.65l-6.46 7.48L11.28 4H4.33l8.211 11.971-.001-.001L3.88 26h2.65l7.182-8.322L19.42 26zM10.23 6l12.34 18h-2.1L8.12 6z" font-family="none" font-size="none" font-weight="none" style="mix-blend-mode:normal" text-anchor="none" transform="scale(8.53333)"/></svg></a>
-            </div>
-
-        </div>
-        <img src="trixi-transparent.webp" alt="Fixed Image" class="fixed-image">
-    </div>
-</body>
-</html>
-
-<script>
-function copyToClipboard() {
-            const textToCopy = "BE7o6vC8c7yXbXYodksospGs6g58SFa68ziUHoMg733v";
-            navigator.clipboard.writeText(textToCopy).catch(err => {
-                console.error("Failed to copy text: ", err);
-            });
-        }
+      });
     </script>
+    <script type="text/javascript">
+      ! function(o, c) {
+        var n = c.documentElement,
+          t = " w-mod-";
+        n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
+      }(window, document);
+    </script>
+    <link href="https://cdn.prod.website-files.com/66d87bb582928970cd067300/66ec1fb7d23f917326364244_icon%20(28)%201%20(3).png" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://cdn.prod.website-files.com/66d87bb582928970cd067300/66ec1fc0a9b37895f4ee49e6_icon%20(28)%201%20(4).png" rel="apple-touch-icon" />
+    <style>
+      .w-webflow-badge {
+        position: fixed !important;
+        display: None !important;
+        visibility: hidden !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="noise-background"></div>
+    <div class="navigation w-nav" data-animation="default" data-collapse="none" data-duration="400" data-easing="ease" data-easing2="ease" id="Hero" role="banner">
+      <div class="container">
+        <div class="navigation-content-wrap">
+          <div class="navigation-left">
+            <a aria-current="page" class="brand w-nav-brand w--current" href="/">
+              <img alt="" class="logo" height="Auto" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b6122d1b57f9f2203418_trixi-vector-final.svg" width="Auto" />
+            </a>
+          </div>
+          <div class="navigation-right">
+            <a class="nav-link w-inline-block" href="#" target="_blank">
+              <div class="nav-link-title">Open Trixi</div>
+            </a>
+            <nav class="nav-menu w-nav-menu" role="navigation">
+              <div class="dropdown w-dropdown" data-delay="0" data-hover="false">
+                <div class="dropdown-toggle w-dropdown-toggle">
+                  <div class="nav-dropdown-line top-line"></div>
+                  <div class="nav-dropdown-line bottom-line"></div>
+                </div>
+                <nav class="navigation-dropdown w-dropdown-list">
+                  <div class="dropdown-pointer">
+                    <div class="dropdown-wrapper">
+                      <a aria-current="page" class="dropdown-link w-inline-block w--current" href="/">
+                        <div class="dropdown-title">Home</div>
+                      </a>
+                      <a class="dropdown-link w-inline-block" href="/#about">
+                        <div class="dropdown-title">About</div>
+                      </a>
+                      <a class="dropdown-link w-inline-block" href="/#features">
+                        <div class="dropdown-title">Features</div>
+                      </a>
+                      <a class="dropdown-link w-inline-block" href="/#pricing">
+                        <div class="dropdown-title">Pricing</div>
+                      </a>
+                      <a class="dropdown-link w-inline-block" href="/#blog">
+                        <div class="dropdown-title">Docs</div>
+                      </a>
+                      <a class="dropdown-link w-inline-block" href="/#faqs">
+                        <div class="dropdown-title">FAQs</div>
+                      </a>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="hero-section">
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="hero-content-wrap" data-w-id="69e0a2f9-f3bf-9338-901f-48eec13422b8">
+          <div class="hero-text-wrap">
+            <div class="hero-heading-wrap">
+              <h1 class="hero-heading sm-heading-1">The Ultimate AI <span class="purple-span">Trench</span> Assistant </h1>
+            </div>
+            <div class="hero-paragraph-wrap">
+              <p class="hero-paragraph">A continuously improving sentiment analysis &amp; trading agent </p>
+            </div>
+            <div class="hero-buttons-wrap">
+              <a class="primary-button w-button" href="#">Open Trixi</a>
+              <a class="sm-paragraph white w-inline-block" href="#" target="_blank">
+                <div>Find out more</div>
+              </a>
+            </div>
+          </div>
+          <img alt="3d Element" class="hero-section-image" loading="eager" sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 940px" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9be8012f339dad87809be_trixi-transparent-1.webp" srcset="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9be8012f339dad87809be_trixi-transparent-1-p-500.webp 500w, https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9be8012f339dad87809be_trixi-transparent-1-p-800.webp 800w, https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9be8012f339dad87809be_trixi-transparent-1.webp 1000w" />
+        </div>
+      </div>
+    </section>
+    <section class="partners-slider-section" style="opacity:0">
+      <div class="w-layout-blockcontainer partners-section-container w-container">
+        <div class="partners-section-fade-wrap">
+          <div class="partners-section-fade"></div>
+          <div class="partners-section-fade right-side"></div>
+        </div>
+        <div class="partners-logos-wrap" data-w-id="300704f1-9ff4-6769-ac07-fb3e289a7831">
+          <div class="partners-logos">
+            <img alt="Partner Logo" class="partner-logo" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 748px" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755263_Partner%20Logo%201.png" srcset="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755263_Partner%2520Logo%25201-p-500.png 500w, https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755263_Partner%20Logo%201.png 748w" />
+            <img alt="Partner Logo" class="partner-logo" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 926px) 95vw, 880px" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755256_Partner%20Logo%202.png" srcset="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755256_Partner%2520Logo%25202-p-500.png 500w, https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755256_Partner%20Logo%202.png 880w" />
+            <img alt="Partner Logo" class="partner-logo" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755264_Partner%20Logo%203.png" />
+            <img alt="Partner Logo" class="partner-logo" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad75526b_Partner%20Logo%204.png" />
+            <img alt="Partner Logo" class="partner-logo" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 744px" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755268_Partner%20Logo%205.png" srcset="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755268_Partner%2520Logo%25205-p-500.png 500w, https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755268_Partner%20Logo%205.png 744w" />
+            <img alt="Partner Logo" class="partner-logo" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 850px) 95vw, 808px" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755252_Partner%20Logo%206.png" srcset="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755252_Partner%2520Logo%25206-p-500.png 500w, https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755252_Partner%20Logo%206.png 808w" />
+          </div>
+          <div class="partners-logos">
+            <img alt="Partner Logo" class="partner-logo" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 748px" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755263_Partner%20Logo%201.png" srcset="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755263_Partner%2520Logo%25201-p-500.png 500w, https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755263_Partner%20Logo%201.png 748w" />
+            <img alt="Partner Logo" class="partner-logo" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 926px) 95vw, 880px" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755256_Partner%20Logo%202.png" srcset="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755256_Partner%2520Logo%25202-p-500.png 500w, https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755256_Partner%20Logo%202.png 880w" />
+            <img alt="Partner Logo" class="partner-logo" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755264_Partner%20Logo%203.png" />
+            <img alt="Partner Logo" class="partner-logo" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad75526b_Partner%20Logo%204.png" />
+            <img alt="Partner Logo" class="partner-logo" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 744px" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755268_Partner%20Logo%205.png" srcset="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755268_Partner%2520Logo%25205-p-500.png 500w, https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755268_Partner%20Logo%205.png 744w" />
+            <img alt="Partner Logo" class="partner-logo" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 850px) 95vw, 808px" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755252_Partner%20Logo%206.png" srcset="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755252_Partner%2520Logo%25206-p-500.png 500w, https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755252_Partner%20Logo%206.png 808w" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section overflow-visible" id="how-it-works">
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="section-text-wrap" data-w-id="5b758282-39e7-a6ff-13ea-0602179e0890" style="opacity:0">
+          <div class="section-heading-wrap">
+            <h2 class="section-heading">Amazing As <span class="purple-span">Fuck</span>
+            </h2>
+          </div>
+          <div class="section-paragraph-wrap">
+            <p class="section-paragraph">Discover how our AI-Powered Design Assistant transforms your ideas into stunning designs effortlessly. Follow these simple steps to turn your vision into reality.</p>
+          </div>
+        </div>
+        <div class="w-layout-grid how-it-works-grid">
+          <div class="how-it-works-card" data-w-id="460e0661-0cd5-631f-5245-b53ead828203" style="opacity:0">
+            <div class="how-it-works-icon-wrap">
+              <img alt="Upload Icon" class="how-it-works-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9c3a0e5c24b86eb92a2e7_x-cloud.png" />
+            </div>
+            <div class="how-it-works-heading-wrap">
+              <h3>Social Analysis</h3>
+            </div>
+            <div class="how-it-works-paragraph-wrap">
+              <p class="how-it-works-paragraph sm-paragraph">Verify a project just from their X account. Rug? Legit? Trixi knows.</p>
+            </div>
+          </div>
+          <div class="how-it-works-card" data-w-id="c208b08e-4d0d-52ce-96a4-d0420d0067b0" style="opacity:0">
+            <div class="how-it-works-icon-wrap">
+              <img alt="Sparkles Icon" class="how-it-works-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755266_sparkles%20Icon.png" />
+            </div>
+            <div class="how-it-works-heading-wrap">
+              <h3 class="how-it-works-heading">Trading Engine</h3>
+            </div>
+            <div class="how-it-works-paragraph-wrap">
+              <p class="how-it-works-paragraph sm-paragraph">Trixi’s a badass trader, and she’ll show you her gains, on-chain. Token holders will receive dividends from Trixi’s trading successes.</p>
+            </div>
+          </div>
+          <div class="how-it-works-card" data-w-id="db907146-faeb-2901-c6d5-c1f2510ea43c" style="opacity:0">
+            <div class="how-it-works-icon-wrap">
+              <img alt="Rocket Icon" class="how-it-works-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad75523e_Rocket%20Icon.png" />
+            </div>
+            <div class="how-it-works-heading-wrap">
+              <h3 class="how-it-works-heading">Content Creation <br />
+              </h3>
+            </div>
+            <div class="how-it-works-paragraph-wrap">
+              <p class="how-it-works-paragraph sm-paragraph">“Hey, Trixi, check out SomeCoin and if it’s legit, buy $200 of it”. She’ll fucking do it, bro</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="features">
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="features-wrap">
+          <div class="feature-content-wrap" data-w-id="48ad7584-d419-1d55-8393-2190d8d468f7" style="opacity:0">
+            <div class="feature-text-wrap">
+              <div class="feature-heading-wrap">
+                <h3 class="feature-heading">Risk Management</h3>
+              </div>
+              <div class="feature-paragraph-wrap">
+                <p class="feature-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+            </div>
+            <div class="feature-image-wrap">
+              <img alt="Feature Image" class="feature-image" height="Auto" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 940px" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9bef806ffaa93e2c665c6_trixi-preview-3.jpg" srcset="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9bef806ffaa93e2c665c6_trixi-preview-3-p-500.jpg 500w, https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9bef806ffaa93e2c665c6_trixi-preview-3-p-800.jpg 800w, https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9bef806ffaa93e2c665c6_trixi-preview-3-p-1080.jpg 1080w, https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9bef806ffaa93e2c665c6_trixi-preview-3.jpg 1285w" width="Auto" />
+            </div>
+          </div>
+          <div class="feature-content-wrap reversed-direction" data-w-id="57111d9d-55bf-bf20-2654-9a05ed2e035a" style="opacity:0">
+            <div class="feature-text-wrap">
+              <div class="feature-heading-wrap">
+                <h3 class="feature-heading">Sentiment Analysis</h3>
+              </div>
+              <div class="feature-paragraph-wrap">
+                <p class="feature-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+            </div>
+            <div class="feature-image-wrap">
+              <img alt="Feature Image" class="feature-image" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 940px" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9bef65010608ac9b9b743_trixi-preview-4.jpg" srcset="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9bef65010608ac9b9b743_trixi-preview-4-p-500.jpg 500w, https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9bef65010608ac9b9b743_trixi-preview-4-p-800.jpg 800w, https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9bef65010608ac9b9b743_trixi-preview-4-p-1080.jpg 1080w, https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9bef65010608ac9b9b743_trixi-preview-4.jpg 1287w" />
+            </div>
+          </div>
+          <div class="feature-content-wrap" data-w-id="626c0d0e-92f8-44d1-dfe4-e9971962a75a" style="opacity:0">
+            <div class="feature-text-wrap">
+              <div class="feature-heading-wrap">
+                <h3 class="feature-heading">Natural Language Trading</h3>
+              </div>
+              <div class="feature-paragraph-wrap">
+                <p class="feature-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+              <a class="primary-button w-button" href="https://try.webflow.com/free-najmai" target="_blank">Get Started</a>
+            </div>
+            <div class="feature-image-wrap">
+              <img alt="Feature Image" class="feature-image" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 940px" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9befa6389d50b544c08f5_trixi-preview-2.jpg" srcset="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9befa6389d50b544c08f5_trixi-preview-2-p-500.jpg 500w, https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9befa6389d50b544c08f5_trixi-preview-2-p-800.jpg 800w, https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9befa6389d50b544c08f5_trixi-preview-2-p-1080.jpg 1080w, https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9befa6389d50b544c08f5_trixi-preview-2.jpg 1297w" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="pricing">
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="section-text-wrap" data-w-id="69881b17-21b4-5238-e27a-d68debd5e9b5" style="opacity:0">
+          <div class="section-heading-wrap">
+            <h2 class="section-heading">Trixi <span class="purple-span">Pricing</span>
+            </h2>
+          </div>
+          <div class="section-paragraph-wrap">
+            <p class="section-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </div>
+        <div class="pricing-content-wrap">
+          <div class="pricing-switch-wrap" data-w-id="1cd80dea-b926-c697-e72b-3665bfca8dd6">
+            <p class="sm-paragraph">Monthly</p>
+            <div class="switch" data-w-id="1cd80dea-b926-c697-e72b-3665bfca8dd9">
+              <div class="switcher"></div>
+            </div>
+            <p class="sm-paragraph">Yearly</p>
+          </div>
+          <div class="pricing-plans-wrap monthly" data-w-id="d9e71d59-2c53-5ea1-288b-4202c7fc1fa2">
+            <div class="pricing-cards-wrap monthly">
+              <div class="pricing-card">
+                <div class="card-top">
+                  <p class="sm-paragraph">Always Free <br />
+                  </p>
+                  <p class="pricing-card-price">FREE</p>
+                  <p class="sm-paragraph">Free forever</p>
+                  <div class="divider"></div>
+                  <div class="pricing-card-features">
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">Basic AI-generated designs</p>
+                    </div>
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">Access to customization tools</p>
+                    </div>
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">Standard templates library</p>
+                    </div>
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">5 projects per month</p>
+                    </div>
+                  </div>
+                </div>
+                <a class="outline-button w-button" href="https://try.webflow.com/free-najmai">Get Started</a>
+              </div>
+              <div class="pricing-card purple-bg">
+                <div class="card-top">
+                  <p class="sm-paragraph">FREE TRIAL</p>
+                  <p class="pricing-card-price">1m $TRIXI</p>
+                  <p class="sm-paragraph">Billed Monthly</p>
+                  <div class="divider"></div>
+                  <div class="pricing-card-features">
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">Advanced AI-generated designs</p>
+                    </div>
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">Full access to customization tools</p>
+                    </div>
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">Premium templates library</p>
+                    </div>
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">Unlimited projects</p>
+                    </div>
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">Real-time collaboration</p>
+                    </div>
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">Priority email support</p>
+                    </div>
+                  </div>
+                </div>
+                <a class="white-button w-button" href="https://try.webflow.com/free-najmai">Get Started</a>
+              </div>
+              <div class="pricing-card">
+                <div class="card-top">
+                  <p class="sm-paragraph">FREE TRIAL</p>
+                  <p class="pricing-card-price">5m $TRIXI</p>
+                  <p class="sm-paragraph">Billed Monthly</p>
+                  <div class="divider"></div>
+                  <div class="pricing-card-features">
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">All features included in Pro Plan</p>
+                    </div>
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">Dedicated account manager</p>
+                    </div>
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">Custom AI solutions and designs</p>
+                    </div>
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">Onboarding and training sessions</p>
+                    </div>
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">24/7 priority support</p>
+                    </div>
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">Advanced analytics and reporting</p>
+                    </div>
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">Secure cloud storage</p>
+                    </div>
+                  </div>
+                </div>
+                <a class="outline-button w-button" href="https://try.webflow.com/free-najmai">Get Started</a>
+              </div>
+            </div>
+            <div class="pricing-cards-wrap yearly">
+              <div class="pricing-card">
+                <div class="card-top">
+                  <p class="sm-paragraph">FREE</p>
+                  <p class="pricing-card-price">$0/m</p>
+                  <p class="sm-paragraph">Free forever</p>
+                  <div class="divider"></div>
+                  <div class="pricing-card-features">
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">Basic AI-generated designs</p>
+                    </div>
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">Access to customization tools</p>
+                    </div>
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">Standard templates library</p>
+                    </div>
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">5 projects per month</p>
+                    </div>
+                  </div>
+                </div>
+                <a class="outline-button w-button" href="https://try.webflow.com/free-najmai" target="_blank">Get Started</a>
+              </div>
+              <div class="pricing-card purple-bg">
+                <div class="card-top">
+                  <p class="sm-paragraph">FREE</p>
+                  <p class="pricing-card-price">$11.93/m</p>
+                  <p class="sm-paragraph">Billed Yearly</p>
+                  <div class="divider"></div>
+                  <div class="pricing-card-features">
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">Advanced AI-generated designs</p>
+                    </div>
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">Full access to customization tools</p>
+                    </div>
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">Premium templates library</p>
+                    </div>
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">Unlimited projects</p>
+                    </div>
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">Real-time collaboration</p>
+                    </div>
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">Priority email support</p>
+                    </div>
+                  </div>
+                </div>
+                <a class="white-button w-button" href="https://try.webflow.com/free-najmai" target="_blank">Get Started</a>
+              </div>
+              <div class="pricing-card">
+                <div class="card-top">
+                  <p class="sm-paragraph">FREE</p>
+                  <p class="pricing-card-price">$24.93/m</p>
+                  <p class="sm-paragraph">Billed Yearly</p>
+                  <div class="divider"></div>
+                  <div class="pricing-card-features">
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">All features included in Pro Plan</p>
+                    </div>
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">Dedicated account manager</p>
+                    </div>
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">Custom AI solutions and designs</p>
+                    </div>
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">Onboarding and training sessions</p>
+                    </div>
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">24/7 priority support</p>
+                    </div>
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">Advanced analytics and reporting</p>
+                    </div>
+                    <div class="pricing-card-feature">
+                      <img alt="" class="pricing-card-check-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755250_Check%20Icon.svg" />
+                      <p class="md-paragraph">Secure cloud storage</p>
+                    </div>
+                  </div>
+                </div>
+                <a class="outline-button w-button" href="https://try.webflow.com/free-najmai" target="_blank">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="integrations">
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="w-layout-blockcontainer container w-container">
+          <div class="hero-content-wrap-2" data-w-id="064038dd-8e18-03de-292f-54174e79f495" style="opacity:0">
+            <div class="hero-text-wrap"></div>
+            <div class="hero-text-wrap">
+              <div class="hero-heading-wrap" style="opacity:0;-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)">
+                <h1 class="hero-heading-2 sm-heading-2">Here's <span class="purple-span">A Bunch</span> of Information </h1>
+              </div>
+              <div class="hero-paragraph-wrap" style="opacity:0;-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)">
+                <p class="hero-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              </div>
+              <div class="hero-paragraph-wrap" style="opacity:0;-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)">
+                <p class="hero-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              </div>
+              <div class="hero-paragraph-wrap" style="opacity:0;-webkit-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 30px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)">
+                <p class="hero-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              </div>
+            </div>
+            <img alt="3d Element" class="hero-section-2-trix" loading="eager" sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 940px" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9ec36b8cc5971ff6d2aca_trixi-transparent-2.webp" srcset="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9ec36b8cc5971ff6d2aca_trixi-transparent-2-p-500.webp 500w, https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9ec36b8cc5971ff6d2aca_trixi-transparent-2-p-800.webp 800w, https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9ec36b8cc5971ff6d2aca_trixi-transparent-2.webp 1029w" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="faqs">
+      <div class="w-layout-blockcontainer container w-container" data-w-id="dcde785a-e5dd-94ea-9db3-359f6c515bde">
+        <div class="faqs-content-wrap">
+          <div class="section-text-wrap">
+            <div class="section-heading-wrap">
+              <h2 class="section-heading">Frequently Asked <span class="purple-span">Questions</span>
+              </h2>
+            </div>
+            <div class="section-paragraph-wrap">
+              <p class="section-paragraph">Have questions about our Trixi? Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?</p>
+            </div>
+          </div>
+          <div class="faqs-list-wrap">
+            <div class="faq-wrapper">
+              <div class="faq-header">
+                <div class="faq-question">Question question question </div>
+                <img alt="" class="faq-header-icon" loading="eager" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755251_Chevron-Icon.svg" />
+              </div>
+              <div class="faq-answer-wrap">
+                <p class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+            </div>
+            <div class="faq-wrapper">
+              <div class="faq-header">
+                <div class="faq-question">Question question question </div>
+                <img alt="" class="faq-header-icon" loading="eager" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755251_Chevron-Icon.svg" />
+              </div>
+              <div class="faq-answer-wrap">
+                <p class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+            </div>
+            <div class="faq-wrapper">
+              <div class="faq-header">
+                <div class="faq-question">Question question question </div>
+                <img alt="" class="faq-header-icon" loading="eager" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755251_Chevron-Icon.svg" />
+              </div>
+              <div class="faq-answer-wrap">
+                <p class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+            </div>
+            <div class="faq-wrapper">
+              <div class="faq-header">
+                <div class="faq-question">Question question question </div>
+                <img alt="" class="faq-header-icon" loading="eager" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755251_Chevron-Icon.svg" />
+              </div>
+              <div class="faq-answer-wrap">
+                <p class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+            </div>
+            <div class="faq-wrapper">
+              <div class="faq-header">
+                <div class="faq-question">Question question question </div>
+                <img alt="" class="faq-header-icon" loading="eager" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755251_Chevron-Icon.svg" />
+              </div>
+              <div class="faq-answer-wrap">
+                <p class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+            </div>
+            <div class="faq-wrapper last-child">
+              <div class="faq-header">
+                <div class="faq-question">Question question question </div>
+                <img alt="" class="faq-header-icon" loading="eager" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755251_Chevron-Icon.svg" />
+              </div>
+              <div class="faq-answer-wrap">
+                <p class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cta-section section">
+      <div class="w-layout-blockcontainer container w-container">
+        <div class="cta-content-wrap" data-w-id="f2d10b95-5678-df1a-3319-4eca71829e74">
+          <div class="cta-section-content-wrap">
+            <div class="section-heading-wrap">
+              <h2 class="section-heading">Start Your <span class="purple-span">Journey</span> With Trixi </h2>
+            </div>
+            <div class="section-paragraph-wrap">
+              <p class="section-paragraph">Sign up now and experience the power of AI-driven something something something something something something </p>
+            </div>
+            <div class="cta-button-wrap">
+              <a class="primary-button w-button" href="https://try.webflow.com/free-najmai" target="_blank">Get Started</a>
+            </div>
+          </div>
+          <img alt="3d Element" class="cta-section-image" loading="eager" sizes="(max-width: 767px) 100vw, (max-width: 842px) 95vw, 800px" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9ee4f2118d7bd3c490d31_planet-2.webp" srcset="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9ee4f2118d7bd3c490d31_planet-2-p-500.webp 500w, https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9ee4f2118d7bd3c490d31_planet-2.webp 800w" />
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <a aria-current="page" class="brand w-nav-brand w--current" href="/">
+            <img alt="" class="logo" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9f3ed78a8d3f2f675b2a3_trixiai-vector.svg" />
+          </a>
+          <div class="footer-links-wrap">
+            <a aria-current="page" class="footer-link w--current" href="/">Home</a>
+            <a class="footer-link" href="#">About</a>
+            <a class="footer-link" href="/#features">Features</a>
+            <a class="footer-link" href="/#pricing">Pricing</a>
+            <a class="footer-link" href="/#blog">Docs</a>
+            <a class="footer-link" href="/#faqs">FAQs</a>
+          </div>
+        </div>
+        <div class="footer-divider-two"></div>
+        <div class="footer-bottom">
+          <div class="footer-copyright">Made by Cunts | Powered by Solana
+          </div>
+          <div class="footer-legal-block">
+            <a class="footer-gray-link" href="/info/licenses">Privacy Information</a>
+            <a class="footer-gray-link" href="/info/changelog">Discord</a>
+            <a class="footer-gray-link" href="/info/style-guide">Telegram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script crossorigin="anonymous" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=67d9b4bf16031fa6ad755164" type="text/javascript"></script>
+    <script src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/js/webflow.schunk.4a394eb5af8156f2.js" type="text/javascript"></script>
+    <script src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/js/webflow.schunk.71cad5b44ed35d66.js" type="text/javascript"></script>
+    <script src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/js/webflow.2db8628f.9a73a2450f3b9a65.js" type="text/javascript"></script>
+  </body>
+</html>
