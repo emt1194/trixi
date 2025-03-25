@@ -38,6 +38,12 @@ div.w-layout-blockcontainer.container.w-container
 }
 #Hero, .hero-content-wrap 
 {margin-left:40px;}
+
+div.navigation-left a.brand.w-nav-brand
+{
+    margin-left:0px;
+}
+
 .feature-content-wrap
 {
     margin-left:20px;
@@ -48,6 +54,18 @@ div.w-layout-blockcontainer.container.w-container
 }
 
 @media screen and (max-width: 991px) {
+
+.grid-thirds
+{
+    margin-left:0px;
+    margin-right:0px;
+    max-width:100%;
+}
+
+.modified-container
+{
+    padding-right:0px;
+}
 
     .w-layout-blockcontainer
     {
@@ -60,7 +78,7 @@ div.w-layout-blockcontainer.container.w-container
         padding-right:30px;
     }
 
-    .feature-image-wrap
+    .feature-image-wrap 
     {
         width:100%;
     }
@@ -91,6 +109,31 @@ div.w-layout-blockcontainer.container.w-container
     margin-left:20px;
 }
 
+#features > div:nth-child(1)
+{
+    max-width:100%;
+}
+
+div#features.w-layout-blockcontainer.commands-container.w-container, #integrations > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)
+{
+    max-width:100%;
+}
+
+.planet-1
+{
+padding-right:0px!important;
+}
+
+.double-container, w-layout-blockcontainer modified-container w-container
+{
+    padding-right:0px;
+}
+
+#Hero
+{
+    margin-left:20px;
+    margin-right:20px;
+}
 
 #integrations > div:nth-child(1)
 {
