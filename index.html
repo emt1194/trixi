@@ -237,16 +237,16 @@ Trixi’s natural language model adapts to modern slang, memes, and financial di
     </h2>
   
   <p class="text-gray-400 mb-4">
-    Forget digging through feeds. Trixi’s command system puts you in control of the timeline — slicing through noise and exposing signals with surgical precision.
+    Forget digging through feeds. Trixi’s command system puts you in control of the timeline — slicing through noise and exposing signals with surgical precision. <strong>Tap a command to see an explanation.</strong>
   </p>
   <p class="text-gray-400 mb-4">
-    Run <code class="text-white bg-[#2B2D36] px-1 py-0.5 rounded">/followers</code> or <code class="text-white bg-[#2B2D36] px-1 py-0.5 rounded">/following</code> to reverse-engineer influence. Use <code class="text-white bg-[#2B2D36] px-1 py-0.5 rounded">/latest</code> to pull fresh posts before they make it to CT. Need a full breakdown? <code class="text-white bg-[#2B2D36] px-1 py-0.5 rounded">/analyze</code> and you're covered.
+    Run <code class="text-white bg-[#2B2D36] px-1 py-0.5 rounded">/followers</code> or <code class="text-white bg-[#2B2D36] px-1 py-0.5 rounded">/following</code> to reverse-engineer influence. Use <code class="text-white bg-[#2B2D36] px-1 py-0.5 rounded">/latest</code> to pull fresh posts before they make it to CT. Need a full breakdown? <code id="openVideoLightbox" class="text-white bg-[#2B2D36] px-1 py-0.5 rounded cursor-pointer hover:underline">/analyze</code>
+ and you're covered.
   </p>
   <p class="text-gray-400 mb-4">
     Check blue-checks with <code class="text-white bg-[#2B2D36] px-1 py-0.5 rounded">/verified</code>, spot pump narratives using <code class="text-white bg-[#2B2D36] px-1 py-0.5 rounded">/trending</code>, and hit <code class="text-white bg-[#2B2D36] px-1 py-0.5 rounded">/ama</code> for real-time answers from your AI trench assistant.
   </p>
-  <p class="text-gray-400">
-    Trixi sees the rugtrix so you don't have to.
+
 
 
   </div>
@@ -476,6 +476,8 @@ function toggleFaq(button) {
   </div>
 </footer>
 
+<!--OFF SCREEN SHIT -->
+
 <div id="mobileMenu"
      class="fixed top-[66px] right-6 w-48 bg-[#2B2D36] text-white rounded-xl shadow-lg hidden flex-col z-[9999] md:hidden overflow-hidden">
   <a href="#about" class="block px-4 py-2 hover:bg-[#3c3f4d] transition rounded-t-xl">About</a>
@@ -484,6 +486,23 @@ function toggleFaq(button) {
   <a href="#faq" class="block px-4 py-2 hover:bg-[#3c3f4d] transition">FAQ</a>
   <a href="#buy" class="block px-4 py-2 hover:bg-[#3c3f4d] transition rounded-b-xl">Buy</a>
 </div>
+
+<div id="videoLightbox" class="fixed inset-0 bg-black bg-opacity-80 z-[9999] hidden items-center justify-center">
+  <div class="relative w-full max-w-3xl mx-auto px-4">
+    <button id="closeVideoLightbox" class="absolute top-2 right-2 text-white text-3xl font-bold hover:text-gray-300 z-50">
+      &times;
+    </button>
+    <video autoplay class="w-full max-h-[75vh] rounded-xl shadow-lg">
+      <source src="./videos/trixi-tg-validity-analysis.mov" type="video/quicktime" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+
+
+<!-- JS -->
+
 <script>
   const menuToggle = document.getElementById('menuToggle');
   const mobileMenu = document.getElementById('mobileMenu');
@@ -575,6 +594,30 @@ function toggleFaq(button) {
   });
 </script>
 
+<script>
+  const openVideoBtn = document.getElementById('openVideoLightbox');
+  const lightbox = document.getElementById('videoLightbox');
+  const closeBtn = document.getElementById('closeVideoLightbox');
+
+  openVideoBtn.addEventListener('click', () => {
+    lightbox.classList.remove('hidden');
+    lightbox.classList.add('flex');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.classList.remove('flex');
+    lightbox.classList.add('hidden');
+    lightbox.querySelector('video').pause();
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove('flex');
+      lightbox.classList.add('hidden');
+      lightbox.querySelector('video').pause();
+    }
+  });
+</script>
 
 
 </body>
