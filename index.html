@@ -1,573 +1,607 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>TrixiAI | The Ultimate AI Trench Assistant for Traders & Analysts</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-<html data-wf-domain="trixiai.net" data-wf-locale="en" data-wf-page="67d9b4bf16031fa6ad755211" data-wf-site="67d9b4bf16031fa6ad755164" data-wf-status="1" lang="en">
-    <head>
-        <meta charset="utf-8" />
- <!-- Primary Meta Tags -->
-<title>TrixiAI | The Ultimate AI Trench Assistant for Traders & Analysts</title>
-<meta name="title" content="TrixiAI | The Ultimate AI Trench Assistant for Traders & Analysts">
-<meta name="description" content="TrixiAI is a next-gen trading assistant delivering real-time sentiment analysis, market insights, and AI-generated content. Track trends, manage risk, and stay ahead with smart tools powered by Gen Z-adapted language and multi-platform intelligence.">
-<meta name="keywords" content="TrixiAI, AI trading assistant, sentiment analysis, crypto insights, natural language trading, financial AI, Telegram trading bot, X market sentiment, social media analytics, meme finance, Gen Z trading, risk-aware AI">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.trixiai.net/">
-<meta property="og:title" content="TrixiAI – AI-Powered Sentiment Analysis & Trading Assistant">
-<meta property="og:description" content="Stay ahead of the market with TrixiAI—your AI trench assistant for crypto and traditional trading. Analyze trends, track influencers, and trade smarter with real-time insights and natural language commands.">
-<meta property="og:image" content="https://www.trixiai.net/images/trixi-preview.png">
+  <!-- Meta Tags -->
+  <meta name="description" content="TrixiAI is a next-gen trading assistant delivering real-time sentiment analysis, market insights, and AI-generated content. Track trends, manage risk, and stay ahead with smart tools powered by Gen Z-adapted language and multi-platform intelligence.">
+  <meta name="keywords" content="TrixiAI, AI trading assistant, sentiment analysis, crypto insights, natural language trading, financial AI, Telegram trading bot, X market sentiment, social media analytics, meme finance, Gen Z trading, risk-aware AI">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.trixiai.net/">
+  <meta property="og:title" content="TrixiAI – AI-Powered Sentiment Analysis & Trading Assistant">
+  <meta property="og:description" content="TrixiAI">
+  <meta property="og:image" content="https://www.trixiai.net/images/trixi-preview.png">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="TrixiAI App">
+  <meta property="twitter:description" content="The ultimate AI-powered assistant for traders.">
+  <meta property="twitter:image" content="https://www.trixiai.net/images/trixi-preview.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#121212">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://www.trixiai.net/">
-<meta property="twitter:title" content="TrixiAI | Smart Sentiment. Smarter Trades.">
-<meta property="twitter:description" content="The ultimate AI-powered assistant for traders. TrixiAI tracks market sentiment, influencer engagement, and social media trends across X, Telegram, and Discord.">
-<meta property="twitter:image" content="https://www.trixiai.net/images/trixi-preview.png">
+  <!-- Fonts & Tailwind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- Favicon -->
-<link rel="icon" href="/favicon.ico" />
-<meta name="theme-color" content="#121212">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Trixi Styles -->
+  <link href="./css/trixi-site.css" rel="stylesheet" type="text/css" />
+</head>
 
-        <link href="./assets/css/trixi.css" rel="stylesheet" type="text/css" />
-        <link href="./assets/css/custom.css" rel="stylesheet" type="text/css" />        
-        <link href="https://fonts.googleapis.com" rel="preconnect" />
-        <link crossorigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect" />
-        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
-        <script type="text/javascript">
-            WebFont.load({ google: { families: ["Outfit:300,regular,500,600,700,800,900", "Inter:regular,500,700,900"] } });
-        </script>
-        <script type="text/javascript">
-            !(function (o, c) {
-                var n = c.documentElement,
-                    t = " w-mod-";
-                (n.className += t + "js"), ("ontouchstart" in o || (o.DocumentTouch && c instanceof DocumentTouch)) && (n.className += t + "touch");
-            })(window, document);
-        </script>
-        <link href="https://cdn.prod.website-files.com/66d87bb582928970cd067300/66ec1fb7d23f917326364244_icon%20(28)%201%20(3).png" rel="shortcut icon" type="image/x-icon" />
-        <link href="https://cdn.prod.website-files.com/66d87bb582928970cd067300/66ec1fc0a9b37895f4ee49e6_icon%20(28)%201%20(4).png" rel="apple-touch-icon" />
-        <style>
-            .w-webflow-badge {
-                position: fixed !important;
-                display: None !important;
-                visibility: hidden !important;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="noise-background"></div>
-        <div class="navigation w-nav" data-animation="default" data-collapse="none" data-duration="400" data-easing="ease" data-easing2="ease" id="Hero" role="banner">
-            <div class="container">
-                <div class="navigation-content-wrap">
-                    <div class="navigation-left">
-                        <a aria-current="page" class="brand w-nav-brand w--current" href="/">
-                            <img alt="" class="logo" height="Auto" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b6122d1b57f9f2203418_trixi-vector-final.svg" width="Auto" />
-                        </a>
-                    </div>
-                    <div class="navigation-right">
-                        <a class="nav-link w-inline-block" href="https://t.me/TrixiVerse" target="_blank">
-                            <img alt="" height="Auto" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67e1979714ccb5eeeca0e907_tg-icon.svg" width="30" />
-                        </a>
-                        <a class="nav-link w-inline-block" href="https://app.trixiai.net" target="_blank"><div class="nav-link-title">Open Trixi</div></a>
-                        <nav class="nav-menu w-nav-menu" role="navigation">
-                            <div class="dropdown w-dropdown" data-delay="0" data-hover="false">
-                                <div class="dropdown-toggle w-dropdown-toggle">
-                                    <div class="nav-dropdown-line top-line"></div>
-                                    <div class="nav-dropdown-line bottom-line"></div>
-                                </div>
-                                <nav class="navigation-dropdown w-dropdown-list">
-                                    <div class="dropdown-pointer">
-                                        <div class="dropdown-wrapper">
-                                            <a aria-current="page" class="dropdown-link w-inline-block w--current" href="/"><div class="dropdown-title">Home</div></a>
-                                            <a class="dropdown-link w-inline-block" href="/#about"><div class="dropdown-title">About</div></a>
-                                            <a class="dropdown-link w-inline-block" href="/#features"><div class="dropdown-title">Features</div></a>
-                                            <a class="dropdown-link w-inline-block" href="#"><div class="dropdown-title">Pricing</div></a><a class="dropdown-link w-inline-block" href="#"><div class="dropdown-title">Docs</div></a>
-                                            <a class="dropdown-link w-inline-block" href="/#faq"><div class="dropdown-title">FAQs</div></a>
-                                        </div>
-                                    </div>
-                                </nav>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <section class="hero-section" id="home">
-            <div class="w-layout-blockcontainer container w-container">
-                <div class="hero-content-wrap" data-w-id="69e0a2f9-f3bf-9338-901f-48eec13422b8">
-                    <div class="hero-text-wrap">
-                        <div class="hero-heading-wrap">
-                            <h1 class="hero-heading sm-heading-1">The Ultimate AI <span class="purple-span">Trench</span> Assistant</h1>
-                        </div>
-                        <div class="hero-paragraph-wrap"><p class="hero-paragraph">Trixi Ai is your one stop go-to $SOL guardian, protecting you from rug-pulls and notifying you about red flags to protect and optimize your gains! Analyze social media profiles, and gain exclusive access to utilities by holding $TRIXIVERSE</p></div>
-                        <div class="hero-buttons-wrap">
-                            <a class="primary-button w-button" href="https://app.trixiai.net/" target="_blank">Open Trixi</a><a class="sm-paragraph white w-inline-block" href="#about" target="_blank"><div>Find out more</div></a>
-                        </div>
-                    </div>
-                    <img
-                        alt="3d Element"
-                        class="hero-section-image"
-                        loading="eager"
-                        sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 940px"
-                        src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9be8012f339dad87809be_trixi-transparent-1.webp"
-                        srcset="
-                            https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9be8012f339dad87809be_trixi-transparent-1-p-500.webp  500w,
-                            https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9be8012f339dad87809be_trixi-transparent-1-p-800.webp  800w,
-                            https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9be8012f339dad87809be_trixi-transparent-1.webp       1000w
-                        "
-                    />
-                </div>
-            </div>
-        </section>
-        <section class="logos-without-title">
-            <div class="container-2">
-                <img
-                    alt="AriseHealth logo"
-                    class="clients-image-three"
-                    loading="lazy"
-                    sizes="(max-width: 1439px) 20px, 1vw"
-                    src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67dc702d9c19fbf0380c23ac_uos-logo-new.png"
-                    srcset="
-                        https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67dc702d9c19fbf0380c23ac_uos-logo-new-p-500.png 500w,
-                        https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67dc702d9c19fbf0380c23ac_uos-logo-new.png       800w
-                    "
-                    width="20"
-                />
-                <img
-                    alt="OE logo"
-                    class="clients-image-three-20"
-                    loading="lazy"
-                    sizes="(max-width: 800px) 100vw, 800px"
-                    src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67dc721cf24588b0bf676151_sol-logo.png"
-                    srcset="
-                        https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67dc721cf24588b0bf676151_sol-logo-p-500.png 500w,
-                        https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67dc721cf24588b0bf676151_sol-logo.png       800w
-                    "
-                />
-                <img
-                    alt="2020INC logo"
-                    class="clients-image-three-15"
-                    loading="lazy"
-                    sizes="(max-width: 640px) 100vw, 640px"
-                    src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67dc760f815c8ff2bc59f083_dao-cap-logo.png"
-                    srcset="
-                        https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67dc760f815c8ff2bc59f083_dao-cap-logo-p-500.png 500w,
-                        https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67dc760f815c8ff2bc59f083_dao-cap-logo.png       640w
-                    "
-                />
-                <img
-                    alt="The Paak logo"
-                    class="clients-image-three"
-                    loading="lazy"
-                    sizes="(max-width: 1594px) 100vw, 1594px"
-                    src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67dc76f769bcdd47db27e335_cloudflare.png"
-                    srcset="
-                        https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67dc76f769bcdd47db27e335_cloudflare-p-500.png   500w,
-                        https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67dc76f769bcdd47db27e335_cloudflare-p-800.png   800w,
-                        https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67dc76f769bcdd47db27e335_cloudflare-p-1080.png 1080w,
-                        https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67dc76f769bcdd47db27e335_cloudflare.png        1594w
-                    "
-                />
-            </div>
-        </section>
-        <section class="section-bg-planet-1 overflow-visible" id="about">
-            <div class="w-layout-blockcontainer double-container w-container">
-                <div class="w-layout-blockcontainer modified-container w-container">
-                    <div class="section-text-wrap" data-w-id="5b758282-39e7-a6ff-13ea-0602179e0890" style="opacity: 0;">
-                        <div class="section-heading-wrap">
-                            <h2 class="section-heading">AI-Powered <span class="purple-span">Insights</span></h2>
-                        </div>
-                        <div class="section-paragraph-wrap">
-                            <p class="section-paragraph">
-                                Trixi combines real-time market analysis, Gen Z-adapted language processing, and multi-modal content creation to deliver intelligent, engaging, and culturally relevant financial insights.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="w-layout-grid how-it-works-grid">
-                        <div class="how-it-works-card" data-w-id="460e0661-0cd5-631f-5245-b53ead828203" style="opacity: 0;">
-                            <div class="how-it-works-icon-wrap"><img alt="Upload Icon" class="how-it-works-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9c3a0e5c24b86eb92a2e7_x-cloud.png" /></div>
-                            <div class="how-it-works-heading-wrap"><h3>Language Mastery</h3></div>
-                            <div class="how-it-works-paragraph-wrap">
-                                <p class="how-it-works-paragraph sm-paragraph">Trixi’s natural language model adapts to modern slang, memes, and financial discussions to deliver engaging, context-aware insights.</p>
-                            </div>
-                        </div>
-                        <div class="how-it-works-card" data-w-id="c208b08e-4d0d-52ce-96a4-d0420d0067b0" style="opacity: 0;">
-                            <div class="how-it-works-icon-wrap">
-                                <img alt="Sparkles Icon" class="how-it-works-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755266_sparkles%20Icon.png" />
-                            </div>
-                            <div class="how-it-works-heading-wrap"><h3 class="how-it-works-heading">Smart Market Analysis</h3></div>
-                            <div class="how-it-works-paragraph-wrap">
-                                <p class="how-it-works-paragraph sm-paragraph">With real-time data processing and predictive neural networks, Trixi provides risk-aware trading insights across traditional and crypto markets.</p>
-                            </div>
-                        </div>
-                        <div class="how-it-works-card" data-w-id="db907146-faeb-2901-c6d5-c1f2510ea43c" style="opacity: 0;">
-                            <div class="how-it-works-icon-wrap">
-                                <img alt="Rocket Icon" class="how-it-works-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad75523e_Rocket%20Icon.png" />
-                            </div>
-                            <div class="how-it-works-heading-wrap">
-                                <h3 class="how-it-works-heading">Content Creation<br /></h3>
-                            </div>
-                            <div class="how-it-works-paragraph-wrap">
-                                <p class="how-it-works-paragraph sm-paragraph">Trixi generates engaging financial content, including text, memes, and voice posts, to enhance market discussions across social platforms.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-layout-blockcontainer commands-container w-container" id="features">
-                    <div class="section-text-wrap" data-w-id="40bf5a9d-84c7-3c16-2fee-7f8a0fc03d95" style="opacity: 0;">
-                        <div class="section-heading-wrap">
-                            <h2 class="section-heading">Powerful <span class="purple-span">Commands</span></h2>
-                        </div>
-                        <div class="section-paragraph-wrap">
-                            <div class="w-layout-grid commands-grid">
-                                <div class="how-it-works-card" data-w-id="9112d5ab-2d49-d258-a3aa-4dad7dbce927" style="opacity: 0;">
-                                    <div class="how-it-works-icon-wrap">
-                                        <img alt="Upload Icon" class="how-it-works-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9c3a0e5c24b86eb92a2e7_x-cloud.png" />
-                                    </div>
-                                    <div class="how-it-works-heading-wrap"><h3>Follower and Engagement Analytics</h3></div>
-                                    <div class="how-it-works-paragraph-wrap">
-                                        <p class="how-it-works-paragraph sm-paragraph">
-                                            Trixi provides in-depth social media analysis with <strong>follower and following tracking</strong> (<code>/followers</code> and <code>/following</code>). These commands help users monitor
-                                            audience behavior, detect growth patterns, and assess the influence of key accounts. Understanding follower dynamics allows traders and analysts to gauge sentiment shifts and market influence in
-                                            real time.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="how-it-works-card" data-w-id="9112d5ab-2d49-d258-a3aa-4dad7dbce930" style="opacity: 0;">
-                                    <div class="how-it-works-icon-wrap">
-                                        <img alt="Sparkles Icon" class="how-it-works-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755266_sparkles%20Icon.png" />
-                                    </div>
-                                    <div class="how-it-works-heading-wrap"><h3 class="how-it-works-heading">Account Activity and Verification</h3></div>
-                                    <div class="how-it-works-paragraph-wrap">
-                                        <p class="how-it-works-paragraph sm-paragraph">
-                                            With Trixi’s <strong>latest tweet fetcher</strong> (<code>/latest</code>), users can quickly access the most recent posts from any account, keeping them informed on key market discussions. The
-                                            <strong>verification checker</strong> (<code>/verified</code>) helps assess the credibility of influencers and sources, ensuring users rely on trusted voices in financial conversations.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="how-it-works-card" data-w-id="9112d5ab-2d49-d258-a3aa-4dad7dbce939" style="opacity: 0;">
-                                    <div class="how-it-works-icon-wrap">
-                                        <img alt="Rocket Icon" class="how-it-works-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad75523e_Rocket%20Icon.png" />
-                                    </div>
-                                    <div class="how-it-works-heading-wrap"><h3 class="how-it-works-heading">Market Trends &amp; Influencer Analysis</h3></div>
-                                    <div class="how-it-works-paragraph-wrap">
-                                        <p class="how-it-works-paragraph sm-paragraph">
-                                            Trixi’s <strong>account analysis tool</strong> (<code>/analyze</code>) delivers a detailed breakdown of an individual’s online presence, offering insights into engagement trends and sentiment
-                                            shifts. The <strong>trending topics tracker</strong> (<code>/trending</code>) identifies real-time market discussions, helping traders anticipate movements and stay ahead of emerging narratives.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="how-it-works-card" data-w-id="e71a271b-442e-d33c-269b-0e2e18c940f6" style="opacity: 0;">
-                                    <div class="how-it-works-icon-wrap">
-                                        <img alt="Rocket Icon" class="how-it-works-icon" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad75523e_Rocket%20Icon.png" />
-                                    </div>
-                                    <div class="how-it-works-heading-wrap"><h3 class="how-it-works-heading">AI-Powered Insights and Responses</h3></div>
-                                    <div class="how-it-works-paragraph-wrap">
-                                        <p class="how-it-works-paragraph sm-paragraph">
-                                            Beyond analytics, Trixi’s <strong>AI-powered AMA feature</strong> (<code>/ama</code>) enables users to ask market-related questions and receive instant, intelligent responses. Whether analyzing
-                                            sentiment, tracking influential voices, or gathering trend-based intelligence, Trixi equips users with the tools needed to navigate an ever-changing financial landscape.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section-planet-2" id="info">
-            <div class="w-layout-blockcontainer container w-container">
-                <div class="features-wrap">
-                    <div class="feature-content-wrap" data-w-id="48ad7584-d419-1d55-8393-2190d8d468f7" style="opacity: 0;">
-                        <div class="feature-text-wrap">
-                            <div class="feature-heading-wrap"><h3 class="feature-heading">Risk Management</h3></div>
-                            <div class="feature-paragraph-wrap">
-                                <p class="feature-paragraph">
-                                    Trixi’s <strong>trading and risk management</strong> system uses real-time data and predictive modeling to assess market trends and provide strategic recommendations. Instead of simply executing trades,
-                                    it evaluates liquidity, volatility, and sentiment to help users make informed decisions. By balancing opportunity and risk, Trixi ensures smarter and safer trading in fast-moving markets.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="feature-image-wrap">
-                            <img
-                                alt="Feature Image"
-                                class="feature-image"
-                                height="Auto"
-                                loading="lazy"
-                                sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 940px"
-                                src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9bef806ffaa93e2c665c6_trixi-preview-3.jpg"
-                                srcset="
-                                    https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9bef806ffaa93e2c665c6_trixi-preview-3-p-500.jpg   500w,
-                                    https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9bef806ffaa93e2c665c6_trixi-preview-3-p-800.jpg   800w,
-                                    https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9bef806ffaa93e2c665c6_trixi-preview-3-p-1080.jpg 1080w,
-                                    https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9bef806ffaa93e2c665c6_trixi-preview-3.jpg        1285w
-                                "
-                                width="Auto"
-                            />
-                        </div>
-                    </div>
-                    <div class="feature-content-wrap reversed-direction" data-w-id="57111d9d-55bf-bf20-2654-9a05ed2e035a" style="opacity: 0;">
-                        <div class="feature-text-wrap">
-                            <div class="feature-heading-wrap"><h3 class="feature-heading">Sentiment Analysis</h3></div>
-                            <div class="feature-paragraph-wrap">
-                                <p class="feature-paragraph">
-                                    Trixi’s <strong>sentiment analysis</strong> scans X, Telegram, and Discord to gauge market perception and differentiate between genuine interest and hype. Using advanced NLP, it detects social media
-                                    trends, engagement levels, and coordinated promotions, giving traders deeper insights beyond price movements. This helps users anticipate shifts and avoid potential market traps.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="feature-image-wrap">
-                            <img
-                                alt="Feature Image"
-                                class="feature-image"
-                                loading="lazy"
-                                sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 940px"
-                                src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9bef65010608ac9b9b743_trixi-preview-4.jpg"
-                                srcset="
-                                    https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9bef65010608ac9b9b743_trixi-preview-4-p-500.jpg   500w,
-                                    https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9bef65010608ac9b9b743_trixi-preview-4-p-800.jpg   800w,
-                                    https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9bef65010608ac9b9b743_trixi-preview-4-p-1080.jpg 1080w,
-                                    https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9bef65010608ac9b9b743_trixi-preview-4.jpg        1287w
-                                "
-                            />
-                        </div>
-                    </div>
-                    <div class="feature-content-wrap" data-w-id="626c0d0e-92f8-44d1-dfe4-e9971962a75a" style="opacity: 0;">
-                        <div class="feature-text-wrap">
-                            <div class="feature-heading-wrap"><h3 class="feature-heading">Natural Language Trading</h3></div>
-                            <div class="feature-paragraph-wrap">
-                                <p class="feature-paragraph">
-                                    With <strong>natural language trading</strong>, Trixi delivers market insights through conversational AI, making trading more intuitive. Users can ask about portfolio updates, trends, or asset analysis in
-                                    everyday language, receiving clear, context-aware responses. By simplifying complex data, Trixi makes market intelligence accessible and actionable.
-                                </p>
-                            </div>
-                            <a class="primary-button w-button" href="https://app.trixiai.net" target="_blank">Open Trixi</a>
-                        </div>
-                        <div class="feature-image-wrap">
-                            <img
-                                alt="Feature Image"
-                                class="feature-image"
-                                loading="lazy"
-                                sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 940px"
-                                src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9befa6389d50b544c08f5_trixi-preview-2.jpg"
-                                srcset="
-                                    https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9befa6389d50b544c08f5_trixi-preview-2-p-500.jpg   500w,
-                                    https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9befa6389d50b544c08f5_trixi-preview-2-p-800.jpg   800w,
-                                    https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9befa6389d50b544c08f5_trixi-preview-2-p-1080.jpg 1080w,
-                                    https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9befa6389d50b544c08f5_trixi-preview-2.jpg        1297w
-                                "
-                            />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section" id="integrations">
-            <div class="w-layout-blockcontainer double-container w-container">
-                <div class="w-layout-blockcontainer container w-container">
-                    <div class="section-text-wrap" data-w-id="aab65e5c-9171-4dc8-4aa7-e8d5b6da1d51" style="opacity: 0;">
-                        <div class="section-heading-wrap">
-                            <h2 class="section-heading">Trixi <span class="purple-span">Roadmap</span></h2>
-                            <p class="section-paragraph">
-                                Trixi combines real-time market analysis, Gen Z-adapted language processing, and multi-modal content creation to deliver intelligent, engaging, and culturally relevant financial insights.
-                            </p>
-                        </div>
-                        <div class="section-paragraph-wrap-fix">
-                            <div class="roadmap grid-container">
-                                <div class="w-layout-grid grid-thirds space-bottom">
-                                    <div class="w-layout-grid list-grid" id="w-node-_86460455-5327-9672-3aa3-dabf0ab32f24-ad755211">
-                                        <div class="panel">
-                                            <div class="panel-body justify-content-center panel-body-extra-small">
-                                                <div class="row row-align-center row-justify-between">
-                                                    <div class="circle-large circle-small bg-gray-3">
-                                                        <img alt="" class="icon-small" src="https://cdn.prod.website-files.com/67d9a1a7f589ac7967c61b7a/67d9a1a7f589ac7967c61c9b_icon-check-small.svg" />
-                                                    </div>
-                                                    <h5>Phase 1 - Ongoing</h5>
-                                                </div>
-                                                <div class="text-block-2">
-                                                    Trixi’s first phase focuses on <strong>core social and market analytics</strong>, providing tools to track follower engagement, analyze account activity, and verify key influencers. Users
-                                                    can monitor audience behavior, fetch the latest tweets, and identify trending topics that shape financial discussions. These insights help traders stay ahead of market sentiment shifts.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel">
-                                            <div class="panel-body justify-content-center panel-body-extra-small">
-                                                <div class="row row-align-center row-justify-between">
-                                                    <div class="circle-large circle-small bg-gray-3">
-                                                        <img alt="" class="icon-small" src="https://cdn.prod.website-files.com/67d9a1a7f589ac7967c61b7a/67d9a1a7f589ac7967c61c9b_icon-check-small.svg" />
-                                                    </div>
-                                                    <h5>Phase 2 - In Active Development</h5>
-                                                </div>
-                                                <div class="text-block-2">
-                                                    The second phase introduces <strong>AI-powered insights and content generation</strong>, including real-time AMA responses and natural language trading assistance. Trixi enables users to
-                                                    ask market-related questions and receive instant, intelligent answers while offering portfolio updates and market trend explanations in an intuitive, conversational format.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel">
-                                            <div class="panel-body justify-content-center panel-body-extra-small">
-                                                <div class="row row-align-center row-justify-between">
-                                                    <div class="circle-large circle-small bg-gray-3">
-                                                        <img alt="" class="icon-small" src="https://cdn.prod.website-files.com/67d9a1a7f589ac7967c61b7a/67d9a1a7f589ac7967c61c9b_icon-check-small.svg" />
-                                                    </div>
-                                                    <h5>Phase 3 - Q2 &amp; Q3 2025</h5>
-                                                </div>
-                                                <div class="text-block-2">
-                                                    In phase three, Trixi enhances <strong>advanced analytics and risk management</strong>, leveraging sentiment analysis to distinguish between organic interest and hype. It also integrates
-                                                    real-time trading data with predictive modeling to assess risk and provide strategic recommendations, ensuring users can make informed financial decisions.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel">
-                                            <div class="panel-body justify-content-center panel-body-extra-small">
-                                                <div class="row row-align-center row-justify-between">
-                                                    <div class="circle-large circle-small bg-gray-3">
-                                                        <img alt="" class="icon-small" src="https://cdn.prod.website-files.com/67d9a1a7f589ac7967c61b7a/67d9a1a7f589ac7967c61c9b_icon-check-small.svg" />
-                                                    </div>
-                                                    <h5>Phase 4 - Q3 &amp; Q4 2025</h5>
-                                                </div>
-                                                <div class="text-block-2">
-                                                    Phase 4 expands Trixi’s capabilities to <strong>website and code analysis</strong>, allowing users to evaluate website credibility and scan for key market trends. Additionally, a built-in
-                                                    code checker will review smart contracts and trading algorithms, identifying security risks and optimization opportunities to enhance market intelligence and trading safety.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="div-block" id="w-node-_86460455-5327-9672-3aa3-dabf0ab32f41-ad755211">
-                                        <div class="hero-content-wrap-tall" data-w-id="50c8f5c7-5a16-95fa-39dc-1d02ce5a15d0" style="opacity: 0;">
-                                            <img
-                                                alt="3d Element"
-                                                class="hero-section-image-2"
-                                                loading="eager"
-                                                sizes="(max-width: 767px) 100vw, (max-width: 991px) 95vw, 940px"
-                                                src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9ec36b8cc5971ff6d2aca_trixi-transparent-2.webp"
-                                                srcset="
-                                                    https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9ec36b8cc5971ff6d2aca_trixi-transparent-2-p-500.webp  500w,
-                                                    https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9ec36b8cc5971ff6d2aca_trixi-transparent-2-p-800.webp  800w,
-                                                    https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9ec36b8cc5971ff6d2aca_trixi-transparent-2.webp       1029w
-                                                "
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="lastsection" id="faq">
-            <div class="w-layout-blockcontainer container w-container" data-w-id="dcde785a-e5dd-94ea-9db3-359f6c515bde">
-                <div class="faqs-content-wrap">
-                    <div class="section-text-wrap">
-                        <div class="section-heading-wrap">
-                            <h2 class="section-heading">Frequently Asked <span class="purple-span">Questions</span></h2>
-                        </div>
-                        <div class="section-paragraph-wrap">
-                            <p class="section-paragraph">
-                                Have questions about our Trixi? Here are answers to common questions about Trixi’s features, including market analysis, risk management, social media tracking, content generation, and how users can access its
-                                AI-driven insights. More questions? Ask in Discord.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faqs-list-wrap">
-                        <div class="faq-wrapper">
-                            <div class="faq-header">
-                                <div class="faq-question"><strong>What is Trixi and how does it work?</strong></div>
-                                <img alt="" class="faq-header-icon" loading="eager" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755251_Chevron-Icon.svg" />
-                            </div>
-                            <div class="faq-answer-wrap">
-                                <p class="faq-answer">
-                                    Trixi is an AI-powered market intelligence tool that provides real-time trading insights, sentiment analysis, and social media monitoring. It helps users make informed decisions by analyzing trends,
-                                    tracking engagement, and offering AI-driven responses.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="faq-wrapper">
-                            <div class="faq-header">
-                                <div class="faq-question"><strong>How does Trixi analyze market trends?</strong></div>
-                                <img alt="" class="faq-header-icon" loading="eager" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755251_Chevron-Icon.svg" />
-                            </div>
-                            <div class="faq-answer-wrap">
-                                <p class="faq-answer">
-                                    Trixi processes real-time trading data from blockchain networks like Solana and Ethereum, integrates sentiment analysis from social media, and applies predictive modeling to identify emerging market
-                                    movements before they happen.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="faq-wrapper">
-                            <div class="faq-header">
-                                <div class="faq-question"><strong>Can Trixi help with risk management?</strong></div>
-                                <img alt="" class="faq-header-icon" loading="eager" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755251_Chevron-Icon.svg" />
-                            </div>
-                            <div class="faq-answer-wrap">
-                                <p class="faq-answer">
-                                    Yes, Trixi evaluates market conditions, liquidity, and sentiment to provide risk assessments and trade recommendations, helping users make more strategic and informed trading decisions.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="faq-wrapper">
-                            <div class="faq-header">
-                                <div class="faq-question"><strong>What social media platforms does Trixi track?</strong></div>
-                                <img alt="" class="faq-header-icon" loading="eager" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755251_Chevron-Icon.svg" />
-                            </div>
-                            <div class="faq-answer-wrap">
-                                <p class="faq-answer">Trixi monitors X (formerly Twitter), Telegram, and Discord to analyze discussions, engagement levels, and trending topics that may impact the financial markets.</p>
-                            </div>
-                        </div>
-                        <div class="faq-wrapper">
-                            <div class="faq-header">
-                                <div class="faq-question"><strong>Does Trixi generate content?</strong></div>
-                                <img alt="" class="faq-header-icon" loading="eager" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755251_Chevron-Icon.svg" />
-                            </div>
-                            <div class="faq-answer-wrap">
-                                <p class="faq-answer">Yes, Trixi creates market-related content, including short-form analysis, memes, and voice-based updates, making financial insights more accessible and engaging.</p>
-                            </div>
-                        </div>
-                        <div class="faq-wrapper last-child">
-                            <div class="faq-header">
-                                <div class="faq-question"><strong>How can I use Trixi’s features?</strong></div>
-                                <img alt="" class="faq-header-icon" loading="eager" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9b4bf16031fa6ad755251_Chevron-Icon.svg" />
-                            </div>
-                            <div class="faq-answer-wrap">
-                                <p class="faq-answer">
-                                    Trixi provides various commands for social media tracking, sentiment analysis, and AI-driven Q&amp;A. Users can access these features through integrations with platforms like Telegram and web-based
-                                    dashboards.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="footer">
-            <div class="container">
-                <div class="footer-top">
-                    <a aria-current="page" class="brand w-nav-brand w--current" href="/">
-                        <img alt="" class="logo" loading="lazy" src="https://cdn.prod.website-files.com/67d9b4bf16031fa6ad755164/67d9f3ed78a8d3f2f675b2a3_trixiai-vector.svg" />
-                    </a>
-                    <div class="footer-links-wrap">
-                        <a aria-current="page" class="footer-link w--current" href="/">Home</a><a class="footer-link" href="#">About</a><a class="footer-link" href="/#features">Features</a><a class="footer-link" href="#">Pricing</a>
-                        <a class="footer-link" href="#">Docs</a><a class="footer-link" href="/#faq">FAQs</a>
-                    </div>
-                </div>
-                <div class="footer-divider-two"></div>
-                <div class="footer-bottom">
-                    <div class="footer-copyright">Made by Trixi's #1 Homeboy | Powered by <!--<a class="footer-gray-link" href="#" target="_blank">-->Solana and lots of GPUs</a></div>
-                    <div class="footer-legal-block">
-                        <a class="footer-gray-link" href="#">Privacy Information</a><a class="footer-gray-link" href="#">Discord</a><a class="footer-gray-link" href="https://t.me/TrixiVerse" target="_blank">Telegram</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+<body class="text-white min-h-screen flex flex-col items-center relative">
 
-        <script
-            crossorigin="anonymous"
-            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-            src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=67d9b4bf16031fa6ad755164"
-            type="text/javascript"
-        ></script>
-        <script src="./assets/js/4a394eb5af8156f2.js" type="text/javascript"></script>
-        <script src="./assets/js/a0990a1a412c9932.js" type="text/javascript"></script>
-        <script src="./assets/js/82bbbf90399b466d.js" type="text/javascript"></script>
-    </body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <linearGradient id="solanaGradientIcon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00FFA3" />
+      <stop offset="50%" stop-color="#03E1FF" />
+      <stop offset="100%" stop-color="#DC1FFF" />
+    </linearGradient>
+  </defs>
+</svg>
+
+
+  <!-- Background Noise Layer -->
+  <div class="noise-background"></div>
+
+  <!-- Top bar -->
+  <header class="w-full max-w-[1200px] flex items-center justify-between px-6 py-4 bg-[#0D0E12] relative z-10">
+    <div class="max-w-[200px] logo">
+      <img src="./img/trixi-logo.png" alt="Trixi Logo" class="w-full h-auto">
+    </div>
+   <!-- Navigation wrapper -->
+<div class="relative space-x-4 buttons-area">
+
+  <!-- Desktop Menu -->
+  <div class="hidden md:flex bg-[#2B2D36] text-white rounded-xl overflow-hidden">
+    <a href="#about" class="px-4 py-2 hover:bg-[#3c3f4d] transition flex items-center">About</a>
+    <a href="#features" class="px-4 py-2 hover:bg-[#3c3f4d] transition flex items-center">Features</a>
+    <a href="#roadmap" class="px-4 py-2 hover:bg-[#3c3f4d] transition flex items-center">Roadmap</a>
+    <a href="#faq" class="px-4 py-2 hover:bg-[#3c3f4d] transition flex items-center">FAQ</a>
+    <a href="#buy" class="px-4 py-2 hover:bg-[#3c3f4d] transition flex items-center">Buy</a>
+  </div>
+
+
+<!-- Mobile hamburger button -->
+<div class="md:hidden">
+  <button id="menuToggle" class="text-white focus:outline-none z-50 relative">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+         viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </button>
+</div>
+
+
+      <a href="https://app.trixiai.net"><button class="bg-[#2B2D36] hover:bg-[#3c3f4d] text-white px-4 py-2 rounded-xl gradient-border-button transition">Open App</button></a>
+	  </div>
+
+
+
+  </header>
+    </div>
+
+  <!-- Main content area -->
+  <main class="w-full max-w-[1200px] px-6 flex mt-12 flex-col gap-6 flex-1 relative z-10">
+
+
+<!-- Desktop hero (only visible ≥568px) -->
+<section class="bg-[#1C1E26] rounded-xl relative w-full h-[600px] overflow-hidden bg-[#0D0E12] hidden sm:flex">
+  <!-- Background image -->
+  <img src="./img/trixi-transparent-3.webp" alt="Trixi Background"
+       class="absolute inset-0 w-full h-full object-cover object-right transform translate-x-[200px] z-0 hero-background" />
+
+  <!-- Text content -->
+  <div class="relative z-10 flex flex-col justify-center h-full px-10 w-full md:w-1/2">
+    <h1 class="text-5xl font-semibold mb-4 text-white">
+      The <span class="solana-gradient">Ultimate</span> AI Trench Assistant
+    </h1>
+    <p class="text-gray-400 max-w-md">
+      Trixi AI is your one-stop go-to $SOL guardian, protecting you from rug-pulls and notifying you about red flags to protect and optimize your gains! Analyze social media profiles, and gain exclusive access to utilities by holding $TRIXIVERSE
+    </p>
+    <div class="mt-6 flex items-center gap-4">
+      <a href="https://app.trixiai.net"><button class="bg-[#2B2D36] px-6 py-2 rounded-xl gradient-border-button w-fit">Open App</button></a>
+      <a href="#about" class="text-sm text-gray-400 hover:text-white underline">Learn more</a>
+    </div>
+  </div>
+</section>
+
+<!-- Mobile hero (only visible <568px) -->
+<section class="bg-[#1C1E26] mobile-hero rounded-xl relative w-full h-auto overflow-hidden bg-[#0D0E12] flex flex-col sm:hidden">
+  <!-- Background image -->
+  <div class="absolute inset-0 z-0">
+    <img src="./img/trixi-transparent-3.webp" alt="Trixi Background"
+         class="w-full h-full object-cover object-center opacity-30 blur-sm" />
+  </div>
+
+  <!-- Text content -->
+  <div class="relative z-10 px-6 py-12">
+    <h1 class="text-4xl font-semibold mb-4 text-white">
+      The <span class="solana-gradient">Ultimate</span> AI Trench Assistant
+    </h1>
+    <p class="text-gray-400">
+      Trixi AI is your one-stop go-to $SOL guardian, protecting you from rug-pulls and notifying you about red flags to protect and optimize your gains! Analyze social media profiles, and gain exclusive access to utilities by holding $TRIXIVERSE
+    </p>
+    <div class="mt-6 flex items-center gap-4">
+      <button class="px-6 py-3 rounded-xl gradient-border-button w-fit">Open App</button>
+      <a href="#about" class="text-sm text-gray-400 hover:text-white underline">Learn more</a>
+    </div>
+  </div>
+</section>
+
+
+<div class="logo-row">
+  <img src="./img/solana.png" alt="Solana" style="width: 22%;" class="rounded-2xl opacity-50 h-24 md:h-32 object-contain" />
+  <img src="./img/cloudflare.png" alt="Cloudflare" style="width: 20%;" class="rounded-2xl opacity-50 h-24 md:h-32 object-contain" />
+  <img src="./img/uos.png" alt="UOS" style="width: 22%;" class="rounded-2xl opacity-50 h-24 md:h-32 object-contain" />
+  <img src="./img/dao-c.png" alt="DAO" style="width: 14%;" class="rounded-2xl opacity-50 h-[72px] md:h-[96px] object-contain" />
+  <img src="./img/pumpfun.png" alt="Pumpfun" style="width: 20%;" class="rounded-2xl opacity-50 h-24 md:h-32 object-contain" />
+</div>
+
+
+
+
+
+
+<div id="about" class="mt-12 text-left">
+  <h2 class="text-5xl font-semibold mb-2">
+    AI-Powered <span class="solana-gradient">Insights</span>
+  </h2>
+  <p class="text-gray-400 max-w-[600px]">
+    Trixi combines real-time market analysis, Gen Z-adapted language processing, and multi-modal content creation to deliver intelligent, engaging, and culturally relevant financial insights.
+  </p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+
+  <div class="bg-[#1C1E26] rounded-2xl p-6">
+    <h3 class="text-2xl font-semibold mb-2 flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" viewBox="0 0 827.72 466.63" width="40" height="50"><path d="M286.1 449.63c-3.14-5.35-6.51-15.33-6.56-17.84-.03-1.56 1.15-1.75 10.97-1.75h11v4.84c0 2.66-1.71 6.3-1.69 12.57.27 10.85 4.19 19.18 2.27 19.18-.73 0-12.71-11.64-14.17-14.14M369.6 433c-.69-1.22-28.06 1.43-63.91 1.08-23.36-.23-48.99-.93-56.97-1.57-18.56-1.47-56.51-5.72-64.97-7.28l-6.53-1.19 5.78-.67c3.17-.36 21.4-.96 40.5-1.33 101.92-1.98 163.97-7.83 220.22-20.75 23.08-5.31 31.1-8.01 45.58-15.38 22.97-11.69 49.77-31.31 82.07-60.07 14.34-12.78 45.5-42.1 46.09-43.37.13-.29-3.03-1.74-7.01-3.24-6.78-2.53-8.24-3.68-22.26-17.5-34.15-33.64-75.57-59.97-125.62-79.85-14.28-5.68-39.15-14.43-40.99-14.43-.53 0 1.04 2.81 3.47 6.25 5.75 8.09 13.69 24.11 16.99 34.25 8.22 25.28 8.23 53.83.04 79.75-11.77 37.25-40.96 68.24-77.92 82.72-47.35 18.55-101.36 9.25-138.67-23.88-21.29-18.9-34.22-40.07-41.49-67.95-2.59-9.92-2.78-12-2.78-30.64s.19-20.71 2.8-30.73c3-11.53 6.91-21.75 11.7-30.58 1.64-3.04 2.81-5.72 2.58-5.94-.63-.63-20.52 8.18-34.84 15.44-34.33 17.4-77.8 47.29-97.25 66.87-12.72 12.8-51.36 57.47-62.91 72.72-1.57 2.07-3.03 3.6-3.25 3.38-.82-.82 8.62-19.62 15.13-30.15 8.72-14.09 21.56-33.33 27.37-41.01 15.16-20.05 37.52-44.04 53.9-57.82 3.97-3.34 10.71-10.08 14.97-14.97 24.89-28.57 59.8-56.16 91.3-72.14 30.44-15.45 50.15-21.16 85.04-24.66l12.46-1.24 5.84-5.58c3.22-3.06 7.42-8.25 9.34-11.53 4.56-7.78 8.98-21.16 10.09-30.56l.9-7.5 3.67 7.83c2.03 4.31 4.82 11.51 6.22 16 1.4 4.49 2.91 8.86 3.36 9.69.45.84 1.62 5.23 2.59 9.76.98 4.53 2.28 8.87 2.89 9.64.74.94 6.03 1.94 16.1 3.03l15 1.62 4.33-4.72c7.99-8.72 21.63-40.76 26.22-61.6.7-3.16 1.61-5.75 2.03-5.75 1.26 0 6.49 7.13 10.24 14 4.25 7.77 7.49 18.88 8.33 28.55.66 7.64-1.25 19.51-4.73 29.42-1.06 3-1.92 5.79-1.92 6.18s2.04 1.03 4.54 1.41c3.9.58 5.48.22 11.25-2.61 8.82-4.33 23.42-18.9 32.02-31.95 10.86-16.49 25.17-46.64 31.79-66.97L502.1 0l1.41 3.46c2.28 5.6 8.97 32.79 11.34 46.14 2.83 15.9 3.15 40.45.65 48.85-7.27 24.35-8.15 29.54-5.2 30.67 7.99 3.06 41.69-44.92 77.9-110.92C593.55 8.44 598.31.45 598.76.45c1.04 0 1.45 1.39 3.66 12.5 1.46 7.31 1.79 13.89 1.76 35-.03 23.17-.28 27.13-2.29 36.38-4.06 18.67-11.65 39.96-23.28 65.36-3.24 7.07-5.89 13.09-5.89 13.38 0 1.04 29.08-15.25 44.5-24.93 38.87-24.41 63.71-49.85 86.58-88.69l4.42-7.5.32 8.5c.77 20.61-3.41 51.82-8.43 63.06-1.6 3.56-12.64 18.27-30.79 41-15.57 19.49-27.91 35.59-27.42 35.78 1.5.59 10.91-1.97 20.12-5.47 24.59-9.34 51-25.64 75.2-46.41 11.94-10.25 34.02-32.97 44.43-45.72 4.61-5.65 8.52-10.12 8.7-9.95.65.66-2.82 21.2-5.12 30.26-6.33 24.96-17.08 44.73-33.96 62.45-12.47 13.09-13.25 14.04-14.97 18.16-1.44 3.44-.58 11.93.75 14.5 3.88 7.45 10.75 10.65 22.67 10.56 15.47-.12 38.16-7.72 58.75-19.7 5.09-2.95 9.25-5.14 9.25-4.85 0 1.53-12.12 23.18-17.82 31.83-8.02 12.16-23.42 27.85-34.68 35.33-21.3 14.14-45.96 22.32-76.2 25.27-13.31 1.3-66.18-1.46-73.1 6.83-4.62 4.88-6.12 6.76-5.98 6.73 19.7-4.14 44.67 11.41 51.76 16.2.51.34.2 1.13-.4 1.05l-20.82-2.77c-16.16-2-26.23-1.09-33.4 1.23-4.48 1.46-9.19 3.49-10.46 4.51l-2.3 1.87 13.31 22.2c11.36 15.34 21.57 33.78 19.84 35.41-2.49 2.35-45.52-32-55.19-28.54l-3.88 2.76-9.68 7.83c-5.48 5.19-13.56 12.11-17.96 15.38-7.95 5.92-7.98 5.96-4.99 6.56 5.63 1.12 18.03 6.85 25.75 11.89 14.29 9.32 23.5 21.29 26.59 34.53.78 3.35 1.19 6.33.9 6.61-.96.96-7.73-3.14-18.79-11.38-24.61-18.33-30.21-26.64-55.63-27.05-9.56.81-14.34 3.3-19.06 5.45l-8.56 3.9 3.71 3.86c7.61 7.93 15.02 27.95 16.59 44.88.81 8.63 1.65 9.02-9.77-4.55q-9.31-11.07-18.92-23.24c-9.8-11.69-10.6-13.58-23.51-10.46-7.07 1.62-12.4 2.79-15.67 3.37-2.19.29-4.31.76-7.16 1.29-8.48 1.56-32.73 5.42-37.83 6.02-3.88.46-5.65 1.07-5.31 1.85 3.69 8.36 6.54 16.11 7.42 20.17 1.69 7.77 5.16 12.22 1.48 13.49-2.38.64-8.35-3.82-17.03-10.97m-59.52-112.25c26.62-7.89 43.53-10.64 69.29-56.38 7.79-13.82 7.57-52.01-2.86-29.86-41.34 73.28-116.48 70.48-179.94 22.53-6.42-4.74-6.65-3.63-1.35 6.62 22.54 43.55 64.98 64.65 114.86 57.09m30.73-98.96c8.03-4.7 13.51-14.1 13.51-23.15 0-14.24-13.13-27.41-27.33-27.41-16.92 0-30.15 16.35-26.6 32.87 3.83 17.86 24.61 26.96 40.42 17.69" data-name="Layer 1" fill="url(#solanaGradientIcon)"/></svg>
+      Language <span class="solana-gradient">Mastery</span>
+    </h3>
+    <p class="text-gray-400">
+Trixi’s natural language model adapts to modern slang, memes, and financial discussions to deliver engaging, context-aware insights.
+    </p>
+  </div>
+
+  <div class="bg-[#1C1E26] rounded-2xl p-6">
+    <h3 class="text-2xl font-semibold mb-2 flex items-center gap-2">
+     <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" viewBox="0 0 827.72 466.63" width="40" height="50"><path d="M286.1 449.63c-3.14-5.35-6.51-15.33-6.56-17.84-.03-1.56 1.15-1.75 10.97-1.75h11v4.84c0 2.66-1.71 6.3-1.69 12.57.27 10.85 4.19 19.18 2.27 19.18-.73 0-12.71-11.64-14.17-14.14M369.6 433c-.69-1.22-28.06 1.43-63.91 1.08-23.36-.23-48.99-.93-56.97-1.57-18.56-1.47-56.51-5.72-64.97-7.28l-6.53-1.19 5.78-.67c3.17-.36 21.4-.96 40.5-1.33 101.92-1.98 163.97-7.83 220.22-20.75 23.08-5.31 31.1-8.01 45.58-15.38 22.97-11.69 49.77-31.31 82.07-60.07 14.34-12.78 45.5-42.1 46.09-43.37.13-.29-3.03-1.74-7.01-3.24-6.78-2.53-8.24-3.68-22.26-17.5-34.15-33.64-75.57-59.97-125.62-79.85-14.28-5.68-39.15-14.43-40.99-14.43-.53 0 1.04 2.81 3.47 6.25 5.75 8.09 13.69 24.11 16.99 34.25 8.22 25.28 8.23 53.83.04 79.75-11.77 37.25-40.96 68.24-77.92 82.72-47.35 18.55-101.36 9.25-138.67-23.88-21.29-18.9-34.22-40.07-41.49-67.95-2.59-9.92-2.78-12-2.78-30.64s.19-20.71 2.8-30.73c3-11.53 6.91-21.75 11.7-30.58 1.64-3.04 2.81-5.72 2.58-5.94-.63-.63-20.52 8.18-34.84 15.44-34.33 17.4-77.8 47.29-97.25 66.87-12.72 12.8-51.36 57.47-62.91 72.72-1.57 2.07-3.03 3.6-3.25 3.38-.82-.82 8.62-19.62 15.13-30.15 8.72-14.09 21.56-33.33 27.37-41.01 15.16-20.05 37.52-44.04 53.9-57.82 3.97-3.34 10.71-10.08 14.97-14.97 24.89-28.57 59.8-56.16 91.3-72.14 30.44-15.45 50.15-21.16 85.04-24.66l12.46-1.24 5.84-5.58c3.22-3.06 7.42-8.25 9.34-11.53 4.56-7.78 8.98-21.16 10.09-30.56l.9-7.5 3.67 7.83c2.03 4.31 4.82 11.51 6.22 16 1.4 4.49 2.91 8.86 3.36 9.69.45.84 1.62 5.23 2.59 9.76.98 4.53 2.28 8.87 2.89 9.64.74.94 6.03 1.94 16.1 3.03l15 1.62 4.33-4.72c7.99-8.72 21.63-40.76 26.22-61.6.7-3.16 1.61-5.75 2.03-5.75 1.26 0 6.49 7.13 10.24 14 4.25 7.77 7.49 18.88 8.33 28.55.66 7.64-1.25 19.51-4.73 29.42-1.06 3-1.92 5.79-1.92 6.18s2.04 1.03 4.54 1.41c3.9.58 5.48.22 11.25-2.61 8.82-4.33 23.42-18.9 32.02-31.95 10.86-16.49 25.17-46.64 31.79-66.97L502.1 0l1.41 3.46c2.28 5.6 8.97 32.79 11.34 46.14 2.83 15.9 3.15 40.45.65 48.85-7.27 24.35-8.15 29.54-5.2 30.67 7.99 3.06 41.69-44.92 77.9-110.92C593.55 8.44 598.31.45 598.76.45c1.04 0 1.45 1.39 3.66 12.5 1.46 7.31 1.79 13.89 1.76 35-.03 23.17-.28 27.13-2.29 36.38-4.06 18.67-11.65 39.96-23.28 65.36-3.24 7.07-5.89 13.09-5.89 13.38 0 1.04 29.08-15.25 44.5-24.93 38.87-24.41 63.71-49.85 86.58-88.69l4.42-7.5.32 8.5c.77 20.61-3.41 51.82-8.43 63.06-1.6 3.56-12.64 18.27-30.79 41-15.57 19.49-27.91 35.59-27.42 35.78 1.5.59 10.91-1.97 20.12-5.47 24.59-9.34 51-25.64 75.2-46.41 11.94-10.25 34.02-32.97 44.43-45.72 4.61-5.65 8.52-10.12 8.7-9.95.65.66-2.82 21.2-5.12 30.26-6.33 24.96-17.08 44.73-33.96 62.45-12.47 13.09-13.25 14.04-14.97 18.16-1.44 3.44-.58 11.93.75 14.5 3.88 7.45 10.75 10.65 22.67 10.56 15.47-.12 38.16-7.72 58.75-19.7 5.09-2.95 9.25-5.14 9.25-4.85 0 1.53-12.12 23.18-17.82 31.83-8.02 12.16-23.42 27.85-34.68 35.33-21.3 14.14-45.96 22.32-76.2 25.27-13.31 1.3-66.18-1.46-73.1 6.83-4.62 4.88-6.12 6.76-5.98 6.73 19.7-4.14 44.67 11.41 51.76 16.2.51.34.2 1.13-.4 1.05l-20.82-2.77c-16.16-2-26.23-1.09-33.4 1.23-4.48 1.46-9.19 3.49-10.46 4.51l-2.3 1.87 13.31 22.2c11.36 15.34 21.57 33.78 19.84 35.41-2.49 2.35-45.52-32-55.19-28.54l-3.88 2.76-9.68 7.83c-5.48 5.19-13.56 12.11-17.96 15.38-7.95 5.92-7.98 5.96-4.99 6.56 5.63 1.12 18.03 6.85 25.75 11.89 14.29 9.32 23.5 21.29 26.59 34.53.78 3.35 1.19 6.33.9 6.61-.96.96-7.73-3.14-18.79-11.38-24.61-18.33-30.21-26.64-55.63-27.05-9.56.81-14.34 3.3-19.06 5.45l-8.56 3.9 3.71 3.86c7.61 7.93 15.02 27.95 16.59 44.88.81 8.63 1.65 9.02-9.77-4.55q-9.31-11.07-18.92-23.24c-9.8-11.69-10.6-13.58-23.51-10.46-7.07 1.62-12.4 2.79-15.67 3.37-2.19.29-4.31.76-7.16 1.29-8.48 1.56-32.73 5.42-37.83 6.02-3.88.46-5.65 1.07-5.31 1.85 3.69 8.36 6.54 16.11 7.42 20.17 1.69 7.77 5.16 12.22 1.48 13.49-2.38.64-8.35-3.82-17.03-10.97m-59.52-112.25c26.62-7.89 43.53-10.64 69.29-56.38 7.79-13.82 7.57-52.01-2.86-29.86-41.34 73.28-116.48 70.48-179.94 22.53-6.42-4.74-6.65-3.63-1.35 6.62 22.54 43.55 64.98 64.65 114.86 57.09m30.73-98.96c8.03-4.7 13.51-14.1 13.51-23.15 0-14.24-13.13-27.41-27.33-27.41-16.92 0-30.15 16.35-26.6 32.87 3.83 17.86 24.61 26.96 40.42 17.69" data-name="Layer 1" fill="url(#solanaGradientIcon)"/></svg>
+      Smart <span class="solana-gradient">Market Analysis</span>
+    </h3>
+    <p class="text-gray-400">
+      With real-time data processing and predictive neural networks, Trixi provides risk-aware trading insights across traditional and crypto markets.
+    </p>
+  </div>
+
+  <div class="bg-[#1C1E26] rounded-2xl p-6">
+    <h3 class="text-2xl font-semibold mb-2 flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" viewBox="0 0 827.72 466.63" width="40" height="50"><path d="M286.1 449.63c-3.14-5.35-6.51-15.33-6.56-17.84-.03-1.56 1.15-1.75 10.97-1.75h11v4.84c0 2.66-1.71 6.3-1.69 12.57.27 10.85 4.19 19.18 2.27 19.18-.73 0-12.71-11.64-14.17-14.14M369.6 433c-.69-1.22-28.06 1.43-63.91 1.08-23.36-.23-48.99-.93-56.97-1.57-18.56-1.47-56.51-5.72-64.97-7.28l-6.53-1.19 5.78-.67c3.17-.36 21.4-.96 40.5-1.33 101.92-1.98 163.97-7.83 220.22-20.75 23.08-5.31 31.1-8.01 45.58-15.38 22.97-11.69 49.77-31.31 82.07-60.07 14.34-12.78 45.5-42.1 46.09-43.37.13-.29-3.03-1.74-7.01-3.24-6.78-2.53-8.24-3.68-22.26-17.5-34.15-33.64-75.57-59.97-125.62-79.85-14.28-5.68-39.15-14.43-40.99-14.43-.53 0 1.04 2.81 3.47 6.25 5.75 8.09 13.69 24.11 16.99 34.25 8.22 25.28 8.23 53.83.04 79.75-11.77 37.25-40.96 68.24-77.92 82.72-47.35 18.55-101.36 9.25-138.67-23.88-21.29-18.9-34.22-40.07-41.49-67.95-2.59-9.92-2.78-12-2.78-30.64s.19-20.71 2.8-30.73c3-11.53 6.91-21.75 11.7-30.58 1.64-3.04 2.81-5.72 2.58-5.94-.63-.63-20.52 8.18-34.84 15.44-34.33 17.4-77.8 47.29-97.25 66.87-12.72 12.8-51.36 57.47-62.91 72.72-1.57 2.07-3.03 3.6-3.25 3.38-.82-.82 8.62-19.62 15.13-30.15 8.72-14.09 21.56-33.33 27.37-41.01 15.16-20.05 37.52-44.04 53.9-57.82 3.97-3.34 10.71-10.08 14.97-14.97 24.89-28.57 59.8-56.16 91.3-72.14 30.44-15.45 50.15-21.16 85.04-24.66l12.46-1.24 5.84-5.58c3.22-3.06 7.42-8.25 9.34-11.53 4.56-7.78 8.98-21.16 10.09-30.56l.9-7.5 3.67 7.83c2.03 4.31 4.82 11.51 6.22 16 1.4 4.49 2.91 8.86 3.36 9.69.45.84 1.62 5.23 2.59 9.76.98 4.53 2.28 8.87 2.89 9.64.74.94 6.03 1.94 16.1 3.03l15 1.62 4.33-4.72c7.99-8.72 21.63-40.76 26.22-61.6.7-3.16 1.61-5.75 2.03-5.75 1.26 0 6.49 7.13 10.24 14 4.25 7.77 7.49 18.88 8.33 28.55.66 7.64-1.25 19.51-4.73 29.42-1.06 3-1.92 5.79-1.92 6.18s2.04 1.03 4.54 1.41c3.9.58 5.48.22 11.25-2.61 8.82-4.33 23.42-18.9 32.02-31.95 10.86-16.49 25.17-46.64 31.79-66.97L502.1 0l1.41 3.46c2.28 5.6 8.97 32.79 11.34 46.14 2.83 15.9 3.15 40.45.65 48.85-7.27 24.35-8.15 29.54-5.2 30.67 7.99 3.06 41.69-44.92 77.9-110.92C593.55 8.44 598.31.45 598.76.45c1.04 0 1.45 1.39 3.66 12.5 1.46 7.31 1.79 13.89 1.76 35-.03 23.17-.28 27.13-2.29 36.38-4.06 18.67-11.65 39.96-23.28 65.36-3.24 7.07-5.89 13.09-5.89 13.38 0 1.04 29.08-15.25 44.5-24.93 38.87-24.41 63.71-49.85 86.58-88.69l4.42-7.5.32 8.5c.77 20.61-3.41 51.82-8.43 63.06-1.6 3.56-12.64 18.27-30.79 41-15.57 19.49-27.91 35.59-27.42 35.78 1.5.59 10.91-1.97 20.12-5.47 24.59-9.34 51-25.64 75.2-46.41 11.94-10.25 34.02-32.97 44.43-45.72 4.61-5.65 8.52-10.12 8.7-9.95.65.66-2.82 21.2-5.12 30.26-6.33 24.96-17.08 44.73-33.96 62.45-12.47 13.09-13.25 14.04-14.97 18.16-1.44 3.44-.58 11.93.75 14.5 3.88 7.45 10.75 10.65 22.67 10.56 15.47-.12 38.16-7.72 58.75-19.7 5.09-2.95 9.25-5.14 9.25-4.85 0 1.53-12.12 23.18-17.82 31.83-8.02 12.16-23.42 27.85-34.68 35.33-21.3 14.14-45.96 22.32-76.2 25.27-13.31 1.3-66.18-1.46-73.1 6.83-4.62 4.88-6.12 6.76-5.98 6.73 19.7-4.14 44.67 11.41 51.76 16.2.51.34.2 1.13-.4 1.05l-20.82-2.77c-16.16-2-26.23-1.09-33.4 1.23-4.48 1.46-9.19 3.49-10.46 4.51l-2.3 1.87 13.31 22.2c11.36 15.34 21.57 33.78 19.84 35.41-2.49 2.35-45.52-32-55.19-28.54l-3.88 2.76-9.68 7.83c-5.48 5.19-13.56 12.11-17.96 15.38-7.95 5.92-7.98 5.96-4.99 6.56 5.63 1.12 18.03 6.85 25.75 11.89 14.29 9.32 23.5 21.29 26.59 34.53.78 3.35 1.19 6.33.9 6.61-.96.96-7.73-3.14-18.79-11.38-24.61-18.33-30.21-26.64-55.63-27.05-9.56.81-14.34 3.3-19.06 5.45l-8.56 3.9 3.71 3.86c7.61 7.93 15.02 27.95 16.59 44.88.81 8.63 1.65 9.02-9.77-4.55q-9.31-11.07-18.92-23.24c-9.8-11.69-10.6-13.58-23.51-10.46-7.07 1.62-12.4 2.79-15.67 3.37-2.19.29-4.31.76-7.16 1.29-8.48 1.56-32.73 5.42-37.83 6.02-3.88.46-5.65 1.07-5.31 1.85 3.69 8.36 6.54 16.11 7.42 20.17 1.69 7.77 5.16 12.22 1.48 13.49-2.38.64-8.35-3.82-17.03-10.97m-59.52-112.25c26.62-7.89 43.53-10.64 69.29-56.38 7.79-13.82 7.57-52.01-2.86-29.86-41.34 73.28-116.48 70.48-179.94 22.53-6.42-4.74-6.65-3.63-1.35 6.62 22.54 43.55 64.98 64.65 114.86 57.09m30.73-98.96c8.03-4.7 13.51-14.1 13.51-23.15 0-14.24-13.13-27.41-27.33-27.41-16.92 0-30.15 16.35-26.6 32.87 3.83 17.86 24.61 26.96 40.42 17.69" data-name="Layer 1" fill="url(#solanaGradientIcon)"/></svg>
+      Content <span class="solana-gradient">Creation</span>
+    </h3>
+    <p class="text-gray-400">
+      Trixi generates engaging financial content, including text, memes, and voice posts, to enhance market discussions across social platforms.
+    </p>
+  </div>
+
+</div>
+
+
+
+<div class="mt-12 text-left">
+  <h2 class="text-5xl font-semibold mb-2">
+    Powerful <span class="solana-gradient">Commands</span>
+  </h2>
+  <p class="text-gray-400 max-w-[600px]">
+    Trixi combines real-time market analysis, Gen Z-adapted language processing, and multi-modal content creation to deliver intelligent, engaging, and culturally relevant financial insights.
+  </p>
+</div>
+
+
+<!-- Step 4: Four panels in a 2x2 grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+
+  <div class="bg-[#1C1E26] rounded-2xl p-6">
+    <h3 class="text-2xl font-semibold mb-2 flex items-center gap-2">
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="50" fill="url(#solanaGradientIcon)" viewBox="0 0 328 328"><path d="M177.75 64.001C177.75 29.4 149.601 1.25 115 1.25c-34.602 0-62.75 28.15-62.75 62.751S80.398 126.75 115 126.75c34.601 0 62.75-28.148 62.75-62.749zM228.606 181.144c-5.858-5.857-15.355-5.858-21.214-.001-5.857 5.857-5.857 15.355 0 21.214l19.393 19.396-19.393 19.391c-5.857 5.857-5.857 15.355 0 21.214a14.956 14.956 0 0 0 10.607 4.394c3.838 0 7.678-1.465 10.605-4.393l30-29.998a15 15 0 0 0 .001-21.214l-29.999-30.003z"/><path d="M223 116.75c-34.488 0-65.145 16.716-84.298 42.47A115.407 115.407 0 0 0 115 156.75c-63.412 0-115 51.589-115 115 0 8.284 6.715 15 15 15h125.596c19.246 24.348 49.03 40 82.404 40 57.896 0 105-47.103 105-105 0-57.896-47.104-105-105-105zm0 180c-41.356 0-75-33.645-75-75s33.644-75 75-75c41.354 0 75 33.645 75 75s-33.646 75-75 75z"/></svg>
+      Follower and <span class="solana-gradient">Engagement</span> Analytics
+    </h3>
+    <p class="text-gray-400">
+      Trixi combines real-time market analysis, Gen Z-adapted language processing, and multi-modal content creation to deliver intelligent, engaging, and culturally relevant financial insights.
+    </p>
+  </div>
+
+  <div class="bg-[#1C1E26] rounded-2xl p-6">
+    <h3 class="text-2xl font-semibold mb-2 flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="url(#solanaGradientIcon)" viewBox="0 0 24 24"><path fill="url(#solanaGradientIcon)" d="m21.56 10.739-1.36-1.58c-.26-.3-.47-.86-.47-1.26v-1.7c0-1.06-.87-1.93-1.93-1.93h-1.7c-.39 0-.96-.21-1.26-.47l-1.58-1.36c-.69-.59-1.82-.59-2.52 0l-1.57 1.37c-.3.25-.87.46-1.26.46H6.18c-1.06 0-1.93.87-1.93 1.93v1.71c0 .39-.21.95-.46 1.25l-1.35 1.59c-.58.69-.58 1.81 0 2.5l1.35 1.59c.25.3.46.86.46 1.25v1.71c0 1.06.87 1.93 1.93 1.93h1.73c.39 0 .96.21 1.26.47l1.58 1.36c.69.59 1.82.59 2.52 0l1.58-1.36c.3-.26.86-.47 1.26-.47h1.7c1.06 0 1.93-.87 1.93-1.93v-1.7c0-.39.21-.96.47-1.26l1.36-1.58c.58-.69.58-1.83-.01-2.52Zm-5.4-.63-4.83 4.83a.75.75 0 0 1-1.06 0l-2.42-2.42a.754.754 0 0 1 0-1.06c.29-.29.77-.29 1.06 0l1.89 1.89 4.3-4.3c.29-.29.77-.29 1.06 0 .29.29.29.77 0 1.06Z"/></svg>
+      Account Activity and <span class="solana-gradient">Verification</span>
+    </h3>
+    <p class="text-gray-400">
+      Trixi combines real-time market analysis, Gen Z-adapted language processing, and multi-modal content creation to deliver intelligent, engaging, and culturally relevant financial insights.
+    </p>
+  </div>
+
+  <div class="bg-[#1C1E26] rounded-2xl p-6">
+    <h3 class="text-2xl font-semibold mb-2 flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="url(#solanaGradientIcon)" viewBox="0 0 24 24"><path fill="url(#solanaGradientIcon)" fill-rule="evenodd" d="M4 3a1 1 0 0 0-2 0v17.2A1.8 1.8 0 0 0 3.8 22H21a1 1 0 1 0 0-2H4V3Zm17.707 4.707a1 1 0 0 0-1.414-1.414L14 12.586l-3.293-3.293a1 1 0 0 0-1.414 0l-4 4a1 1 0 1 0 1.414 1.414L10 11.414l3.293 3.293a1 1 0 0 0 1.414 0l7-7Z" clip-rule="evenodd"/></svg>
+      Market Trends & <span class="solana-gradient">Influencer Analysis</span>
+    </h3>
+    <p class="text-gray-400">
+      Trixi combines real-time market analysis, Gen Z-adapted language processing, and multi-modal content creation to deliver intelligent, engaging, and culturally relevant financial insights.
+    </p>
+  </div>
+
+  <div class="bg-[#1C1E26] rounded-2xl p-6">
+    <h3 class="text-2xl font-semibold mb-2 flex items-center gap-2">
+     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#DC1FFF " stroke="#03E1FF" stroke-width="3" viewBox="0 0 64 64"><circle cx="34.52" cy="11.43" r="5.82"/><circle cx="53.63" cy="31.6" r="5.82"/><circle cx="34.52" cy="50.57" r="5.82"/><circle cx="15.16" cy="42.03" r="5.82"/><circle cx="15.16" cy="19.27" r="5.82"/><circle cx="34.51" cy="29.27" r="4.7"/><path d="m20.17 16.3 8.73-3.37M38.6 15.59l10.88 11.93M50.07 36.2l-11.4 10.29M18.36 24.13l12.55 21.88M20.31 44.74l8.39 3.89M17.34 36.63l14.03-20.31M20.52 21.55l9.82 5.55M39.22 29.8l8.59.65M34.51 33.98l.01 10.76"/></svg>
+      AI-Powered <span class="solana-gradient">Insights and Responses</span>
+    </h3>
+    <p class="text-gray-400">
+      Trixi combines real-time market analysis, Gen Z-adapted language processing, and multi-modal content creation to deliver intelligent, engaging, and culturally relevant financial insights.
+    </p>
+  </div>
+
+</div>
+
+<div id="features" class="mt-12 text-left">
+  <h2 class="text-5xl font-semibold mb-2">
+    Unmatched <span class="solana-gradient">Feature Set</span>
+  </h2>
+  <p class="text-gray-400 max-w-[600px]">
+    Trixi combines real-time market analysis, Gen Z-adapted language processing, and multi-modal content creation to deliver intelligent, engaging, and culturally relevant financial insights.
+  </p>
+</div>
+
+
+<!-- Step 5: Custom grid layout -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+
+  <!-- Panel 1: Risk Management Text -->
+  <div class="panel-text-1 rounded-2xl md:col-span-1 flex flex-col justify-center">
+    <h3 class="text-2xl font-semibold mb-2"><span class="solana-gradient">Risk Management</span></h3>
+    <p class="text-gray-400">
+      Trixi’s trading and risk management system uses real-time data and predictive modeling to assess market trends and provide strategic recommendations. Instead of simply executing trades, it evaluates liquidity, volatility, and sentiment to help users make informed decisions. By balancing opportunity and risk, Trixi ensures smarter and safer trading in fast-moving markets.
+    </p>
+  </div>
+
+  <!-- Panel 2: Risk Management Image -->
+  <div class="panel-image-1 rounded-2xl overflow-hidden md:col-span-2">
+    <img src="./img/trixi-preview-1.jpg" alt="Tech Image" class="w-full h-full object-cover rounded-2xl" />
+  </div>
+
+  <!-- Panel 3: Sentiment Analysis Image -->
+  <div class="panel-image-2 rounded-2xl overflow-hidden md:col-span-2">
+    <img src="./img/trixi-preview-2.jpg" alt="Data Image" class="w-full h-full object-cover rounded-2xl" />
+  </div>
+
+  <!-- Panel 4: Sentiment Analysis Text -->
+  <div class="panel-text-2  rounded-2xl md:col-span-1 flex flex-col justify-center">
+    <h3 class="text-2xl font-semibold mb-2"><span class="solana-gradient">Sentiment Analysis</span></h3>
+    <p class="text-gray-400">
+      Trixi’s sentiment analysis scans X, Telegram, and Discord to gauge market perception and differentiate between genuine interest and hype. Using advanced NLP, it detects social media trends, engagement levels, and coordinated promotions, giving traders deeper insights beyond price movements. This helps users anticipate shifts and avoid potential market traps.
+    </p>
+  </div>
+
+  <!-- Panel 5: Natural Language Trading Text -->
+  <div class="panel-text-3  rounded-2xl md:col-span-1 flex flex-col justify-center">
+    <h3 class="text-2xl font-semibold mb-2"><span class="solana-gradient">Natural Language Trading</span></h3>
+    <p class="text-gray-400">
+      With natural language trading, Trixi delivers market insights through conversational AI, making trading more intuitive. Users can ask about portfolio updates, trends, or asset analysis in everyday language, receiving clear, context-aware responses. By simplifying complex data, Trixi makes market intelligence accessible and actionable.
+    </p>
+  </div>
+
+  <!-- Panel 6: Natural Language Trading Image -->
+  <div class="panel-image-3 rounded-2xl overflow-hidden md:col-span-2">
+    <img src="./img/trixi-preview-3.jpg" alt="AI Image" class="w-full h-full object-cover rounded-2xl" />
+  </div>
+
+</div>
+
+
+
+<!-- Step 6: Repeat h2 and paragraph -->
+<div class="mt-12 text-left">
+  <h2 class="text-5xl font-semibold mb-2">
+    Trixi <span class="solana-gradient">Roadmap</span>
+  </h2>
+  <p class="text-gray-400 max-w-[600px]">
+Trixi’s roadmap is ever-evolving, and is regularly updated. Check in on Telegram to chat with our team and find out more.</p>
+</div>
+
+
+
+
+<!-- Step 7: Stacked panel and image -->
+<!-- Updated Step 7: Roadmap Panels -->
+<div id="roadmap" class="flex flex-col md:flex-row gap-6 mt-12 items-stretch">
+  <!-- Left column: roadmap panels -->
+  <div class="w-full md:w-[60%] [@media(max-width:1040px)]:md:w-[65%] [@media(max-width:940px)]:md:w-[70%] flex flex-col gap-6">    <!-- Phase 1 -->
+    <div class="bg-[#1C1E26] p-6 rounded-2xl ">
+      <h3 class="text-xl font-semibold mb-1">Phase 1 – Ongoing</h3>
+      <p class="text-gray-400 text-sm">
+ Trixi’s first phase focuses on core social and market analytics, providing tools to track follower engagement, analyze account activity, and verify key influencers. Users can monitor audience behavior, fetch the latest tweets, and identify trending topics that shape financial discussions. These insights help traders stay ahead of market sentiment shifts.       </p>
+    </div>
+    <!-- Phase 2 -->
+    <div class="bg-[#1C1E26] p-6 rounded-2xl ">
+      <h3 class="text-xl font-semibold mb-1">Phase 2 – In Active Development</h3>
+      <p class="text-gray-400 text-sm">
+ The second phase introduces AI-powered insights and content generation, including real-time AMA responses and natural language trading assistance. Trixi enables users to ask market-related questions and receive instant, intelligent answers while offering portfolio updates and market trend explanations in an intuitive, conversational format.       </p>
+    </div>
+    <!-- Phase 3 -->
+    <div class="bg-[#1C1E26] p-6 rounded-2xl ]">
+      <h3 class="text-xl font-semibold mb-1">Phase 3 – Q2 & Q3 2025</h3>
+      <p class="text-gray-400 text-sm">
+ In phase three, Trixi enhances advanced analytics and risk management, leveraging sentiment analysis to distinguish between organic interest and hype. It also integrates real-time trading data with predictive modeling to assess risk and provide strategic recommendations, ensuring users can make informed financial decisions.       </p>
+    </div>
+    <!-- Phase 4 -->
+    <div class="bg-[#1C1E26] p-6 rounded-2xl ">
+      <h3 class="text-xl font-semibold mb-1">Phase 4 – Q3 & Q4 2025</h3>
+      <p class="text-gray-400 text-sm">
+ Phase 4 expands Trixi’s capabilities to website and code analysis, allowing users to evaluate website credibility and scan for key market trends. Additionally, a built-in code checker will review smart contracts and trading algorithms, identifying security risks and optimization opportunities to enhance market intelligence and trading safety.       </p>
+    </div>
+  </div>
+
+  <!-- Roadmap Image with 30% Zoom -->
+ <div class="w-full md:w-[40%] trixi-roadmap-image [@media(max-width:1040px)]:md:w-[35%] [@media(max-width:940px)]:md:w-[30%] bg-[#1C1E26] rounded-2xl flex justify-end items-end overflow-hidden relative h-[30vh] md:h-auto">
+<img src="./img/trixi-standing.webp" alt="Trixi Starverse"
+     class="h-full object-cover" />
+
+</div>
+
+
+</div>
+
+
+<!-- Step 8: FAQ Panel -->
+<div id="faq" class="bg-[#1C1E26] p-8 rounded-2xl mt-12">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+    <!-- Left column: intro text -->
+    <div class="self-center"">
+        <h2 class="text-5xl font-semibold mb-2">
+    Frequently Asked <span class="solana-gradient">Questions</span>
+  </h2>
+      <p class="text-gray-400">
+        Got questions? We’ve got answers. Explore some of the most common questions users ask about TrixiAI. Got more questions? Visit us on Telegram and ask the team directly.
+      </p>
+    </div>
+
+    <!-- Right column: FAQ toggles -->
+<!-- Right column: FAQ toggles -->
+<div class="space-y-4">
+
+  <div class="faq-item border-b border-gray-700 pb-4">
+    <button class="faq-question w-full text-left font-semibold text-white focus:outline-none flex justify-between items-center" onclick="toggleFaq(this)">
+      <span>What is TrixiAI?</span>
+      <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+    </button>
+    <div class="faq-answer max-h-0 overflow-hidden text-gray-400 mt-2 transition-all duration-500 ease-in-out">
+      An AI trading assistant that speaks your language—literally and financially.
+    </div>
+  </div>
+  <div class="faq-item border-b border-gray-700 pb-4">
+    <button class="faq-question w-full text-left font-semibold text-white focus:outline-none flex justify-between items-center" onclick="toggleFaq(this)">
+      <span>How does it analyze sentiment?</span>
+      <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+    </button>
+    <div class="faq-answer max-h-0 overflow-hidden text-gray-400 mt-2 transition-all duration-500 ease-in-out">
+      It pulls real-time data from social platforms and turns noise into actionable intelligence.
+    </div>
+  </div>
+  <div class="faq-item border-b border-gray-700 pb-4">
+    <button class="faq-question w-full text-left font-semibold text-white focus:outline-none flex justify-between items-center" onclick="toggleFaq(this)">
+      <span>What is Trixi and how does it work?</span>
+      <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+    </button>
+    <div class="faq-answer max-h-0 overflow-hidden text-gray-400 mt-2 transition-all duration-500 ease-in-out">
+      Trixi is an AI-powered market intelligence tool that provides real-time trading insights, sentiment analysis, and social media monitoring. It helps users make informed decisions by analyzing trends, tracking engagement, and offering AI-driven responses.
+    </div>
+  </div>
+
+  <div class="faq-item border-b border-gray-700 pb-4">
+    <button class="faq-question w-full text-left font-semibold text-white focus:outline-none flex justify-between items-center" onclick="toggleFaq(this)">
+      <span>How does Trixi analyze market trends?</span>
+      <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+    </button>
+    <div class="faq-answer max-h-0 overflow-hidden text-gray-400 mt-2 transition-all duration-500 ease-in-out">
+      Trixi processes real-time trading data from blockchain networks like Solana and Ethereum, integrates sentiment analysis from social media, and applies predictive modeling to identify emerging market movements before they happen.
+    </div>
+  </div>
+
+  <div class="faq-item border-b border-gray-700 pb-4">
+    <button class="faq-question w-full text-left font-semibold text-white focus:outline-none flex justify-between items-center" onclick="toggleFaq(this)">
+      <span>Can Trixi help with risk management?</span>
+      <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+    </button>
+    <div class="faq-answer max-h-0 overflow-hidden text-gray-400 mt-2 transition-all duration-500 ease-in-out">
+      Yes, Trixi evaluates market conditions, liquidity, and sentiment to provide risk assessments and trade recommendations, helping users make more strategic and informed trading decisions.
+    </div>
+  </div>
+
+  <div class="faq-item border-b border-gray-700 pb-4">
+    <button class="faq-question w-full text-left font-semibold text-white focus:outline-none flex justify-between items-center" onclick="toggleFaq(this)">
+      <span>What social media platforms does Trixi track?</span>
+      <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+    </button>
+    <div class="faq-answer max-h-0 overflow-hidden text-gray-400 mt-2 transition-all duration-500 ease-in-out">
+      Trixi monitors X (formerly Twitter), Telegram, and Discord to analyze discussions, engagement levels, and trending topics that may impact the financial markets.
+    </div>
+  </div>
+
+  <div class="faq-item border-b border-gray-700 pb-4">
+    <button class="faq-question w-full text-left font-semibold text-white focus:outline-none flex justify-between items-center" onclick="toggleFaq(this)">
+      <span>Does Trixi generate content?</span>
+      <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+    </button>
+    <div class="faq-answer max-h-0 overflow-hidden text-gray-400 mt-2 transition-all duration-500 ease-in-out">
+      Yes, Trixi creates market-related content, including short-form analysis, memes, and voice-based updates, making financial insights more accessible and engaging.
+    </div>
+  </div>
+
+  <div class="faq-item border-b border-gray-700 pb-4">
+    <button class="faq-question w-full text-left font-semibold text-white focus:outline-none flex justify-between items-center" onclick="toggleFaq(this)">
+      <span>How can I use Trixi’s features?</span>
+      <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+    </button>
+    <div class="faq-answer max-h-0 overflow-hidden text-gray-400 mt-2 transition-all duration-500 ease-in-out">
+      Trixi provides various commands for social media tracking, sentiment analysis, and AI-driven Q&A. Users can access these features through integrations with platforms like Telegram and web-based dashboards.
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+
+<script>
+function toggleFaq(button) {
+  const allFaqs = document.querySelectorAll('.faq-answer');
+  const allIcons = document.querySelectorAll('.faq-question svg');
+  const content = button.nextElementSibling;
+  const icon = button.querySelector('svg');
+
+  // First, close all toggles
+  allFaqs.forEach(faq => {
+    faq.style.maxHeight = "0px";
+  });
+  allIcons.forEach(svg => {
+    svg.classList.remove('rotate-180');
+  });
+
+  // Then toggle the clicked one if it was closed
+  if (content.style.maxHeight === "0px" || !content.style.maxHeight) {
+    content.style.maxHeight = content.scrollHeight + "px";
+    icon.classList.add('rotate-180');
+  }
+}
+</script>
+
+
+
+<!-- Contract Panel -->
+<div id="buy" class="bg-[#1C1E26] rounded-xl p-6 mt-12 w-full text-white flex flex-col gap-4">
+  <!-- Navigation Links -->
+  <div class="flex justify-between text-sm font-medium gap-2 flex-wrap">
+    <a href="https://www.dextools.io/app/en/solana/pair-explorer/BE7o6vC8c7yXbXYodksospGs6g58SFa68ziUHoMg733v?t=1742950554590" target="_blank"
+       class="w-[30%] px-4 py-2 bg-[#2B2D36] rounded-xl transition duration-300 hover:bg-gradient-to-r hover:from-[#9945FF] hover:to-[#14F195] hover:text-white text-center">
+      Dextools
+    </a>
+    <a href="https://dexscreener.com/solana/ja2ujrzlxwy5puk6ynas63fea83o7xgriefp8yqmwelq" target="_blank"
+       class="w-[30%] px-4 py-2 bg-[#2B2D36] rounded-xl transition duration-300 hover:bg-gradient-to-r hover:from-[#9945FF] hover:to-[#14F195] hover:text-white text-center">
+      DexScreener
+    </a>
+    <a href="https://t.me/TrixiVerse" target="_blank"
+       class="w-[30%] px-4 py-2 bg-[#2B2D36] rounded-xl transition duration-300 hover:bg-gradient-to-r hover:from-[#9945FF] hover:to-[#14F195] hover:text-white text-center">
+      Telegram
+    </a>
+  </div>
+
+<!-- CA Copy Button -->
+<div id="copyBox"
+     class="flex items-center justify-between px-4 py-2 bg-[#2B2D36] rounded-xl text-sm font-mono text-white cursor-pointer transition duration-300 hover:bg-gradient-to-r hover:from-[#9945FF] hover:to-[#14F195] select-none">
+  <span class="truncate">CA: BE7o6vC8c7yXbXYodksospGs6g58SFa68ziUHoMg733v</span>
+  <span class="ml-4 text-xs font-normal whitespace-nowrap">Click or tap to copy</span>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+</main>
+
+
+<!-- Step 9: Expanded footer -->
+<footer class="w-full mt-20 bg-[#1C1E26] text-white">
+  <div class="max-w-[1200px] mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-8">
+    <div class="w-full md:w-1/3">
+      <img src="./img/trixi-logo.png" alt="Footer Logo" class="w-[150px] h-auto">
+    </div>
+   <div class="w-full md:w-2/3 flex justify-end">
+	<p class="text-gray-500 text-sm text-right">
+  © 2025 TrixiVerse. All rights reserved.
+</p>
+     <!-- <div class="space-y-2">
+        <a href="#" class="block text-gray-400 hover:text-white">About</a>
+        <a href="#" class="block text-gray-400 hover:text-white">Features</a>
+        <a href="#" class="block text-gray-400 hover:text-white">Pricing</a>
+      </div>
+      <div class="space-y-2">
+        <a href="#" class="block text-gray-400 hover:text-white">Support</a>
+        <a href="#" class="block text-gray-400 hover:text-white">Terms</a>
+        <a href="#" class="block text-gray-400 hover:text-white">Privacy</a>
+      </div>-->
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile-only floating dropdown menu -->
+<div id="mobileMenu"
+     class="fixed top-[66px] right-6 w-48 bg-[#2B2D36] text-white rounded-xl shadow-lg hidden flex-col z-[9999] md:hidden overflow-hidden">
+  <a href="#about" class="block px-4 py-2 hover:bg-[#3c3f4d] transition rounded-t-xl">About</a>
+  <a href="#features" class="block px-4 py-2 hover:bg-[#3c3f4d] transition">Features</a>
+  <a href="#roadmap" class="block px-4 py-2 hover:bg-[#3c3f4d] transition">Roadmap</a>
+  <a href="#faq" class="block px-4 py-2 hover:bg-[#3c3f4d] transition">FAQ</a>
+  <a href="#buy" class="block px-4 py-2 hover:bg-[#3c3f4d] transition rounded-b-xl">Buy</a>
+</div>
+
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+      mobileMenu.classList.add('hidden');
+    }
+  });
+</script>
+
+<script>
+  const copyBox = document.getElementById('copyBox');
+  copyBox.addEventListener('click', () => {
+    const address = "BE7o6vC8c7yXbXYodksospGs6g58SFa68ziUHoMg733v";
+    navigator.clipboard.writeText(address).then(() => {
+      copyBox.innerText = "Copied!";
+      setTimeout(() => {
+        copyBox.innerText = "CA:" + address;
+      }, 2000);
+    });
+  });
+</script>
+
+<!-- Return to Top Button -->
+<button id="toTopBtn" style="display: none;" class="fixed bottom-6 right-6 z-50 px-4 py-2 rounded-xl bg-[#2B2D36] text-white text-sm shadow-lg hover:bg-gradient-to-r hover:from-[#9945FF] hover:to-[#14F195] transition">
+  ↑ Back to Top
+</button>
+
+<script>
+  const toTopBtn = document.getElementById('toTopBtn');
+
+  toTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  
+  window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    toTopBtn.style.display = 'block';
+  } else {
+    toTopBtn.style.display = 'none';
+  }
+});
+
+</script>
+
+
+</body>
 </html>
