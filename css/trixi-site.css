@@ -277,7 +277,7 @@ html {
   height: 1000px;
   fill: url(#solanaGradientIcon);
   filter: blur(160px) brightness(60%);
-  opacity: 0.1;
+  opacity: 0.15;
   will-change: transform;
   animation:
     blobMorph 12s ease-in-out infinite alternate,
@@ -338,5 +338,35 @@ html {
   .solana-blobs svg.blob {
     width: 1000px;
     height: 1000px;
+  }
+}
+
+.scrolling-image-wrapper {
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.scrolling-image-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 10071px; /* 5036px * 2, for both images stacked */
+  animation: scrollSeamless 20s linear infinite;
+}
+
+.scroll-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+@keyframes scrollSeamless {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5036px);
   }
 }
