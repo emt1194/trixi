@@ -23,6 +23,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="./css/trixi-site.css" rel="stylesheet" type="text/css" />
+
 </head>
 <body class="text-white min-h-screen flex flex-col items-center relative">
 <svg width="0" height="0" style="position:absolute">
@@ -251,13 +252,11 @@ Trixi’s natural language model adapts to modern slang, memes, and financial di
 
   </div>
 
-<!-- Right Scrolling Image Panel -->
-<div class="scrolling-image-wrapper md:w-1/2 rounded-2xl overflow-hidden relative bg-[#1C1E26]">
-  <div class="scrolling-image-container">
-    <img src="./img/trixi-tg.png" alt="Trixi Scroll 1" class="scroll-img" />
-    <img src="./img/trixi-tg.png" alt="Trixi Scroll 2" class="scroll-img" />
-  </div>
+<!-- Live Code Block -->
+<div class="md:w-1/2 bg-[#1C1E26] rounded-2xl  overflow-hidden flex items-start">
+  <div id="analyticsDisplay" class="rounded-xl w-full h-full"></div>
 </div>
+
 
 </section>
 
@@ -332,10 +331,28 @@ Trixi’s roadmap is ever-evolving, and is regularly updated. Check in on Telegr
  Phase 4 expands Trixi’s capabilities to website and code analysis, allowing users to evaluate website credibility and scan for key market trends. Additionally, a built-in code checker will review smart contracts and trading algorithms, identifying security risks and optimization opportunities to enhance market intelligence and trading safety.       </p>
     </div>
   </div>
- <div class="w-full md:w-[40%] trixi-roadmap-image [@media(max-width:1040px)]:md:w-[35%] [@media(max-width:940px)]:md:w-[30%] bg-[#1C1E26] rounded-2xl flex justify-end items-end overflow-hidden relative h-[30vh] md:h-auto">
-<img src="./img/trixi-standing.webp" alt="Trixi Starverse"
-     class="h-full object-cover" />
+  
+  <!-- Trixi Standing Panel -->
+<div class="w-full md:w-[40%] trixi-roadmap-image [@media(max-width:1040px)]:md:w-[35%] [@media(max-width:940px)]:md:w-[30%] rounded-2xl flex justify-end items-end overflow-hidden relative h-[30vh] md:h-auto bg-[#1C1E26] sm:bg-transparent">
+
+  <!-- Video Background (Desktop Only) -->
+  <video autoplay muted loop playsinline
+         class="absolute inset-0 w-full h-full object-cover z-[-2] hidden sm:block rounded-2xl">
+    <source src="./videos/trixi-space.mp4" type="video/mp4" />
+  </video>
+
+  <!-- Dark Overlay (Desktop Only) -->
+  <div class="absolute inset-0 bg-black/70 z-[-1] hidden sm:block rounded-2xl"></div>
+
+  <!-- Foreground Image -->
+  <img src="./img/trixi-standing.webp" alt="Trixi Starverse"
+       class="h-full object-cover" />
+
 </div>
+
+
+
+
 </div>
 <div id="faq" class="bg-[#1C1E26] p-8 rounded-2xl mt-12">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
@@ -503,121 +520,8 @@ function toggleFaq(button) {
 
 <!-- JS -->
 
-<script>
-  const menuToggle = document.getElementById('menuToggle');
-  const mobileMenu = document.getElementById('mobileMenu');
-  menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-  document.addEventListener('click', (e) => {
-    if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-      mobileMenu.classList.add('hidden');
-    }
-  });
-</script>
-<script>
-  const copyBox = document.getElementById('copyBox');
-  copyBox.addEventListener('click', () => {
-    const address = "BE7o6vC8c7yXbXYodksospGs6g58SFa68ziUHoMg733v";
-    navigator.clipboard.writeText(address).then(() => {
-      copyBox.innerText = "Copied!";
-      setTimeout(() => {
-        copyBox.innerText = "CA:" + address;
-      }, 2000);
-    });
-  });
-</script>
-<button id="toTopBtn" style="display: none;" class="fixed bottom-6 right-6 z-50 px-4 py-2 rounded-xl bg-[#2B2D36] text-white text-sm shadow-lg hover:bg-gradient-to-r hover:from-[#9945FF] hover:to-[#14F195] transition">
-  ↑ Back to Top
-</button>
-<script>
-  const toTopBtn = document.getElementById('toTopBtn');
-  toTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-  window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    toTopBtn.style.display = 'block';
-  } else {
-    toTopBtn.style.display = 'none';
-  }
-});
-</script>
-<!-- Parallax Scroll - fix later
-<script>
-  const blobs = document.querySelectorAll('.blob');
-  const parallaxFactors = [];
-
-  blobs.forEach((blob, i) => {
-    // Random position around the screen
-    const x = Math.random() * 100 - 50; // -50% to +50%
-    const y = Math.random() * 100 - 50; // -50% to +50%
-    blob.style.left = `${x}vw`;
-    blob.style.top = `${y}vh`;
-
-    // Store a custom parallax intensity
-    const factor = 0.02 + Math.random() * 0.03;
-    parallaxFactors.push(factor);
-  });
-
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    blobs.forEach((blob, i) => {
-      const factor = parallaxFactors[i];
-      blob.style.transform = `translateY(${scrollY * factor}px) scale(1)`;
-    });
-  });
-</script>
--->
-
-<script>
-  const video = document.getElementById('heroVideo');
-  const fadeDuration = 1; // in seconds
-
-  let hasFaded = false;
-
-  video.addEventListener('timeupdate', () => {
-    if (!video.duration) return;
-
-    const timeLeft = video.duration - video.currentTime;
-
-    if (timeLeft <= fadeDuration && !hasFaded) {
-      video.classList.add('fade-out');
-      hasFaded = true;
-    }
-
-    // Reset fade when loop restarts
-    if (video.currentTime < 0.1 && hasFaded) {
-      video.classList.remove('fade-out');
-      hasFaded = false;
-    }
-  });
-</script>
-
-<script>
-  const openVideoBtn = document.getElementById('openVideoLightbox');
-  const lightbox = document.getElementById('videoLightbox');
-  const closeBtn = document.getElementById('closeVideoLightbox');
-
-  openVideoBtn.addEventListener('click', () => {
-    lightbox.classList.remove('hidden');
-    lightbox.classList.add('flex');
-  });
-
-  closeBtn.addEventListener('click', () => {
-    lightbox.classList.remove('flex');
-    lightbox.classList.add('hidden');
-    lightbox.querySelector('video').pause();
-  });
-
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) {
-      lightbox.classList.remove('flex');
-      lightbox.classList.add('hidden');
-      lightbox.querySelector('video').pause();
-    }
-  });
-</script>
+<script src="./js/trixi.js"></script>
+<script src="./js/analytics-loop.js"></script>
 
 
 </body>
