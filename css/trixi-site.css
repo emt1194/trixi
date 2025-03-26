@@ -294,14 +294,14 @@ html {
 .blob2 {
   top: 60%;
   right: 10%;
-  animation-delay: 8s;
+  animation-delay: 4s;
 }
 
 .blob3 {
   top: 30%;
   left: 50%;
-  transform: translateX(-50%);
-  animation-delay: 16s;
+  transform: translateX(-40%);
+  animation-delay: 8s;
 }
 
 @keyframes blobDrift {
