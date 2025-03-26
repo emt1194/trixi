@@ -23,7 +23,7 @@ let index = 0;
 
 function typeReport(text, callback) {
   display.textContent = ''; // Clear previous text
-  display.className = 'text-xs text-white bg-[#2B2D36] p-6 rounded-2xl whitespace-pre-wrap font-mono leading-relaxed w-[100%] h-[500px] overflow-hidden';
+  display.className = 'text-xs analytics-text-etc text-white bg-[#2B2D36] p-6 rounded-2xl whitespace-pre-wrap font-mono leading-relaxed w-[100%] h-[500px] overflow-hidden';
 
   let i = 0;
   const chunkSize = Math.floor(Math.random() * 6) + 5; // 5–10 chars

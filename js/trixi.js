@@ -114,25 +114,3 @@ const video = document.getElementById('heroVideo');
     }
   });
 
-const openVideoBtn = document.getElementById('openVideoLightbox');
-  const lightbox = document.getElementById('videoLightbox');
-  const closeBtn = document.getElementById('closeVideoLightbox');
-
-  openVideoBtn.addEventListener('click', () => {
-    lightbox.classList.remove('hidden');
-    lightbox.classList.add('flex');
-  });
-
-  closeBtn.addEventListener('click', () => {
-    lightbox.classList.remove('flex');
-    lightbox.classList.add('hidden');
-    lightbox.querySelector('video').pause();
-  });
-
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) {
-      lightbox.classList.remove('flex');
-      lightbox.classList.add('hidden');
-      lightbox.querySelector('video').pause();
-    }
-  });

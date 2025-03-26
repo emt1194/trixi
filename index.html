@@ -240,29 +240,41 @@ Trixi’s natural language model adapts to modern slang, memes, and financial di
 <!-- looping tg info -->
 
 <section class="scrolling-panel-section w-full flex flex-col md:flex-row gap-6 items-stretch">
-  <!-- Left Text Panel -->
-  <div class="bg-[#1C1E26] rounded-2xl p-6 flex flex-col justify-center md:w-1/2">
-    <h2 class="text-3xl font-semibold mb-4">
-      Real-Time <span class="solana-gradient">Twitter/X</span> Analysis
-    </h2>
-  
+<!-- Left Text Panel -->
+<div class="bg-[#1C1E26] rounded-2xl p-6 flex flex-col justify-center md:w-1/2">
+  <h2 class="text-3xl font-semibold mb-4">
+    Real-Time <span class="solana-gradient">Twitter/X</span> Analysis
+  </h2>
+
   <p class="text-gray-400 mb-4">
     Forget digging through feeds. Trixi’s command system puts you in control of the timeline — slicing through noise and exposing signals with surgical precision. <strong>Tap a command to see an explanation.</strong>
   </p>
   <p class="text-gray-400 mb-4">
-    Run <code class="text-white bg-[#2B2D36] px-1 py-0.5 rounded">/followers</code> or <code class="text-white bg-[#2B2D36] px-1 py-0.5 rounded">/following</code> to reverse-engineer influence. Use <code class="text-white bg-[#2B2D36] px-1 py-0.5 rounded">/latest</code> to pull fresh posts before they make it to CT. Need a full breakdown? <code id="openVideoLightbox" class="text-white bg-[#2B2D36] px-1 py-0.5 rounded cursor-pointer hover:underline">/analyze</code>
- and you're covered.
+    Run <code class="disabled-link text-white bg-[#2B2D36] px-1 py-0.5 rounded cursor-pointer hover:underline" data-video="followers">/followers</code> or <code class="disabled-link text-white bg-[#2B2D36] px-1 py-0.5 rounded cursor-pointer hover:underline" data-video="following">/following</code> to reverse-engineer influence. Use <code class="disabled-link text-white bg-[#2B2D36] px-1 py-0.5 rounded cursor-pointer hover:underline" data-video="latest">/latest</code> to pull fresh posts before they make it to CT. Need a full breakdown? <code class="text-white bg-[#2B2D36] px-1 py-0.5 rounded cursor-pointer hover:underline" data-video="analyze">/analyze</code> and you're covered.
   </p>
   <p class="text-gray-400 mb-4">
-    Check blue-checks with <code class="text-white bg-[#2B2D36] px-1 py-0.5 rounded">/verified</code>, spot pump narratives using <code class="text-white bg-[#2B2D36] px-1 py-0.5 rounded">/trending</code>, and hit <code class="text-white bg-[#2B2D36] px-1 py-0.5 rounded">/ama</code> for real-time answers from your AI trench assistant.
+    Check blue-checks with <code class="disabled-link text-white bg-[#2B2D36] px-1 py-0.5 rounded cursor-pointer hover:underline" data-video="verified">/verified</code>, spot pump narratives using <code class="disabled-link text-white bg-[#2B2D36] px-1 py-0.5 rounded cursor-pointer hover:underline" data-video="trending">/trending</code>, and hit <code class="disabled-link text-white bg-[#2B2D36] px-1 py-0.5 rounded cursor-pointer hover:underline" data-video="ama">/ama</code> for real-time answers from your AI trench assistant.
   </p>
-        <a href="https://t.me/TrixiVerse" target="_blank"><button class="bg-[#2B2D36] hover:bg-[#3c3f4d] text-white px-4 py-2 rounded-xl gradient-border-button transition">Join our Telegram</button></a>
+  <a href="https://t.me/TrixiVerse" target="_blank"><button class="bg-[#2B2D36] hover:bg-[#3c3f4d] text-white px-4 py-2 rounded-xl gradient-border-button transition">Join our Telegram</button></a>
+</div>
+
+<!-- Lightbox Modal -->
+<div id="videoLightbox" class="fixed inset-0 z-50 bg-black/80 hidden flex items-center justify-center">
+  <div class="relative bg-black rounded-xl overflow-hidden">
+    <div id="videoLoader" class="absolute inset-0 flex items-center justify-center bg-black z-10">
+      <div class="h-1 w-full bg-gradient-to-r from-[#00FFA3] via-[#03E1FF] to-[#DC1FFF] animate-pulse"></div>
+    </div>
+    <video
+      id="lightboxVideo" class="block w-full h-auto max-h-[80vh]" playsinline autoplay></video>
   </div>
+</div>
+
 
 <!-- Live Code Block -->
-<div class="md:w-1/2 bg-[#1C1E26] p-3 rounded-2xl  overflow-hidden flex items-start">
-  <div id="analyticsDisplay" class="rounded-xl w-full h-full"></div>
+<div class="md:w-1/2 bg-[#1C1E26] p-3 rounded-2xl overflow-hidden flex items-start relative z-10">
+  <div id="analyticsDisplay" class="rounded-xl w-full h-full analytics-display"></div>
 </div>
+
 
 
 </section>
@@ -524,19 +536,6 @@ Trixi’s roadmap is ever-evolving, and is regularly updated. Check in on Telegr
   </a>
 
 
-
-</div>
-
-<div id="videoLightbox" class="fixed inset-0 bg-black bg-opacity-80 z-[9999] hidden items-center justify-center">
-  <div class="relative w-full max-w-3xl mx-auto px-4">
-    <button id="closeVideoLightbox" class="absolute top-2 right-2 text-white text-3xl font-bold hover:text-gray-300 z-50">
-      &times;
-    </button>
-    <video autoplay class="w-full max-h-[75vh] rounded-xl shadow-lg">
-      <source src="./videos/trixi-tg-validity-analysis.mov" type="video/quicktime" />
-      Your browser does not support the video tag.
-    </video>
-  </div>
 </div>
 
 <button id="toTopBtn"
@@ -549,6 +548,8 @@ Trixi’s roadmap is ever-evolving, and is regularly updated. Check in on Telegr
 
 <script src="./js/trixi.js"></script>
 <script src="./js/analytics-loop.js"></script>
+<script src="./js/lightbox.js"></script>
+
 
 
 </body>
