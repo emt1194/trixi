@@ -17,16 +17,34 @@ function toggleFaq(button) {
   }
 }
 
-const menuToggle = document.getElementById('menuToggle');
-  const mobileMenu = document.getElementById('mobileMenu');
-  menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-  document.addEventListener('click', (e) => {
-    if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-      mobileMenu.classList.add('hidden');
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  if (!menuToggle || !mobileMenu) {
+    console.warn("Menu toggle or mobile menu element not found.");
+    return;
+  }
+
+  // Toggle menu visibility
+  const toggleMenu = (event) => {
+    event.stopPropagation();
+    mobileMenu.classList.toggle("hidden");
+  };
+
+  // Close menu when clicking outside
+  const handleClickOutside = (event) => {
+    if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+      mobileMenu.classList.add("hidden");
     }
-  });
+  };
+
+  // Bind events
+  menuToggle.addEventListener("click", toggleMenu);
+  document.addEventListener("click", handleClickOutside);
+});
+
+
 
 const copyBox = document.getElementById('copyBox');
   copyBox.addEventListener('click', () => {

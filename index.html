@@ -54,15 +54,22 @@
       <img src="./img/trixi-logo.png" alt="Trixi" class="w-full h-auto">
     </div>
 <div class="relative space-x-4 buttons-area">
-  <div class="hidden md:flex bg-[#2B2D36] text-white rounded-xl overflow-hidden">
+<div class="custom-nav bg-[#2B2D36] text-white rounded-xl overflow-hidden">
     <a href="#about" class="px-4 py-2 hover:bg-[#3c3f4d] transition flex items-center">About</a>
     <a href="#features" class="px-4 py-2 hover:bg-[#3c3f4d] transition flex items-center">Features</a>
     <a href="#roadmap" class="px-4 py-2 hover:bg-[#3c3f4d] transition flex items-center">Roadmap</a>
     <a href="#faq" class="px-4 py-2 hover:bg-[#3c3f4d] transition flex items-center">FAQ</a>
     <a href="#buy" class="px-4 py-2 hover:bg-[#3c3f4d] transition flex items-center">Buy</a>
+	    <a href="https://t.me/TrixiVerse" target="_blank" class="px-3 py-2 hover:bg-[#3c3f4d] flex items-center justify-center">
+          <svg class="w-5 h-5" fill="white" viewBox="0 0 48 48"><path d="M41.42 7.309s3.885-1.515 3.56 2.164c-.107 1.515-1.078 6.818-1.834 12.553l-2.59 16.99s-.216 2.489-2.159 2.922c-1.942.432-4.856-1.515-5.396-1.948-.432-.325-8.094-5.195-10.792-7.575-.756-.65-1.62-1.948.108-3.463L33.648 18.13c1.295-1.298 2.59-4.328-2.806-.649l-15.11 10.28s-1.727 1.083-4.964.109l-7.016-2.165s-2.59-1.623 1.835-3.246c10.793-5.086 24.068-10.28 35.831-15.15Z"/></svg>
+    </a>
+    <a href="https://discord.gg/cY5ETJtnT6" target="_blank" class="px-3 py-2 hover:bg-[#3c3f4d] flex items-center justify-center">
+    <svg class="w-5 h-5" fill="white" viewBox="0 0 24 24"><path d="M18.59 5.89c-1.23-.57-2.54-.99-3.92-1.23-.17.3-.37.71-.5 1.04-1.46-.22-2.91-.22-4.34 0-.14-.33-.34-.74-.51-1.04-1.38.24-2.69.66-3.92 1.23-2.48 3.74-3.15 7.39-2.82 10.98 1.65 1.23 3.24 1.97 4.81 2.46.39-.53.73-1.1 1.03-1.69-.57-.21-1.11-.48-1.62-.79.14-.1.27-.21.4-.31 3.13 1.46 6.52 1.46 9.61 0 .13.11.26.21.4.31-.51.31-1.06.57-1.62.79.3.59.64 1.16 1.03 1.69 1.57-.49 3.17-1.23 4.81-2.46.39-4.17-.67-7.78-2.82-10.98h-.02Zm-9.75 8.78c-.94 0-1.71-.87-1.71-1.94 0-1.07.75-1.94 1.71-1.94s1.72.87 1.71 1.94c0 1.06-.75 1.94-1.71 1.94Zm6.31 0c-.94 0-1.71-.87-1.71-1.94 0-1.07.75-1.94 1.71-1.94s1.72.87 1.71 1.94c0 1.06-.75 1.94-1.71 1.94Z"/></svg>
+    </a>
   </div>
-<div class="md:hidden">
+<div class="custom-menu-button">
   <button id="menuToggle" class="text-white focus:outline-none z-50 relative">
+    <!-- Hamburger icon -->
     <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
          viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round"
@@ -73,6 +80,8 @@
       <a href="https://app.trixiai.net"><button class="bg-[#2B2D36] hover:bg-[#3c3f4d] text-white px-4 py-2 rounded-xl gradient-border-button transition">Open App</button></a>
 	  </div>
   </header>
+
+
  
     </div>
   <main class="w-full max-w-[1200px] px-6 flex mt-12 flex-col gap-6 flex-1 relative z-10">
@@ -247,9 +256,7 @@ Trixi’s natural language model adapts to modern slang, memes, and financial di
   <p class="text-gray-400 mb-4">
     Check blue-checks with <code class="text-white bg-[#2B2D36] px-1 py-0.5 rounded">/verified</code>, spot pump narratives using <code class="text-white bg-[#2B2D36] px-1 py-0.5 rounded">/trending</code>, and hit <code class="text-white bg-[#2B2D36] px-1 py-0.5 rounded">/ama</code> for real-time answers from your AI trench assistant.
   </p>
-
-
-
+        <a href="https://t.me/TrixiVerse"><button class="bg-[#2B2D36] hover:bg-[#3c3f4d] text-white px-4 py-2 rounded-xl gradient-border-button transition">Join our Telegram</button></a>
   </div>
 
 <!-- Live Code Block -->
@@ -440,41 +447,32 @@ Trixi’s roadmap is ever-evolving, and is regularly updated. Check in on Telegr
 </div>
   </div>
 </div>
-<script>
-function toggleFaq(button) {
-  const allFaqs = document.querySelectorAll('.faq-answer');
-  const allIcons = document.querySelectorAll('.faq-question svg');
-  const content = button.nextElementSibling;
-  const icon = button.querySelector('svg');
-  // First, close all toggles
-  allFaqs.forEach(faq => {
-    faq.style.maxHeight = "0px";
-  });
-  allIcons.forEach(svg => {
-    svg.classList.remove('rotate-180');
-  });
-  // Then toggle the clicked one if it was closed
-  if (content.style.maxHeight === "0px" || !content.style.maxHeight) {
-    content.style.maxHeight = content.scrollHeight + "px";
-    icon.classList.add('rotate-180');
-  }
-}
-</script>
+
 <div id="buy" class="bg-[#1C1E26] rounded-xl p-6 mt-12 w-full text-white flex flex-col gap-4">
-  <div class="flex justify-between text-sm font-medium gap-2 flex-wrap">
-    <a href="https://www.dextools.io/app/en/solana/pair-explorer/BE7o6vC8c7yXbXYodksospGs6g58SFa68ziUHoMg733v?t=1742950554590" target="_blank"
-       class="w-[30%] px-4 py-2 bg-[#2B2D36] rounded-xl transition duration-300 hover:bg-gradient-to-r hover:from-[#9945FF] hover:to-[#14F195] hover:text-white text-center">
-      Dextools
-    </a>
-    <a href="https://dexscreener.com/solana/ja2ujrzlxwy5puk6ynas63fea83o7xgriefp8yqmwelq" target="_blank"
-       class="w-[30%] px-4 py-2 bg-[#2B2D36] rounded-xl transition duration-300 hover:bg-gradient-to-r hover:from-[#9945FF] hover:to-[#14F195] hover:text-white text-center">
-      DexScreener
-    </a>
-    <a href="https://t.me/TrixiVerse" target="_blank"
-       class="w-[30%] px-4 py-2 bg-[#2B2D36] rounded-xl transition duration-300 hover:bg-gradient-to-r hover:from-[#9945FF] hover:to-[#14F195] hover:text-white text-center">
-      Telegram
-    </a>
-  </div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 w-full text-sm font-medium">
+  <a href="https://www.dextools.io/app/en/solana/pair-explorer/BE7o6vC8c7yXbXYodksospGs6g58SFa68ziUHoMg733v?t=1742950554590"
+     target="_blank"
+     class="px-4 py-2 bg-[#2B2D36] text-center rounded-xl transition hover:bg-gradient-to-r hover:from-[#9945FF] hover:to-[#14F195] hover:text-white">
+    Dextools
+  </a>
+  <a href="https://dexscreener.com/solana/ja2ujrzlxwy5puk6ynas63fea83o7xgriefp8yqmwelq"
+     target="_blank"
+     class="px-4 py-2 bg-[#2B2D36] text-center rounded-xl transition hover:bg-gradient-to-r hover:from-[#9945FF] hover:to-[#14F195] hover:text-white">
+    DexScreener
+  </a>
+  <a href="https://t.me/TrixiVerse"
+     target="_blank"
+     class="px-4 py-2 bg-[#2B2D36] text-center rounded-xl transition hover:bg-gradient-to-r hover:from-[#9945FF] hover:to-[#14F195] hover:text-white">
+    Telegram
+  </a>
+  <a href="https://discord.gg/cY5ETJtnT6"
+     target="_blank"
+     class="px-4 py-2 bg-[#2B2D36] text-center rounded-xl transition hover:bg-gradient-to-r hover:from-[#9945FF] hover:to-[#14F195] hover:text-white">
+    Discord
+  </a>
+</div>
+
+
 <div id="copyBox"
      class="flex items-center justify-between px-4 py-2 bg-[#2B2D36] rounded-xl text-sm font-mono text-white cursor-pointer transition duration-300 hover:bg-gradient-to-r hover:from-[#9945FF] hover:to-[#14F195] select-none">
   <span class="truncate">CA: BE7o6vC8c7yXbXYodksospGs6g58SFa68ziUHoMg733v</span>
@@ -487,21 +485,46 @@ function toggleFaq(button) {
     <div class="flex items-center">
       <img src="./img/trixi-logo.png" alt="Trixi Logo" class="w-[150px] h-auto">
     </div>
-    <div class="text-gray-500 text-sm text-right">
-      © 2025 TrixiVerse.
-    </div>
+	
+<div class="text-gray-500 text-sm flex flex-wrap items-center gap-4">
+ 
+  <a href="https://t.me/TrixiVerse" target="_blank"
+     class="hover:text-white hover:underline transition">
+    Telegram
+  </a>
+  <a href="https://discord.gg/cY5ETJtnT6" target="_blank"
+     class="hover:text-white hover:underline transition">
+    Discord
+  </a>
+   <span>© 2025 TrixiVerse.</span>
+</div>
+
+
   </div>
 </footer>
 
 <!--OFF SCREEN SHIT -->
 
-<div id="mobileMenu"
-     class="fixed top-[66px] right-6 w-48 bg-[#2B2D36] text-white rounded-xl shadow-lg hidden flex-col z-[9999] md:hidden overflow-hidden">
+<div id="mobileMenu" class="fixed top-[66px] right-6 w-48 bg-[#2B2D36] text-white rounded-xl shadow-lg hidden flex-col z-[9999] md:hidden overflow-hidden">
   <a href="#about" class="block px-4 py-2 hover:bg-[#3c3f4d] transition rounded-t-xl">About</a>
   <a href="#features" class="block px-4 py-2 hover:bg-[#3c3f4d] transition">Features</a>
   <a href="#roadmap" class="block px-4 py-2 hover:bg-[#3c3f4d] transition">Roadmap</a>
   <a href="#faq" class="block px-4 py-2 hover:bg-[#3c3f4d] transition">FAQ</a>
-  <a href="#buy" class="block px-4 py-2 hover:bg-[#3c3f4d] transition rounded-b-xl">Buy</a>
+  <a href="#buy" class="block px-4 py-2 hover:bg-[#3c3f4d] transition">Buy</a>
+
+  <a href="https://t.me/TrixiVerse" target="_blank"
+     class="flex items-center gap-2 block px-4 py-2 hover:bg-[#3c3f4d] ">
+    <svg class="w-5 h-5" fill="white" viewBox="0 0 48 48"><path d="M41.42 7.309s3.885-1.515 3.56 2.164c-.107 1.515-1.078 6.818-1.834 12.553l-2.59 16.99s-.216 2.489-2.159 2.922c-1.942.432-4.856-1.515-5.396-1.948-.432-.325-8.094-5.195-10.792-7.575-.756-.65-1.62-1.948.108-3.463L33.648 18.13c1.295-1.298 2.59-4.328-2.806-.649l-15.11 10.28s-1.727 1.083-4.964.109l-7.016-2.165s-2.59-1.623 1.835-3.246c10.793-5.086 24.068-10.28 35.831-15.15Z"/></svg>
+    Telegram
+  </a>
+  <a href="https://discord.gg/cY5ETJtnT6" target="_blank"
+     class="flex items-center gap-2 block px-4 py-2 hover:bg-[#3c3f4d] rounded-b-xl">
+    <svg class="w-5 h-5" fill="white" viewBox="0 0 24 24"><path d="M18.59 5.89c-1.23-.57-2.54-.99-3.92-1.23-.17.3-.37.71-.5 1.04-1.46-.22-2.91-.22-4.34 0-.14-.33-.34-.74-.51-1.04-1.38.24-2.69.66-3.92 1.23-2.48 3.74-3.15 7.39-2.82 10.98 1.65 1.23 3.24 1.97 4.81 2.46.39-.53.73-1.1 1.03-1.69-.57-.21-1.11-.48-1.62-.79.14-.1.27-.21.4-.31 3.13 1.46 6.52 1.46 9.61 0 .13.11.26.21.4.31-.51.31-1.06.57-1.62.79.3.59.64 1.16 1.03 1.69 1.57-.49 3.17-1.23 4.81-2.46.39-4.17-.67-7.78-2.82-10.98h-.02Zm-9.75 8.78c-.94 0-1.71-.87-1.71-1.94 0-1.07.75-1.94 1.71-1.94s1.72.87 1.71 1.94c0 1.06-.75 1.94-1.71 1.94Zm6.31 0c-.94 0-1.71-.87-1.71-1.94 0-1.07.75-1.94 1.71-1.94s1.72.87 1.71 1.94c0 1.06-.75 1.94-1.71 1.94Z"/></svg>
+    Discord
+  </a>
+
+
+
 </div>
 
 <div id="videoLightbox" class="fixed inset-0 bg-black bg-opacity-80 z-[9999] hidden items-center justify-center">
@@ -516,9 +539,13 @@ function toggleFaq(button) {
   </div>
 </div>
 
+<button id="toTopBtn"
+        class="fixed bottom-6 right-6 z-50 px-4 py-2 rounded-xl bg-[#2B2D36] text-white text-sm shadow-lg hover:bg-gradient-to-r hover:from-[#9945FF] hover:to-[#14F195] transition hidden">
+  ↑ Back to Top
+</button>
 
 
-<!-- JS -->
+<!-- JS now in trixi.js file -->
 
 <script src="./js/trixi.js"></script>
 <script src="./js/analytics-loop.js"></script>

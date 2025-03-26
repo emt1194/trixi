@@ -388,3 +388,37 @@ code {
 .fade-video.fade-out {
   opacity: 0;
 }
+
+/* Custom breakpoint override for header nav visibility */
+@media (max-width: 871px) {
+  .custom-nav {
+    display: none !important;
+  }
+
+  .custom-menu-button {
+    display: inline-flex !important;
+  }
+
+  #mobileMenu {
+    display: block !important;
+  }
+
+  #mobileMenu.hidden {
+    display: none !important;
+  }
+}
+
+@media (min-width: 871px) {
+  .custom-nav {
+    display: flex !important;
+  }
+
+  .custom-menu-button {
+    display: none !important;
+  }
+
+  #mobileMenu {
+    display: none !important; /* Force hidden above breakpoint */
+  }
+}
+
