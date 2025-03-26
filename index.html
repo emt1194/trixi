@@ -79,11 +79,12 @@
   <!-- HERO --> 
 <section class="relative w-full h-[600px] overflow-hidden hidden sm:flex rounded-xl">
   <!-- Video Background -->
-  <video autoplay muted loop playsinline
-         class="absolute inset-0 w-full h-full object-cover z-[-2] rounded-xl">
-    <source src="./videos/trixi-space.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+  <video id="heroVideo" autoplay muted loop playsinline
+       class="absolute inset-0 w-full h-full object-cover z-[-2] rounded-xl fade-video">
+  <source src="./videos/trixi-space.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
 
   <!-- Dark Overlay on Video -->
   <div class="absolute inset-0 bg-black/70 z-[-1] rounded-xl"></div>
@@ -549,6 +550,32 @@ function toggleFaq(button) {
   });
 </script>
 -->
+
+<script>
+  const video = document.getElementById('heroVideo');
+  const fadeDuration = 1; // in seconds
+
+  let hasFaded = false;
+
+  video.addEventListener('timeupdate', () => {
+    if (!video.duration) return;
+
+    const timeLeft = video.duration - video.currentTime;
+
+    if (timeLeft <= fadeDuration && !hasFaded) {
+      video.classList.add('fade-out');
+      hasFaded = true;
+    }
+
+    // Reset fade when loop restarts
+    if (video.currentTime < 0.1 && hasFaded) {
+      video.classList.remove('fade-out');
+      hasFaded = false;
+    }
+  });
+</script>
+
+
 
 </body>
 </html>

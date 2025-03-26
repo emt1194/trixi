@@ -379,3 +379,12 @@ code {
   vertical-align: baseline;
   max-width: 100%;
 }
+
+.fade-video {
+  transition: opacity 1s ease;
+  opacity: 1;
+}
+
+.fade-video.fade-out {
+  opacity: 0;
+}
