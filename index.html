@@ -35,9 +35,22 @@
   </defs>
 </svg>
   <div class="noise-background"></div>
-  <header class="w-full max-w-[1200px] flex items-center justify-between px-6 py-4 bg-[#0D0E12] relative z-10">
+  <div class="solana-blobs">
+  <svg class="blob blob1" viewBox="0 0 600 600">
+    <path d="M300,60C360,100,440,160,460,240C480,320,440,420,360,460C280,500,160,480,120,400C80,320,100,200,160,120C220,40,240,20,300,60Z"/>
+  </svg>
+  <svg class="blob blob2" viewBox="0 0 600 600">
+    <path d="M300,100C370,130,430,200,420,270C410,340,320,400,250,420C180,440,100,420,80,350C60,280,120,200,180,150C240,100,260,70,300,100Z"/>
+  </svg>
+  <svg class="blob blob3" viewBox="0 0 600 600">
+    <path d="M320,80C400,100,460,180,440,260C420,340,340,400,260,420C180,440,100,420,100,340C100,260,180,180,240,140C300,100,280,60,320,80Z"/>
+  </svg>
+</div>
+
+<header class="w-full max-w-[1200px] flex items-center justify-between px-6 py-4 bg-transparent relative z-10">
+
     <div class="max-w-[200px] logo">
-      <img src="./img/trixi-logo.png" alt="Trixi Logo" class="w-full h-auto">
+      <img src="./img/trixi-logo.png" alt="Trixi" class="w-full h-auto">
     </div>
 <div class="relative space-x-4 buttons-area">
   <div class="hidden md:flex bg-[#2B2D36] text-white rounded-xl overflow-hidden">
@@ -59,6 +72,7 @@
       <a href="https://app.trixiai.net"><button class="bg-[#2B2D36] hover:bg-[#3c3f4d] text-white px-4 py-2 rounded-xl gradient-border-button transition">Open App</button></a>
 	  </div>
   </header>
+ 
     </div>
   <main class="w-full max-w-[1200px] px-6 flex mt-12 flex-col gap-6 flex-1 relative z-10">
 <section class="bg-[#1C1E26] rounded-xl relative w-full h-[600px] overflow-hidden bg-[#0D0E12] hidden sm:flex">
@@ -95,6 +109,8 @@
     </div>
   </div>
 </section>
+<!-- Logos Section - Remove for now -->
+<!-- 
 <div class="logo-row">
   <img src="./img/solana.png" alt="Solana" style="width: 22%;" class="rounded-2xl opacity-50 h-24 md:h-32 object-contain" />
   <img src="./img/cloudflare.png" alt="Cloudflare" style="width: 20%;" class="rounded-2xl opacity-50 h-24 md:h-32 object-contain" />
@@ -102,6 +118,7 @@
   <img src="./img/dao-c.png" alt="DAO" style="width: 14%;" class="rounded-2xl opacity-50 h-[72px] md:h-[96px] object-contain" />
   <img src="./img/pumpfun.png" alt="Pumpfun" style="width: 20%;" class="rounded-2xl opacity-50 h-24 md:h-32 object-contain" />
 </div>
+-->
 <div id="about" class="mt-12 text-left">
   <h2 class="text-5xl font-semibold mb-2">
     AI-Powered <span class="solana-gradient">Insights</span>
@@ -445,5 +462,32 @@ function toggleFaq(button) {
   }
 });
 </script>
+<!-- Parallax Scroll - fix later
+<script>
+  const blobs = document.querySelectorAll('.blob');
+  const parallaxFactors = [];
+
+  blobs.forEach((blob, i) => {
+    // Random position around the screen
+    const x = Math.random() * 100 - 50; // -50% to +50%
+    const y = Math.random() * 100 - 50; // -50% to +50%
+    blob.style.left = `${x}vw`;
+    blob.style.top = `${y}vh`;
+
+    // Store a custom parallax intensity
+    const factor = 0.02 + Math.random() * 0.03;
+    parallaxFactors.push(factor);
+  });
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    blobs.forEach((blob, i) => {
+      const factor = parallaxFactors[i];
+      blob.style.transform = `translateY(${scrollY * factor}px) scale(1)`;
+    });
+  });
+</script>
+-->
+
 </body>
 </html>

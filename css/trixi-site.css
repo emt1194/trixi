@@ -262,3 +262,81 @@ html {
     gap: 0.25rem;
 
   }
+  
+  .solana-blobs {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.solana-blobs svg.blob {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  fill: url(#solanaGradientIcon);
+  filter: blur(160px) brightness(60%);
+  opacity: 0.1;
+  will-change: transform;
+  animation:
+    blobMorph 12s ease-in-out infinite alternate,
+    blobDrift 24s ease-in-out infinite;
+}
+
+/* Base anchor positions */
+.blob1 {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.blob2 {
+  top: 60%;
+  right: 10%;
+  animation-delay: 8s;
+}
+
+.blob3 {
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-delay: 16s;
+}
+
+@keyframes blobDrift {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(30vw, -30vh) scale(1.05);
+  }
+  50% {
+    transform: translate(-30vw, 30vh) scale(0.98);
+  }
+  75% {
+    transform: translate(20vw, 20vh) scale(1.03);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes blobMorph {
+  0% {
+    d: path("M300,60C360,100,440,160,460,240C480,320,440,420,360,460C280,500,160,480,120,400C80,320,100,200,160,120C220,40,240,20,300,60Z");
+  }
+  50% {
+    d: path("M320,80C400,100,460,180,440,260C420,340,340,400,260,420C180,440,100,420,100,340C100,260,180,180,240,140C300,100,280,60,320,80Z");
+  }
+  100% {
+    d: path("M300,60C360,100,440,160,460,240C480,320,440,420,360,460C280,500,160,480,120,400C80,320,100,200,160,120C220,40,240,20,300,60Z");
+  }
+}
+
+@media (min-width: 1024px) {
+  .solana-blobs svg.blob {
+    width: 1000px;
+    height: 1000px;
+  }
+}
