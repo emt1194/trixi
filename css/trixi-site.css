@@ -370,3 +370,12 @@ html {
     transform: translateY(-5036px);
   }
 }
+
+code {
+  white-space: nowrap;
+  overflow-x: auto;
+  text-overflow: ellipsis;
+  display: inline;
+  vertical-align: baseline;
+  max-width: 100%;
+}
