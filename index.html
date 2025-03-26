@@ -75,9 +75,24 @@
  
     </div>
   <main class="w-full max-w-[1200px] px-6 flex mt-12 flex-col gap-6 flex-1 relative z-10">
-<section class="bg-[#1C1E26] rounded-xl relative w-full h-[600px] overflow-hidden bg-[#0D0E12] hidden sm:flex">
-  <img src="./img/trixi-transparent-3.webp" alt="Trixi Background"
-       class="absolute inset-0 w-full h-full object-cover object-right transform translate-x-[200px] z-0 hero-background" />
+  
+  <!-- HERO --> 
+<section class="relative w-full h-[600px] overflow-hidden hidden sm:flex rounded-xl">
+  <!-- Video Background -->
+  <video autoplay muted loop playsinline
+         class="absolute inset-0 w-full h-full object-cover z-[-2] rounded-xl">
+    <source src="./videos/trixi-space.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Dark Overlay on Video -->
+  <div class="absolute inset-0 bg-black/70 z-[-1] rounded-xl"></div>
+
+  <!-- Foreground Image -->
+  <img src="./img/trixi-transparent-3.webp" alt="Trixi Layer"
+       class="absolute inset-0 w-full h-full object-cover object-right transform translate-x-[200px] z-0 rounded-xl" />
+
+  <!-- Text Content -->
   <div class="relative z-10 flex flex-col justify-center h-full px-10 w-full md:w-1/2">
     <h1 class="text-5xl font-semibold mb-4 text-white">
       The <span class="solana-gradient">Ultimate</span> AI Trench Assistant
@@ -86,11 +101,19 @@
       Trixi AI is your one-stop go-to $SOL guardian, protecting you from rug-pulls and notifying you about red flags to protect and optimize your gains! Analyze social media profiles, and gain exclusive access to utilities by holding $TRIXIVERSE.
     </p>
     <div class="mt-6 flex items-center gap-4">
-      <a href="https://app.trixiai.net"><button class="bg-[#2B2D36] px-6 py-2 rounded-xl gradient-border-button w-fit">Open App</button></a>
+      <a href="https://app.trixiai.net">
+        <button class="bg-[#2B2D36] px-6 py-2 rounded-xl gradient-border-button w-fit">Open App</button>
+      </a>
       <a href="#about" class="text-sm text-gray-400 hover:text-white underline">Learn more</a>
     </div>
   </div>
 </section>
+
+
+
+<!-- MOBILE HERO -->
+
+
 <section class="bg-[#1C1E26] mobile-hero rounded-xl relative w-full h-auto overflow-hidden bg-[#0D0E12] flex flex-col sm:hidden">
   <div class="absolute inset-0 z-0">
     <img src="./img/trixi-transparent-3.webp" alt="Trixi Background"
@@ -442,17 +465,16 @@ function toggleFaq(button) {
 </div>
 </main>
 <footer class="w-full mt-20 bg-[#1C1E26] text-white">
-  <div class="max-w-[1200px] mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-8">
-    <div class="w-full md:w-1/3">
-      <img src="./img/trixi-logo.png" alt="Footer Logo" class="w-[150px] h-auto">
+  <div class="max-w-[1200px] mx-auto px-6 py-12 flex flex-row flex-wrap items-center justify-between gap-4">
+    <div class="flex items-center">
+      <img src="./img/trixi-logo.png" alt="Trixi Logo" class="w-[150px] h-auto">
     </div>
-   <div class="w-full md:w-2/3 flex justify-end">
-	<p class="text-gray-500 text-sm text-right">
-  © 2025 TrixiVerse. 
-</p>
+    <div class="text-gray-500 text-sm text-right">
+      © 2025 TrixiVerse.
     </div>
   </div>
 </footer>
+
 <div id="mobileMenu"
      class="fixed top-[66px] right-6 w-48 bg-[#2B2D36] text-white rounded-xl shadow-lg hidden flex-col z-[9999] md:hidden overflow-hidden">
   <a href="#about" class="block px-4 py-2 hover:bg-[#3c3f4d] transition rounded-t-xl">About</a>
