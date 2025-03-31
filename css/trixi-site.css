@@ -601,3 +601,7 @@ body {
     padding-right: 0.75rem !important;
   }
 }
+
+#mainHeader {
+  isolation: isolate;
+}
