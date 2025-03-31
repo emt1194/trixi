@@ -164,11 +164,8 @@ const video = document.getElementById('heroVideo');
     });
   });
   
-// AOS Tweaks
-
   AOS.init({
     once: true,
     duration: 800,
     easing: 'ease-in-out',
   });
-

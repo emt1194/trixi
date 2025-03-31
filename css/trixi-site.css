@@ -511,7 +511,7 @@ body {
 
 .main-trixi-menu 
 {
-  z-index: 99!important;
+  z-index: 9999!important;
 }
 
 #glassBar.visible {
@@ -570,4 +570,41 @@ body {
 #mainHeader
 {
   z-index:9999!important;
+}
+
+
+/* Base styles remain the same */
+#glassBar {
+  z-index: 998;
+}
+
+#mainHeader {
+  z-index: 999;
+}
+
+/* Chrome-specific fix */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  #glassBar {
+    z-index: 997;
+  }
+  
+  #mainHeader {
+    z-index: 9999;
+  }
+
+  .main-trixi-menu {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+}
+
+/* Additional safety measure for newer Chrome versions */
+@supports (-webkit-appearance:none) and (not (overflow:-webkit-marquee)) and (not (-ms-ime-align:auto)) and (not (-moz-appearance:none)) {
+  #glassBar {
+    z-index: 997;
+  }
+  
+  #mainHeader {
+    z-index: 9999;
+  }
 }
