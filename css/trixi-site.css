@@ -398,7 +398,7 @@ code {
 }
 
 /* Custom breakpoint override for header nav visibility */
-@media (max-width: 960px) {
+@media (max-width: 940px) {
   .custom-nav {
     display: none !important;
   }
@@ -416,7 +416,7 @@ code {
   }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 920px) {
   .custom-nav {
     display: flex !important;
   }
