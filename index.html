@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CN4HMF6K86"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-CN4HMF6K86');
-</script>
-
   <meta charset="utf-8" />
   <title>TrixiAI | The Ultimate AI Trench Assistant for Traders & Analysts</title>
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -34,6 +23,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="./css/trixi-site.css" rel="stylesheet" type="text/css" />
+<!-- AOS Library CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CN4HMF6K86"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-CN4HMF6K86');
+  </script>
+  
 
 </head>
 <body class="text-white min-h-screen flex flex-col items-center relative">
@@ -47,6 +48,10 @@
   </defs>
 </svg>
   <div class="noise-background"></div>
+  <!--<div class="stars-wrapper">
+  <div class="stars"></div>-->
+</div>
+
   <div class="solana-blobs">
   <svg class="blob blob1" viewBox="0 0 600 600">
     <path d="M300,60C360,100,440,160,460,240C480,320,440,420,360,460C280,500,160,480,120,400C80,320,100,200,160,120C220,40,240,20,300,60Z"/>
@@ -59,7 +64,7 @@
   </svg>
 </div>
 
-<header class="w-full max-w-[1200px] flex items-center justify-between px-6 py-4 bg-transparent relative z-10">
+<header id="mainHeader" class="main-trixi-menu sticky top-0 w-full max-w-[1200px] flex items-center justify-between px-6 py-4 bg-transparent relative z-99">
 
     <div class="max-w-[200px] logo">
       <img src="./img/trixi-logo.png" alt="Trixi" class="w-full h-auto">
@@ -68,6 +73,7 @@
 <div class="custom-nav bg-[#2B2D36] text-white rounded-xl overflow-hidden">
     <a href="#about" class="px-4 py-2 hover:bg-[#3c3f4d] transition flex items-center">About</a>
     <a href="#features" class="px-4 py-2 hover:bg-[#3c3f4d] transition flex items-center">Features</a>
+    <a href="#tools" class="px-4 py-2 hover:bg-[#3c3f4d] transition flex items-center">Tools</a>
     <a href="#roadmap" class="px-4 py-2 hover:bg-[#3c3f4d] transition flex items-center">Roadmap</a>
     <a href="#faq" class="px-4 py-2 hover:bg-[#3c3f4d] transition flex items-center">FAQ</a>
     <a href="#buy" class="px-4 py-2 hover:bg-[#3c3f4d] transition flex items-center">Buy</a>
@@ -98,7 +104,7 @@
   <main class="w-full max-w-[1200px] px-6 flex mt-12 flex-col gap-6 flex-1 relative z-10">
   
   <!-- HERO --> 
-<section class="relative w-full h-[600px] overflow-hidden hidden sm:flex rounded-xl">
+<section class="relative w-full h-[600px] overflow-hidden hidden sm:flex rounded-xl" data-aos="fade-in">
   <!-- Video Background -->
   <video id="heroVideo" autoplay muted loop playsinline
        class="absolute inset-0 w-full h-full object-cover z-[-2] rounded-xl fade-video">
@@ -136,10 +142,10 @@
 <!-- MOBILE HERO -->
 
 
-<section class="bg-[#1C1E26] mobile-hero rounded-xl relative w-full h-auto overflow-hidden bg-[#0D0E12] flex flex-col sm:hidden">
+<section class="bg-[#1C1E26] mobile-hero rounded-xl relative w-full h-auto overflow-hidden bg-[#0D0E12] flex flex-col sm:hidden" data-aos="fade-in">
   <div class="absolute inset-0 z-0">
     <img src="./img/trixi-transparent-3.webp" alt="Trixi Background"
-         class="w-full h-full object-cover object-center opacity-30 blur-sm" />
+         class="w-full h-full object-cover object-center opacity-30 transform translate-x-[150px]" />
   </div>
   <div class="relative z-10 px-6 py-12">
     <h1 class="text-4xl font-semibold mb-4 text-white">
@@ -154,6 +160,7 @@
     </div>
   </div>
 </section>
+
 <!-- Logos Section - Remove for now -->
 <!-- 
 <div class="logo-row">
@@ -164,7 +171,7 @@
   <img src="./img/pumpfun.png" alt="Pumpfun" style="width: 20%;" class="rounded-2xl opacity-50 h-24 md:h-32 object-contain" />
 </div>
 -->
-<div id="about" class="mt-12 text-left">
+<div id="about" class="mt-12 text-left" data-aos="fade-in"  data-aos-delay="200">
   <h2 class="text-5xl font-semibold mb-2">
     AI-Powered <span class="solana-gradient">Insights</span>
   </h2>
@@ -173,7 +180,7 @@
   </p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-  <div class="bg-[#1C1E26] rounded-2xl p-6">
+  <div class="bg-[#1C1E26] rounded-2xl p-6" data-aos="fade-in">
     <h3 class="text-2xl font-semibold mb-2 flex items-center gap-2">
       <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" viewBox="0 0 827.72 466.63" width="40" height="50"><path d="M286.1 449.63c-3.14-5.35-6.51-15.33-6.56-17.84-.03-1.56 1.15-1.75 10.97-1.75h11v4.84c0 2.66-1.71 6.3-1.69 12.57.27 10.85 4.19 19.18 2.27 19.18-.73 0-12.71-11.64-14.17-14.14M369.6 433c-.69-1.22-28.06 1.43-63.91 1.08-23.36-.23-48.99-.93-56.97-1.57-18.56-1.47-56.51-5.72-64.97-7.28l-6.53-1.19 5.78-.67c3.17-.36 21.4-.96 40.5-1.33 101.92-1.98 163.97-7.83 220.22-20.75 23.08-5.31 31.1-8.01 45.58-15.38 22.97-11.69 49.77-31.31 82.07-60.07 14.34-12.78 45.5-42.1 46.09-43.37.13-.29-3.03-1.74-7.01-3.24-6.78-2.53-8.24-3.68-22.26-17.5-34.15-33.64-75.57-59.97-125.62-79.85-14.28-5.68-39.15-14.43-40.99-14.43-.53 0 1.04 2.81 3.47 6.25 5.75 8.09 13.69 24.11 16.99 34.25 8.22 25.28 8.23 53.83.04 79.75-11.77 37.25-40.96 68.24-77.92 82.72-47.35 18.55-101.36 9.25-138.67-23.88-21.29-18.9-34.22-40.07-41.49-67.95-2.59-9.92-2.78-12-2.78-30.64s.19-20.71 2.8-30.73c3-11.53 6.91-21.75 11.7-30.58 1.64-3.04 2.81-5.72 2.58-5.94-.63-.63-20.52 8.18-34.84 15.44-34.33 17.4-77.8 47.29-97.25 66.87-12.72 12.8-51.36 57.47-62.91 72.72-1.57 2.07-3.03 3.6-3.25 3.38-.82-.82 8.62-19.62 15.13-30.15 8.72-14.09 21.56-33.33 27.37-41.01 15.16-20.05 37.52-44.04 53.9-57.82 3.97-3.34 10.71-10.08 14.97-14.97 24.89-28.57 59.8-56.16 91.3-72.14 30.44-15.45 50.15-21.16 85.04-24.66l12.46-1.24 5.84-5.58c3.22-3.06 7.42-8.25 9.34-11.53 4.56-7.78 8.98-21.16 10.09-30.56l.9-7.5 3.67 7.83c2.03 4.31 4.82 11.51 6.22 16 1.4 4.49 2.91 8.86 3.36 9.69.45.84 1.62 5.23 2.59 9.76.98 4.53 2.28 8.87 2.89 9.64.74.94 6.03 1.94 16.1 3.03l15 1.62 4.33-4.72c7.99-8.72 21.63-40.76 26.22-61.6.7-3.16 1.61-5.75 2.03-5.75 1.26 0 6.49 7.13 10.24 14 4.25 7.77 7.49 18.88 8.33 28.55.66 7.64-1.25 19.51-4.73 29.42-1.06 3-1.92 5.79-1.92 6.18s2.04 1.03 4.54 1.41c3.9.58 5.48.22 11.25-2.61 8.82-4.33 23.42-18.9 32.02-31.95 10.86-16.49 25.17-46.64 31.79-66.97L502.1 0l1.41 3.46c2.28 5.6 8.97 32.79 11.34 46.14 2.83 15.9 3.15 40.45.65 48.85-7.27 24.35-8.15 29.54-5.2 30.67 7.99 3.06 41.69-44.92 77.9-110.92C593.55 8.44 598.31.45 598.76.45c1.04 0 1.45 1.39 3.66 12.5 1.46 7.31 1.79 13.89 1.76 35-.03 23.17-.28 27.13-2.29 36.38-4.06 18.67-11.65 39.96-23.28 65.36-3.24 7.07-5.89 13.09-5.89 13.38 0 1.04 29.08-15.25 44.5-24.93 38.87-24.41 63.71-49.85 86.58-88.69l4.42-7.5.32 8.5c.77 20.61-3.41 51.82-8.43 63.06-1.6 3.56-12.64 18.27-30.79 41-15.57 19.49-27.91 35.59-27.42 35.78 1.5.59 10.91-1.97 20.12-5.47 24.59-9.34 51-25.64 75.2-46.41 11.94-10.25 34.02-32.97 44.43-45.72 4.61-5.65 8.52-10.12 8.7-9.95.65.66-2.82 21.2-5.12 30.26-6.33 24.96-17.08 44.73-33.96 62.45-12.47 13.09-13.25 14.04-14.97 18.16-1.44 3.44-.58 11.93.75 14.5 3.88 7.45 10.75 10.65 22.67 10.56 15.47-.12 38.16-7.72 58.75-19.7 5.09-2.95 9.25-5.14 9.25-4.85 0 1.53-12.12 23.18-17.82 31.83-8.02 12.16-23.42 27.85-34.68 35.33-21.3 14.14-45.96 22.32-76.2 25.27-13.31 1.3-66.18-1.46-73.1 6.83-4.62 4.88-6.12 6.76-5.98 6.73 19.7-4.14 44.67 11.41 51.76 16.2.51.34.2 1.13-.4 1.05l-20.82-2.77c-16.16-2-26.23-1.09-33.4 1.23-4.48 1.46-9.19 3.49-10.46 4.51l-2.3 1.87 13.31 22.2c11.36 15.34 21.57 33.78 19.84 35.41-2.49 2.35-45.52-32-55.19-28.54l-3.88 2.76-9.68 7.83c-5.48 5.19-13.56 12.11-17.96 15.38-7.95 5.92-7.98 5.96-4.99 6.56 5.63 1.12 18.03 6.85 25.75 11.89 14.29 9.32 23.5 21.29 26.59 34.53.78 3.35 1.19 6.33.9 6.61-.96.96-7.73-3.14-18.79-11.38-24.61-18.33-30.21-26.64-55.63-27.05-9.56.81-14.34 3.3-19.06 5.45l-8.56 3.9 3.71 3.86c7.61 7.93 15.02 27.95 16.59 44.88.81 8.63 1.65 9.02-9.77-4.55q-9.31-11.07-18.92-23.24c-9.8-11.69-10.6-13.58-23.51-10.46-7.07 1.62-12.4 2.79-15.67 3.37-2.19.29-4.31.76-7.16 1.29-8.48 1.56-32.73 5.42-37.83 6.02-3.88.46-5.65 1.07-5.31 1.85 3.69 8.36 6.54 16.11 7.42 20.17 1.69 7.77 5.16 12.22 1.48 13.49-2.38.64-8.35-3.82-17.03-10.97m-59.52-112.25c26.62-7.89 43.53-10.64 69.29-56.38 7.79-13.82 7.57-52.01-2.86-29.86-41.34 73.28-116.48 70.48-179.94 22.53-6.42-4.74-6.65-3.63-1.35 6.62 22.54 43.55 64.98 64.65 114.86 57.09m30.73-98.96c8.03-4.7 13.51-14.1 13.51-23.15 0-14.24-13.13-27.41-27.33-27.41-16.92 0-30.15 16.35-26.6 32.87 3.83 17.86 24.61 26.96 40.42 17.69" data-name="Layer 1" fill="url(#solanaGradientIcon)"/></svg>
       Language <span class="solana-gradient">Mastery</span>
@@ -182,7 +189,7 @@
 Trixi’s natural language model adapts to modern slang, memes, and financial discussions to deliver engaging, context-aware insights.
     </p>
   </div>
-  <div class="bg-[#1C1E26] rounded-2xl p-6">
+  <div class="bg-[#1C1E26] rounded-2xl p-6" data-aos="fade-in">
     <h3 class="text-2xl font-semibold mb-2 flex items-center gap-2">
      <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" viewBox="0 0 827.72 466.63" width="40" height="50"><path d="M286.1 449.63c-3.14-5.35-6.51-15.33-6.56-17.84-.03-1.56 1.15-1.75 10.97-1.75h11v4.84c0 2.66-1.71 6.3-1.69 12.57.27 10.85 4.19 19.18 2.27 19.18-.73 0-12.71-11.64-14.17-14.14M369.6 433c-.69-1.22-28.06 1.43-63.91 1.08-23.36-.23-48.99-.93-56.97-1.57-18.56-1.47-56.51-5.72-64.97-7.28l-6.53-1.19 5.78-.67c3.17-.36 21.4-.96 40.5-1.33 101.92-1.98 163.97-7.83 220.22-20.75 23.08-5.31 31.1-8.01 45.58-15.38 22.97-11.69 49.77-31.31 82.07-60.07 14.34-12.78 45.5-42.1 46.09-43.37.13-.29-3.03-1.74-7.01-3.24-6.78-2.53-8.24-3.68-22.26-17.5-34.15-33.64-75.57-59.97-125.62-79.85-14.28-5.68-39.15-14.43-40.99-14.43-.53 0 1.04 2.81 3.47 6.25 5.75 8.09 13.69 24.11 16.99 34.25 8.22 25.28 8.23 53.83.04 79.75-11.77 37.25-40.96 68.24-77.92 82.72-47.35 18.55-101.36 9.25-138.67-23.88-21.29-18.9-34.22-40.07-41.49-67.95-2.59-9.92-2.78-12-2.78-30.64s.19-20.71 2.8-30.73c3-11.53 6.91-21.75 11.7-30.58 1.64-3.04 2.81-5.72 2.58-5.94-.63-.63-20.52 8.18-34.84 15.44-34.33 17.4-77.8 47.29-97.25 66.87-12.72 12.8-51.36 57.47-62.91 72.72-1.57 2.07-3.03 3.6-3.25 3.38-.82-.82 8.62-19.62 15.13-30.15 8.72-14.09 21.56-33.33 27.37-41.01 15.16-20.05 37.52-44.04 53.9-57.82 3.97-3.34 10.71-10.08 14.97-14.97 24.89-28.57 59.8-56.16 91.3-72.14 30.44-15.45 50.15-21.16 85.04-24.66l12.46-1.24 5.84-5.58c3.22-3.06 7.42-8.25 9.34-11.53 4.56-7.78 8.98-21.16 10.09-30.56l.9-7.5 3.67 7.83c2.03 4.31 4.82 11.51 6.22 16 1.4 4.49 2.91 8.86 3.36 9.69.45.84 1.62 5.23 2.59 9.76.98 4.53 2.28 8.87 2.89 9.64.74.94 6.03 1.94 16.1 3.03l15 1.62 4.33-4.72c7.99-8.72 21.63-40.76 26.22-61.6.7-3.16 1.61-5.75 2.03-5.75 1.26 0 6.49 7.13 10.24 14 4.25 7.77 7.49 18.88 8.33 28.55.66 7.64-1.25 19.51-4.73 29.42-1.06 3-1.92 5.79-1.92 6.18s2.04 1.03 4.54 1.41c3.9.58 5.48.22 11.25-2.61 8.82-4.33 23.42-18.9 32.02-31.95 10.86-16.49 25.17-46.64 31.79-66.97L502.1 0l1.41 3.46c2.28 5.6 8.97 32.79 11.34 46.14 2.83 15.9 3.15 40.45.65 48.85-7.27 24.35-8.15 29.54-5.2 30.67 7.99 3.06 41.69-44.92 77.9-110.92C593.55 8.44 598.31.45 598.76.45c1.04 0 1.45 1.39 3.66 12.5 1.46 7.31 1.79 13.89 1.76 35-.03 23.17-.28 27.13-2.29 36.38-4.06 18.67-11.65 39.96-23.28 65.36-3.24 7.07-5.89 13.09-5.89 13.38 0 1.04 29.08-15.25 44.5-24.93 38.87-24.41 63.71-49.85 86.58-88.69l4.42-7.5.32 8.5c.77 20.61-3.41 51.82-8.43 63.06-1.6 3.56-12.64 18.27-30.79 41-15.57 19.49-27.91 35.59-27.42 35.78 1.5.59 10.91-1.97 20.12-5.47 24.59-9.34 51-25.64 75.2-46.41 11.94-10.25 34.02-32.97 44.43-45.72 4.61-5.65 8.52-10.12 8.7-9.95.65.66-2.82 21.2-5.12 30.26-6.33 24.96-17.08 44.73-33.96 62.45-12.47 13.09-13.25 14.04-14.97 18.16-1.44 3.44-.58 11.93.75 14.5 3.88 7.45 10.75 10.65 22.67 10.56 15.47-.12 38.16-7.72 58.75-19.7 5.09-2.95 9.25-5.14 9.25-4.85 0 1.53-12.12 23.18-17.82 31.83-8.02 12.16-23.42 27.85-34.68 35.33-21.3 14.14-45.96 22.32-76.2 25.27-13.31 1.3-66.18-1.46-73.1 6.83-4.62 4.88-6.12 6.76-5.98 6.73 19.7-4.14 44.67 11.41 51.76 16.2.51.34.2 1.13-.4 1.05l-20.82-2.77c-16.16-2-26.23-1.09-33.4 1.23-4.48 1.46-9.19 3.49-10.46 4.51l-2.3 1.87 13.31 22.2c11.36 15.34 21.57 33.78 19.84 35.41-2.49 2.35-45.52-32-55.19-28.54l-3.88 2.76-9.68 7.83c-5.48 5.19-13.56 12.11-17.96 15.38-7.95 5.92-7.98 5.96-4.99 6.56 5.63 1.12 18.03 6.85 25.75 11.89 14.29 9.32 23.5 21.29 26.59 34.53.78 3.35 1.19 6.33.9 6.61-.96.96-7.73-3.14-18.79-11.38-24.61-18.33-30.21-26.64-55.63-27.05-9.56.81-14.34 3.3-19.06 5.45l-8.56 3.9 3.71 3.86c7.61 7.93 15.02 27.95 16.59 44.88.81 8.63 1.65 9.02-9.77-4.55q-9.31-11.07-18.92-23.24c-9.8-11.69-10.6-13.58-23.51-10.46-7.07 1.62-12.4 2.79-15.67 3.37-2.19.29-4.31.76-7.16 1.29-8.48 1.56-32.73 5.42-37.83 6.02-3.88.46-5.65 1.07-5.31 1.85 3.69 8.36 6.54 16.11 7.42 20.17 1.69 7.77 5.16 12.22 1.48 13.49-2.38.64-8.35-3.82-17.03-10.97m-59.52-112.25c26.62-7.89 43.53-10.64 69.29-56.38 7.79-13.82 7.57-52.01-2.86-29.86-41.34 73.28-116.48 70.48-179.94 22.53-6.42-4.74-6.65-3.63-1.35 6.62 22.54 43.55 64.98 64.65 114.86 57.09m30.73-98.96c8.03-4.7 13.51-14.1 13.51-23.15 0-14.24-13.13-27.41-27.33-27.41-16.92 0-30.15 16.35-26.6 32.87 3.83 17.86 24.61 26.96 40.42 17.69" data-name="Layer 1" fill="url(#solanaGradientIcon)"/></svg>
       Smart <span class="solana-gradient">Market Analysis</span>
@@ -191,7 +198,7 @@ Trixi’s natural language model adapts to modern slang, memes, and financial di
       With real-time data processing and predictive neural networks, Trixi provides risk-aware trading insights across traditional and crypto markets.
     </p>
   </div>
-  <div class="bg-[#1C1E26] rounded-2xl p-6">
+  <div class="bg-[#1C1E26] rounded-2xl p-6" data-aos="fade-in">
     <h3 class="text-2xl font-semibold mb-2 flex items-center gap-2">
       <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" viewBox="0 0 827.72 466.63" width="40" height="50"><path d="M286.1 449.63c-3.14-5.35-6.51-15.33-6.56-17.84-.03-1.56 1.15-1.75 10.97-1.75h11v4.84c0 2.66-1.71 6.3-1.69 12.57.27 10.85 4.19 19.18 2.27 19.18-.73 0-12.71-11.64-14.17-14.14M369.6 433c-.69-1.22-28.06 1.43-63.91 1.08-23.36-.23-48.99-.93-56.97-1.57-18.56-1.47-56.51-5.72-64.97-7.28l-6.53-1.19 5.78-.67c3.17-.36 21.4-.96 40.5-1.33 101.92-1.98 163.97-7.83 220.22-20.75 23.08-5.31 31.1-8.01 45.58-15.38 22.97-11.69 49.77-31.31 82.07-60.07 14.34-12.78 45.5-42.1 46.09-43.37.13-.29-3.03-1.74-7.01-3.24-6.78-2.53-8.24-3.68-22.26-17.5-34.15-33.64-75.57-59.97-125.62-79.85-14.28-5.68-39.15-14.43-40.99-14.43-.53 0 1.04 2.81 3.47 6.25 5.75 8.09 13.69 24.11 16.99 34.25 8.22 25.28 8.23 53.83.04 79.75-11.77 37.25-40.96 68.24-77.92 82.72-47.35 18.55-101.36 9.25-138.67-23.88-21.29-18.9-34.22-40.07-41.49-67.95-2.59-9.92-2.78-12-2.78-30.64s.19-20.71 2.8-30.73c3-11.53 6.91-21.75 11.7-30.58 1.64-3.04 2.81-5.72 2.58-5.94-.63-.63-20.52 8.18-34.84 15.44-34.33 17.4-77.8 47.29-97.25 66.87-12.72 12.8-51.36 57.47-62.91 72.72-1.57 2.07-3.03 3.6-3.25 3.38-.82-.82 8.62-19.62 15.13-30.15 8.72-14.09 21.56-33.33 27.37-41.01 15.16-20.05 37.52-44.04 53.9-57.82 3.97-3.34 10.71-10.08 14.97-14.97 24.89-28.57 59.8-56.16 91.3-72.14 30.44-15.45 50.15-21.16 85.04-24.66l12.46-1.24 5.84-5.58c3.22-3.06 7.42-8.25 9.34-11.53 4.56-7.78 8.98-21.16 10.09-30.56l.9-7.5 3.67 7.83c2.03 4.31 4.82 11.51 6.22 16 1.4 4.49 2.91 8.86 3.36 9.69.45.84 1.62 5.23 2.59 9.76.98 4.53 2.28 8.87 2.89 9.64.74.94 6.03 1.94 16.1 3.03l15 1.62 4.33-4.72c7.99-8.72 21.63-40.76 26.22-61.6.7-3.16 1.61-5.75 2.03-5.75 1.26 0 6.49 7.13 10.24 14 4.25 7.77 7.49 18.88 8.33 28.55.66 7.64-1.25 19.51-4.73 29.42-1.06 3-1.92 5.79-1.92 6.18s2.04 1.03 4.54 1.41c3.9.58 5.48.22 11.25-2.61 8.82-4.33 23.42-18.9 32.02-31.95 10.86-16.49 25.17-46.64 31.79-66.97L502.1 0l1.41 3.46c2.28 5.6 8.97 32.79 11.34 46.14 2.83 15.9 3.15 40.45.65 48.85-7.27 24.35-8.15 29.54-5.2 30.67 7.99 3.06 41.69-44.92 77.9-110.92C593.55 8.44 598.31.45 598.76.45c1.04 0 1.45 1.39 3.66 12.5 1.46 7.31 1.79 13.89 1.76 35-.03 23.17-.28 27.13-2.29 36.38-4.06 18.67-11.65 39.96-23.28 65.36-3.24 7.07-5.89 13.09-5.89 13.38 0 1.04 29.08-15.25 44.5-24.93 38.87-24.41 63.71-49.85 86.58-88.69l4.42-7.5.32 8.5c.77 20.61-3.41 51.82-8.43 63.06-1.6 3.56-12.64 18.27-30.79 41-15.57 19.49-27.91 35.59-27.42 35.78 1.5.59 10.91-1.97 20.12-5.47 24.59-9.34 51-25.64 75.2-46.41 11.94-10.25 34.02-32.97 44.43-45.72 4.61-5.65 8.52-10.12 8.7-9.95.65.66-2.82 21.2-5.12 30.26-6.33 24.96-17.08 44.73-33.96 62.45-12.47 13.09-13.25 14.04-14.97 18.16-1.44 3.44-.58 11.93.75 14.5 3.88 7.45 10.75 10.65 22.67 10.56 15.47-.12 38.16-7.72 58.75-19.7 5.09-2.95 9.25-5.14 9.25-4.85 0 1.53-12.12 23.18-17.82 31.83-8.02 12.16-23.42 27.85-34.68 35.33-21.3 14.14-45.96 22.32-76.2 25.27-13.31 1.3-66.18-1.46-73.1 6.83-4.62 4.88-6.12 6.76-5.98 6.73 19.7-4.14 44.67 11.41 51.76 16.2.51.34.2 1.13-.4 1.05l-20.82-2.77c-16.16-2-26.23-1.09-33.4 1.23-4.48 1.46-9.19 3.49-10.46 4.51l-2.3 1.87 13.31 22.2c11.36 15.34 21.57 33.78 19.84 35.41-2.49 2.35-45.52-32-55.19-28.54l-3.88 2.76-9.68 7.83c-5.48 5.19-13.56 12.11-17.96 15.38-7.95 5.92-7.98 5.96-4.99 6.56 5.63 1.12 18.03 6.85 25.75 11.89 14.29 9.32 23.5 21.29 26.59 34.53.78 3.35 1.19 6.33.9 6.61-.96.96-7.73-3.14-18.79-11.38-24.61-18.33-30.21-26.64-55.63-27.05-9.56.81-14.34 3.3-19.06 5.45l-8.56 3.9 3.71 3.86c7.61 7.93 15.02 27.95 16.59 44.88.81 8.63 1.65 9.02-9.77-4.55q-9.31-11.07-18.92-23.24c-9.8-11.69-10.6-13.58-23.51-10.46-7.07 1.62-12.4 2.79-15.67 3.37-2.19.29-4.31.76-7.16 1.29-8.48 1.56-32.73 5.42-37.83 6.02-3.88.46-5.65 1.07-5.31 1.85 3.69 8.36 6.54 16.11 7.42 20.17 1.69 7.77 5.16 12.22 1.48 13.49-2.38.64-8.35-3.82-17.03-10.97m-59.52-112.25c26.62-7.89 43.53-10.64 69.29-56.38 7.79-13.82 7.57-52.01-2.86-29.86-41.34 73.28-116.48 70.48-179.94 22.53-6.42-4.74-6.65-3.63-1.35 6.62 22.54 43.55 64.98 64.65 114.86 57.09m30.73-98.96c8.03-4.7 13.51-14.1 13.51-23.15 0-14.24-13.13-27.41-27.33-27.41-16.92 0-30.15 16.35-26.6 32.87 3.83 17.86 24.61 26.96 40.42 17.69" data-name="Layer 1" fill="url(#solanaGradientIcon)"/></svg>
       Content <span class="solana-gradient">Creation</span>
@@ -201,7 +208,7 @@ Trixi’s natural language model adapts to modern slang, memes, and financial di
     </p>
   </div>
 </div>
-<div class="mt-12 text-left">
+<div class="mt-12 text-left" data-aos="fade-in">
   <h2 class="text-5xl font-semibold mb-2">
     Powerful <span class="solana-gradient">Commands</span>
   </h2>
@@ -210,7 +217,7 @@ Trixi’s natural language model adapts to modern slang, memes, and financial di
   </p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-  <div class="bg-[#1C1E26] rounded-2xl p-6">
+  <div class="bg-[#1C1E26] rounded-2xl p-6" data-aos="fade-in">
     <h3 class="text-2xl font-semibold mb-2 flex items-center gap-2">
 <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="50" fill="url(#solanaGradientIcon)" viewBox="0 0 328 328"><path d="M177.75 64.001C177.75 29.4 149.601 1.25 115 1.25c-34.602 0-62.75 28.15-62.75 62.751S80.398 126.75 115 126.75c34.601 0 62.75-28.148 62.75-62.749zM228.606 181.144c-5.858-5.857-15.355-5.858-21.214-.001-5.857 5.857-5.857 15.355 0 21.214l19.393 19.396-19.393 19.391c-5.857 5.857-5.857 15.355 0 21.214a14.956 14.956 0 0 0 10.607 4.394c3.838 0 7.678-1.465 10.605-4.393l30-29.998a15 15 0 0 0 .001-21.214l-29.999-30.003z"/><path d="M223 116.75c-34.488 0-65.145 16.716-84.298 42.47A115.407 115.407 0 0 0 115 156.75c-63.412 0-115 51.589-115 115 0 8.284 6.715 15 15 15h125.596c19.246 24.348 49.03 40 82.404 40 57.896 0 105-47.103 105-105 0-57.896-47.104-105-105-105zm0 180c-41.356 0-75-33.645-75-75s33.644-75 75-75c41.354 0 75 33.645 75 75s-33.646 75-75 75z"/></svg>
       Follower and <span class="solana-gradient">Engagement</span> Analytics
@@ -219,7 +226,7 @@ Trixi’s natural language model adapts to modern slang, memes, and financial di
 		Trixi provides in-depth social media analysis with follower and following tracking. These commands help users monitor audience behavior, detect growth patterns, and assess the influence of key accounts. Understanding follower dynamics allows traders and analysts to gauge sentiment shifts and market influence in real time.
     </p>
   </div>
-  <div class="bg-[#1C1E26] rounded-2xl p-6">
+  <div class="bg-[#1C1E26] rounded-2xl p-6" data-aos="fade-in">
     <h3 class="text-2xl font-semibold mb-2 flex items-center gap-2">
       <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="url(#solanaGradientIcon)" viewBox="0 0 24 24"><path fill="url(#solanaGradientIcon)" d="m21.56 10.739-1.36-1.58c-.26-.3-.47-.86-.47-1.26v-1.7c0-1.06-.87-1.93-1.93-1.93h-1.7c-.39 0-.96-.21-1.26-.47l-1.58-1.36c-.69-.59-1.82-.59-2.52 0l-1.57 1.37c-.3.25-.87.46-1.26.46H6.18c-1.06 0-1.93.87-1.93 1.93v1.71c0 .39-.21.95-.46 1.25l-1.35 1.59c-.58.69-.58 1.81 0 2.5l1.35 1.59c.25.3.46.86.46 1.25v1.71c0 1.06.87 1.93 1.93 1.93h1.73c.39 0 .96.21 1.26.47l1.58 1.36c.69.59 1.82.59 2.52 0l1.58-1.36c.3-.26.86-.47 1.26-.47h1.7c1.06 0 1.93-.87 1.93-1.93v-1.7c0-.39.21-.96.47-1.26l1.36-1.58c.58-.69.58-1.83-.01-2.52Zm-5.4-.63-4.83 4.83a.75.75 0 0 1-1.06 0l-2.42-2.42a.754.754 0 0 1 0-1.06c.29-.29.77-.29 1.06 0l1.89 1.89 4.3-4.3c.29-.29.77-.29 1.06 0 .29.29.29.77 0 1.06Z"/></svg>
       Account Activity and <span class="solana-gradient">Verification</span>
@@ -228,7 +235,7 @@ Trixi’s natural language model adapts to modern slang, memes, and financial di
       With Trixi’s latest tweet fetcher, users can quickly access the most recent posts from any account, keeping them informed on key market discussions. The verification checker helps assess the credibility of influencers and sources, ensuring users rely on trusted voices in financial conversations. 
     </p>
   </div>
-  <div class="bg-[#1C1E26] rounded-2xl p-6">
+  <div class="bg-[#1C1E26] rounded-2xl p-6" data-aos="fade-in">
     <h3 class="text-2xl font-semibold mb-2 flex items-center gap-2">
       <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="url(#solanaGradientIcon)" viewBox="0 0 24 24"><path fill="url(#solanaGradientIcon)" fill-rule="evenodd" d="M4 3a1 1 0 0 0-2 0v17.2A1.8 1.8 0 0 0 3.8 22H21a1 1 0 1 0 0-2H4V3Zm17.707 4.707a1 1 0 0 0-1.414-1.414L14 12.586l-3.293-3.293a1 1 0 0 0-1.414 0l-4 4a1 1 0 1 0 1.414 1.414L10 11.414l3.293 3.293a1 1 0 0 0 1.414 0l7-7Z" clip-rule="evenodd"/></svg>
       Market Trends & <span class="solana-gradient">Influencer Analysis</span>
@@ -237,7 +244,7 @@ Trixi’s natural language model adapts to modern slang, memes, and financial di
       Trixi’s account analysis tool delivers a detailed breakdown of an individual’s online presence, offering insights into engagement trends and sentiment shifts. The trending topics tracker identifies real-time market discussions, helping traders anticipate movements and stay ahead of emerging narratives. 
     </p>
   </div>
-  <div class="bg-[#1C1E26] rounded-2xl p-6">
+  <div class="bg-[#1C1E26] rounded-2xl p-6" data-aos="fade-in">
     <h3 class="text-2xl font-semibold mb-2 flex items-center gap-2">
      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#DC1FFF " stroke="#03E1FF" stroke-width="3" viewBox="0 0 64 64"><circle cx="34.52" cy="11.43" r="5.82"/><circle cx="53.63" cy="31.6" r="5.82"/><circle cx="34.52" cy="50.57" r="5.82"/><circle cx="15.16" cy="42.03" r="5.82"/><circle cx="15.16" cy="19.27" r="5.82"/><circle cx="34.51" cy="29.27" r="4.7"/><path d="m20.17 16.3 8.73-3.37M38.6 15.59l10.88 11.93M50.07 36.2l-11.4 10.29M18.36 24.13l12.55 21.88M20.31 44.74l8.39 3.89M17.34 36.63l14.03-20.31M20.52 21.55l9.82 5.55M39.22 29.8l8.59.65M34.51 33.98l.01 10.76"/></svg>
       AI-Powered <span class="solana-gradient">Insights and Responses</span>
@@ -252,7 +259,7 @@ Trixi’s natural language model adapts to modern slang, memes, and financial di
 
 <section class="scrolling-panel-section w-full flex flex-col md:flex-row gap-6 items-stretch">
 <!-- Left Text Panel -->
-<div class="bg-[#1C1E26] rounded-2xl p-6 flex flex-col justify-center md:w-1/2">
+<div class="bg-[#1C1E26] rounded-2xl p-6 flex flex-col justify-center md:w-1/2" data-aos="fade-in">
   <h2 class="text-3xl font-semibold mb-4">
     Real-Time <span class="solana-gradient">Twitter/X</span> Analysis
   </h2>
@@ -282,7 +289,7 @@ Trixi’s natural language model adapts to modern slang, memes, and financial di
 
 
 <!-- Live Code Block -->
-<div class="md:w-1/2 bg-[#1C1E26] p-3 rounded-2xl overflow-hidden flex items-start relative z-10">
+<div class="md:w-1/2 bg-[#1C1E26] p-3 rounded-2xl overflow-hidden flex items-start relative z-10" data-aos="fade-in">
   <div id="analyticsDisplay" class="rounded-xl w-full h-full analytics-display"></div>
 </div>
 
@@ -294,7 +301,7 @@ Trixi’s natural language model adapts to modern slang, memes, and financial di
 
 
 
-<div id="features" class="mt-12 text-left">
+<div id="features" class="mt-12 text-left" data-aos="fade-in">
   <h2 class="text-5xl font-semibold mb-2">
     Unmatched <span class="solana-gradient">Feature Set</span>
   </h2>
@@ -303,35 +310,88 @@ Trixi’s natural language model adapts to modern slang, memes, and financial di
   </p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-  <div class="panel-text-1 rounded-2xl md:col-span-1 flex flex-col justify-center">
+  <div class="panel-text-1 rounded-2xl md:col-span-1 flex flex-col justify-center" data-aos="fade-in" data-aos-delay="200">
     <h3 class="text-2xl font-semibold mb-2"><span class="solana-gradient">Risk Management</span></h3>
     <p class="text-gray-400">
       Trixi’s trading and risk management system uses real-time data and predictive modeling to assess market trends and provide strategic recommendations. Instead of simply executing trades, it evaluates liquidity, volatility, and sentiment to help users make informed decisions. By balancing opportunity and risk, Trixi ensures smarter and safer trading in fast-moving markets.
     </p>
   </div>
-  <div class="panel-image-1 rounded-2xl overflow-hidden md:col-span-2">
+  <div class="panel-image-1 rounded-2xl overflow-hidden md:col-span-2" data-aos="fade-left">
     <img src="./img/trixi-preview-1.jpg" alt="Tech Image" class="w-full h-full object-cover rounded-2xl" />
   </div>
-  <div class="panel-image-2 rounded-2xl overflow-hidden md:col-span-2">
+  <div class="panel-image-2 rounded-2xl overflow-hidden md:col-span-2" data-aos="fade-right">
     <img src="./img/trixi-preview-2.jpg" alt="Data Image" class="w-full h-full object-cover rounded-2xl" />
   </div>
-  <div class="panel-text-2  rounded-2xl md:col-span-1 flex flex-col justify-center">
+  <div class="panel-text-2  rounded-2xl md:col-span-1 flex flex-col justify-center" data-aos="fade-in" data-aos-delay="200">
     <h3 class="text-2xl font-semibold mb-2"><span class="solana-gradient">Sentiment Analysis</span></h3>
     <p class="text-gray-400">
-      Trixi’s sentiment analysis scans X, Telegram, and Discord to gauge market perception and differentiate between genuine interest and hype. Using advanced NLP, it detects social media trends, engagement levels, and coordinated promotions, giving traders deeper insights beyond price movements. This helps users anticipate shifts and avoid potential market traps.
+      Trixi’s sentiment analysis scans X, Telegram, and Discord to gauge market perception and differentiate between genuine interest and hype. Using advanced NLP, she detects social media trends, engagement levels, and coordinated promotions, giving traders deeper insights beyond price movements. This helps users anticipate shifts and avoid potential market traps. Telegram and Discord sentiment monitoring will allow her to protect you from losses created by bad actors.
     </p>
   </div>
-  <div class="panel-text-3  rounded-2xl md:col-span-1 flex flex-col justify-center">
+  <div class="panel-text-3  rounded-2xl md:col-span-1 flex flex-col justify-center" data-aos="fade-in" data-aos-delay="200">
     <h3 class="text-2xl font-semibold mb-2"><span class="solana-gradient">Natural Language Trading</span></h3>
     <p class="text-gray-400">
       With natural language trading, Trixi delivers market insights through conversational AI, making trading more intuitive. Users can ask about portfolio updates, trends, or asset analysis in everyday language, receiving clear, context-aware responses. By simplifying complex data, Trixi makes market intelligence accessible and actionable.
     </p>
   </div>
-  <div class="panel-image-3 rounded-2xl overflow-hidden md:col-span-2">
+  <div class="panel-image-3 rounded-2xl overflow-hidden md:col-span-2" data-aos="fade-left">
     <img src="./img/trixi-preview-3.jpg" alt="AI Image" class="w-full h-full object-cover rounded-2xl" />
   </div>
 </div>
-<div class="mt-12 text-left">
+
+<!-- Current toolset -->
+
+<section id="tools" class="w-full mt-12" data-aos="fade-up">
+  <div class="max-w-[1200px] mx-auto">
+    <!-- Section Title -->
+    <h2 class="text-5xl font-semibold mb-2">
+      Available <span class="solana-gradient">Tools</span>
+    </h2>
+    <p class="text-gray-400 max-w-[600px] mb-6">
+      Many of Trixi's tools are currently available, and others are in development. Check out what you can use, right now.
+    </p>
+
+<!-- Wrapper for responsive layout -->
+<div class="flex flex-row md:flex-col gap-4 w-full">
+
+  <!-- Tab Buttons -->
+  <div id="tabMenu" class="w-[200px] md:w-full flex flex-col gap-4 flex-shrink-0">
+    <!-- Active Features row -->
+    <div class="flex flex-wrap md:flex-nowrap items-start gap-2 md:gap-4">
+      <p class="px-0 noclick-trixi py-2 w-full md:w-[150px]">Active Features:</p>    
+      <div class="flex flex-wrap gap-2">
+        <button type="button" data-tab="0" class="tab-btn w-full md:w-auto px-4 py-2 rounded-xl text-white bg-[#2B2D36] transition duration-300 gradient-border-button-hover">X Analyzer</button>
+        <button type="button" data-tab="1" class="tab-btn w-full md:w-auto px-4 py-2 rounded-xl text-white bg-[#2B2D36] transition duration-300 gradient-border-button-hover">Social Media Scanner</button>
+        <button type="button" data-tab="2" class="tab-btn w-full md:w-auto px-4 py-2 rounded-xl text-white bg-[#2B2D36] transition duration-300 gradient-border-button-hover">Volume Bot</button>
+      </div>
+    </div>
+
+    <!-- Coming Soon row -->
+    <div class="flex flex-wrap md:flex-nowrap items-start gap-2 md:gap-4">
+      <p class="px-0 py-2 w-full md:w-[150px]">Coming Soon:</p>
+      <div class="flex flex-wrap gap-2">
+        <button type="button" data-tab="3" class="tab-btn w-full md:w-auto px-4 py-2 rounded-xl text-white bg-[#2B2D36] transition duration-300">Username Analysis</button>
+        <button type="button" data-tab="4" class="tab-btn w-full md:w-auto px-4 py-2 rounded-xl text-white bg-[#2B2D36] transition duration-300">Trading Interface</button>
+        <button type="button" data-tab="5" class="tab-btn w-full md:w-auto px-4 py-2 rounded-xl text-white bg-[#2B2D36] transition duration-300">Sentiment Analysis</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab Content -->
+  <div id="tabContent" class="flex-1 md:w-full flex items-center bg-[#1C1E26] text-gray-300 p-6 rounded-2xl transition-all duration-300">
+    <p>
+      Cut through the noise on X/Twitter with Trixi’s real-time feed tracking. Our analyzer surfaces trending tokens, influential tweets, and scans each account for trustworthiness, linked accounts, and dozens of other variables, giving you the heads up.
+    </p>
+  </div>
+</div>
+</div>
+
+    </section>
+    
+
+<!-- Roadmap -->
+
+<div class="mt-12 text-left" data-aos="fade-in" data-aos-delay="200">
   <h2 class="text-5xl font-semibold mb-2">
     Trixi <span class="solana-gradient">Roadmap</span>
   </h2>
@@ -340,22 +400,22 @@ Trixi’s roadmap is ever-evolving, and is regularly updated. Check in on Telegr
 </div>
 <div id="roadmap" class="flex flex-col md:flex-row gap-6 mt-12 items-stretch">
   <div class="w-full md:w-[60%] [@media(max-width:1040px)]:md:w-[65%] [@media(max-width:940px)]:md:w-[70%] flex flex-col gap-6">    
-    <div class="bg-[#1C1E26] p-6 rounded-2xl ">
+    <div class="bg-[#1C1E26] p-6 rounded-2xl" data-aos="fade-right">
       <h3 class="text-xl font-semibold mb-1">Phase 1 – Ongoing</h3>
       <p class="text-gray-400 text-sm">
  Trixi’s first phase focuses on core social and market analytics, providing tools to track follower engagement, analyze account activity, and verify key influencers. Users can monitor audience behavior, fetch the latest tweets, and identify trending topics that shape financial discussions. These insights help traders stay ahead of market sentiment shifts.       </p>
     </div>
-    <div class="bg-[#1C1E26] p-6 rounded-2xl ">
+    <div class="bg-[#1C1E26] p-6 rounded-2xl " data-aos="fade-right">
       <h3 class="text-xl font-semibold mb-1">Phase 2 – In Active Development</h3>
       <p class="text-gray-400 text-sm">
  The second phase introduces AI-powered insights and content generation, including real-time AMA responses and natural language trading assistance. Trixi enables users to ask market-related questions and receive instant, intelligent answers while offering portfolio updates and market trend explanations in an intuitive, conversational format.       </p>
     </div>
-    <div class="bg-[#1C1E26] p-6 rounded-2xl ]">
+    <div class="bg-[#1C1E26] p-6 rounded-2xl" data-aos="fade-right">
       <h3 class="text-xl font-semibold mb-1">Phase 3 – Q2 & Q3 2025</h3>
       <p class="text-gray-400 text-sm">
- In phase three, Trixi enhances advanced analytics and risk management, leveraging sentiment analysis to distinguish between organic interest and hype. It also integrates real-time trading data with predictive modeling to assess risk and provide strategic recommendations, ensuring users can make informed financial decisions.       </p>
+ In phase three, Trixi enhances advanced analytics and risk management, leveraging sentiment analysis to distinguish between organic interest and hype. It also integrates real-time trading data with predictive modeling to assess risk and provide strategic recommendations, ensuring users can make informed financial decisions. Real-time community sentiment monitoring will protect you from fud, and Trixi can save you from any rugs that somehow slip through the cracks.</p>
     </div>
-    <div class="bg-[#1C1E26] p-6 rounded-2xl ">
+    <div class="bg-[#1C1E26] p-6 rounded-2xl" data-aos="fade-right">
       <h3 class="text-xl font-semibold mb-1">Phase 4 – Q3 & Q4 2025</h3>
       <p class="text-gray-400 text-sm">
  Phase 4 expands Trixi’s capabilities to website and code analysis, allowing users to evaluate website credibility and scan for key market trends. Additionally, a built-in code checker will review smart contracts and trading algorithms, identifying security risks and optimization opportunities to enhance market intelligence and trading safety.       </p>
@@ -363,7 +423,7 @@ Trixi’s roadmap is ever-evolving, and is regularly updated. Check in on Telegr
   </div>
   
   <!-- Trixi Standing Panel -->
-<div class="w-full md:w-[40%] trixi-roadmap-image [@media(max-width:1040px)]:md:w-[35%] [@media(max-width:940px)]:md:w-[30%] rounded-2xl flex justify-end items-end overflow-hidden relative h-[30vh] md:h-auto bg-[#1C1E26] sm:bg-transparent">
+<div class="w-full md:w-[40%] trixi-roadmap-image [@media(max-width:1040px)]:md:w-[35%] [@media(max-width:940px)]:md:w-[30%] rounded-2xl flex justify-end items-end overflow-hidden relative h-[30vh] md:h-auto bg-[#1C1E26] sm:bg-transparent" data-aos-delay="200" data-aos="fade-left">
 
   <!-- Video Background (Desktop Only) -->
   <video autoplay muted loop playsinline
@@ -384,9 +444,9 @@ Trixi’s roadmap is ever-evolving, and is regularly updated. Check in on Telegr
 
 
 </div>
-<div id="faq" class="bg-[#1C1E26] p-8 rounded-2xl mt-12">
+<div id="faq" class="bg-[#1C1E26] p-8 rounded-2xl mt-12" data-aos="fade-in">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-    <div class="self-center"">
+    <div class="self-center">
         <h2 class="text-5xl font-semibold mb-2">
     Frequently Asked <span class="solana-gradient">Questions</span>
   </h2>
@@ -437,7 +497,7 @@ Trixi’s roadmap is ever-evolving, and is regularly updated. Check in on Telegr
       <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
     </button>
     <div class="faq-answer max-h-0 overflow-hidden text-gray-400 mt-2 transition-all duration-500 ease-in-out">
-      Yes, Trixi evaluates market conditions, liquidity, and sentiment to provide risk assessments and trade recommendations, helping users make more strategic and informed trading decisions.
+      Yes, Trixi evaluates market conditions, liquidity, and sentiment to provide risk assessments and trade recommendations, helping users make more strategic and informed trading decisions. She can protect your bags by analysing on-chain activity for whales dumping or devs rugging and save you from getting rekt.
     </div>
   </div>
   <div class="faq-item border-b border-gray-700 pb-4">
@@ -471,7 +531,7 @@ Trixi’s roadmap is ever-evolving, and is regularly updated. Check in on Telegr
   </div>
 </div>
 
-<div id="buy" class="bg-[#1C1E26] rounded-xl p-6 mt-12 w-full text-white flex flex-col gap-4">
+<div id="buy" class="bg-[#1C1E26] rounded-xl p-6 mt-12 w-full text-white flex flex-col gap-4" data-aos="fade-in">
 <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 w-full text-sm font-medium">
   <a href="https://www.dextools.io/app/en/token/trixi?t=1743028088656"
      target="_blank"
@@ -531,6 +591,7 @@ Trixi’s roadmap is ever-evolving, and is regularly updated. Check in on Telegr
 <div id="mobileMenu" class="fixed top-[66px] right-6 w-48 bg-[#2B2D36] text-white rounded-xl shadow-lg hidden flex-col z-[9999] md:hidden overflow-hidden">
   <a href="#about" class="block px-4 py-2 hover:bg-[#3c3f4d] transition rounded-t-xl">About</a>
   <a href="#features" class="block px-4 py-2 hover:bg-[#3c3f4d] transition">Features</a>
+  <a href="#tools" class="block px-4 py-2 hover:bg-[#3c3f4d] transition">Tools</a>
   <a href="#roadmap" class="block px-4 py-2 hover:bg-[#3c3f4d] transition">Roadmap</a>
   <a href="#faq" class="block px-4 py-2 hover:bg-[#3c3f4d] transition">FAQ</a>
   <a href="#buy" class="block px-4 py-2 hover:bg-[#3c3f4d] transition">Buy</a>
@@ -545,9 +606,10 @@ Trixi’s roadmap is ever-evolving, and is regularly updated. Check in on Telegr
     <svg class="w-5 h-5" fill="white" viewBox="0 0 24 24"><path d="M18.59 5.89c-1.23-.57-2.54-.99-3.92-1.23-.17.3-.37.71-.5 1.04-1.46-.22-2.91-.22-4.34 0-.14-.33-.34-.74-.51-1.04-1.38.24-2.69.66-3.92 1.23-2.48 3.74-3.15 7.39-2.82 10.98 1.65 1.23 3.24 1.97 4.81 2.46.39-.53.73-1.1 1.03-1.69-.57-.21-1.11-.48-1.62-.79.14-.1.27-.21.4-.31 3.13 1.46 6.52 1.46 9.61 0 .13.11.26.21.4.31-.51.31-1.06.57-1.62.79.3.59.64 1.16 1.03 1.69 1.57-.49 3.17-1.23 4.81-2.46.39-4.17-.67-7.78-2.82-10.98h-.02Zm-9.75 8.78c-.94 0-1.71-.87-1.71-1.94 0-1.07.75-1.94 1.71-1.94s1.72.87 1.71 1.94c0 1.06-.75 1.94-1.71 1.94Zm6.31 0c-.94 0-1.71-.87-1.71-1.94 0-1.07.75-1.94 1.71-1.94s1.72.87 1.71 1.94c0 1.06-.75 1.94-1.71 1.94Z"/></svg>
     Discord
   </a>
-
-
 </div>
+
+<div id="glassBar" class="fixed top-0 left-0 w-full h-[77px] z-[98] hidden pointer-events-none transition-all duration-300"></div>
+
 
 <button id="toTopBtn"
         class="fixed bottom-6 right-6 z-50 px-4 py-2 rounded-xl bg-[#2B2D36] text-white text-sm shadow-lg hover:bg-gradient-to-r hover:from-[#9945FF] hover:to-[#14F195] transition hidden">
@@ -560,6 +622,15 @@ Trixi’s roadmap is ever-evolving, and is regularly updated. Check in on Telegr
 <script src="./js/trixi.js"></script>
 <script src="./js/analytics-loop.js"></script>
 <script src="./js/lightbox.js"></script>
+<!-- AOS Library JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true, // animate only once
+    duration: 800, // animation duration
+    easing: 'ease-in-out',
+  });
+</script>
 
 
 

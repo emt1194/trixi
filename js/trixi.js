@@ -114,3 +114,61 @@ const video = document.getElementById('heroVideo');
     }
   });
 
+  window.addEventListener('scroll', () => {
+    const glassBar = document.getElementById('glassBar');
+    if (window.scrollY > 100) {
+      glassBar.classList.add('visible');
+      glassBar.classList.remove('hidden');
+    } else {
+      glassBar.classList.remove('visible');
+      glassBar.classList.add('hidden');
+    }
+  });
+  
+  const tabs = document.querySelectorAll(".tab-btn");
+  const tabContent = document.getElementById("tabContent");
+  
+  const tabTexts = [
+"Cut through the noise on X/Twitter with Trixi’s real-time feed tracking. Our analyzer surfaces trending tokens, influential tweets, and scans each account for trustworthiness, linked accounts, and dozens of other variables, giving you the heads up.",
+
+  // Social Media Scan
+  "We monitor X/Twitter, Telegram, and shortly, Discord, Reddit, 4Chan, and more — scanning thousands of messages for unusal activity, coordinated raids, KOL mentions, and early signs of market momentum. If it’s being talked about, you’ll know about it first.",
+
+  // Volume Bot
+  "Trixi’s Volume Bot is like your token’s built-in hype crew — casually buying and selling on repeat to make your chart look alive (without messing with the price). It boosts volume so you rank higher on platforms like DexScreener. More eyeballs, more clout, more chances someone apes in.",
+
+  // Username Analysis
+  "Trixi keeps tabs on usernames across socials — spotting sudden name changes that could signal a narrative shift, stealth marketing, or new affiliations. When someone switches it up, you’ll be the first to know.",
+
+  // Trading Interface
+  "A lightweight, ultra-fast trading UI connected to the alpha. Seamlessly bridge analysis and execution — buy, sell, or set alerts from the same dashboard where you’re tracking sentiment, volume, and social signals.",
+
+  // Sentiment Analysis
+  "Trixi quietly slips into Discords, Telegram groups, and other communities to listen in on the vibe. She picks up on mood shifts, emerging hype, and growing concerns — so you know what the crowd’s feeling before the charts react."
+
+  ];
+  
+  tabs.forEach(btn => {
+    btn.addEventListener("click", () => {
+      if (btn.classList.contains("noclick-trixi")) return; // 🔒 skip click
+  
+      const scrollY = window.scrollY;
+  
+      tabs.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+  
+      const index = parseInt(btn.getAttribute("data-tab"));
+      tabContent.innerHTML = `<p>${tabTexts[index]}</p>`;
+  
+      window.scrollTo({ top: scrollY });
+    });
+  });
+  
+// AOS Tweaks
+
+  AOS.init({
+    once: true,
+    duration: 800,
+    easing: 'ease-in-out',
+  });
+
