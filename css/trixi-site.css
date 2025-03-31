@@ -566,3 +566,8 @@ body {
     font-size: 0.95rem; /* text-sm */
   }
 }
+
+#mainHeader
+{
+  z-index:9999!important;
+}
