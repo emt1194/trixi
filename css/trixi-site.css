@@ -569,8 +569,8 @@ body {
   }
 }
 
-.glass-header-inner {
-  background-color: rgba(13, 14, 18, 0.7);
+.glass-header-bar {
+  background-color: rgba(13, 14, 18, 0.7); /* dark translucent */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
