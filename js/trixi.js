@@ -179,4 +179,11 @@ const video = document.getElementById('heroVideo');
     easing: 'ease-in-out',
   });
 
-  
+// prevent zoom on mobile
+
+  if (window.innerWidth < 550) {
+    let meta = document.querySelector('meta[name="viewport"]');
+    if (meta) {
+      meta.setAttribute("content", "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no");
+    }
+  }

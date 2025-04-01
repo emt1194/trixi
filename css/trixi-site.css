@@ -534,12 +534,25 @@ body {
 
   @media (max-width: 550px) {
     #tabMenu {
-      width: 150px !important;
+      width: 100px !important;
     }
     #tabContent {
       padding: 1rem !important; /* Same as Tailwind's p-4 */
     }
-  }
+      #tabMenu {
+        width: 150px !important;
+      }
+
+      
+    }
+    @media (max-width: 550px) {
+      .tab-btn {
+        font-size: 0.85rem;
+        padding: 0.25rem 0.5rem; /* Smaller padding */
+        max-width: 100%;
+      }
+    }
+    
 
 
 
@@ -577,20 +590,11 @@ body {
   opacity: 1;
 }
 
-
-@media (max-width: 550px) {
-  .p-fix {
-    font-size: 0.875rem; 
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-  }
-}
-
-
 @media (max-width: 550px) {
   #tabContent {
     font-size: 0.95rem; /* text-sm */
   }
+  
 }
 
 /*
