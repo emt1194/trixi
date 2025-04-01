@@ -218,6 +218,11 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (max-width: 450px) {
+  .logo {
+    max-width: 150px !important;
+  }
+}
 
 .logo-row {
   display: flex;
