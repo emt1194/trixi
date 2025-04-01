@@ -39,6 +39,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+  // Close menu when a link inside it is clicked
+  const closeMenuOnLinkClick = () => {
+    mobileMenu.classList.add("hidden");
+  };
+
+  mobileMenu.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener("click", closeMenuOnLinkClick);
+  });
+
   // Bind events
   menuToggle.addEventListener("click", toggleMenu);
   document.addEventListener("click", handleClickOutside);
@@ -169,3 +178,5 @@ const video = document.getElementById('heroVideo');
     duration: 800,
     easing: 'ease-in-out',
   });
+
+  
